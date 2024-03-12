@@ -289,7 +289,7 @@ gre(Argus) :-
         list_to_set(V, U),
         makevars(X, Y, beta(U)),
         retract(X),
-        assertz(Y), fm(Y),
+        assertz(Y),
         fail
     ;   true
     ),
