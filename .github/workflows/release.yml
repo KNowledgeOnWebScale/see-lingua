@@ -10,10 +10,13 @@ jobs:
     name: "Tagged Release"
     runs-on: "ubuntu-latest"
 
+    permissions:
+      contents: write
+
     steps:
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - uses: marvinpinto/action-automatic-releases@latest
         with:
-          repo_token: "${{ secrets.GH_TOKEN }}"
-          automatic_release_tag: "${{ github.ref_name }}"
+          repo_token: ${{ github.token }}
+          automatic_release_tag: ${{ github.ref_name }}
           prerelease: false
           files: "*"
