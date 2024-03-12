@@ -1,0 +1,37 @@
+# ------------
+# Filter query
+# ------------
+
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix string: <http://www.w3.org/2000/10/swap/string#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
+@prefix var: <http://www.w3.org/2000/10/swap/var#>.
+@prefix : <#>.
+
+# facts
+:Let :param "Huey".
+:Let :param "Dewey".
+:Let :param "Louie".
+
+# query
+:filter_query lingua:question _:filter_question;
+    lingua:answer _:filter_answer.
+
+_:filter_question {
+    :Let :where (var:param var:where).
+    (var:param var:where) log:new (var:newParam var:newWhere).
+    (var:newParam var:newWhere var:filteredParams) log:collectAllIn var:scope.
+    var:filteredParams list:length 2.
+}
+
+_:filter_answer {
+    :result :is var:filteredParams.
+}
+
+:Let :where (var:param _:filter_where).
+
+_:filter_where {
+    :Let :param var:param.
+    var:param string:lessThan "Louie".
+}

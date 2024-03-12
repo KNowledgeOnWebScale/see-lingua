@@ -1,0 +1,28 @@
+@prefix : <https://eyereasoner.github.io/see/lingua/filter.trig#>.
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
+@prefix var: <http://www.w3.org/2000/10/swap/var#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix string: <http://www.w3.org/2000/10/swap/string#>.
+
+:filter_query lingua:question _:gn_1.
+:filter_query lingua:answer _:node_2.
+:filter_query lingua:bindings ((var:param var:param) (var:where _:node_14) (var:newParam var:U_1) (var:newWhere _:gn_2) (var:filteredParams ("Huey" "Dewey")) (var:scope ((<https://eyereasoner.github.io/see/lingua/filter.trig>) 1))).
+:result :is ("Huey" "Dewey").
+_:gn_1 {
+    :Let :where (var:param var:where).
+    (var:param var:where) log:new (var:newParam var:newWhere).
+    (var:newParam var:newWhere var:filteredParams) log:collectAllIn var:scope.
+    var:filteredParams list:length 2.
+}
+_:node_2 {
+    :result :is var:filteredParams.
+}
+_:node_14 {
+    :Let :param var:param.
+    var:param string:lessThan "Louie".
+}
+_:gn_2 {
+    :Let :param var:U_1.
+    var:U_1 string:lessThan "Louie".
+}
