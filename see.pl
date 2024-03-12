@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v0.2.0 (2024-03-12)').
+version_info('SEE v0.2.1 (2024-03-12)').
 
 help_info('Usage: see <options>* <data>*
 see
@@ -279,6 +279,20 @@ gre(Argus) :-
                 retractall(brake)
             ;   true
             )), true)),
+    % create universal statements
+    (   pred(P),
+        \+atom_concat('<http://www.w3.org/2000/10/swap/', _, P),
+        X =.. [P, _, _],
+        call(X),
+        findvars(X, V, alpha),
+        V \= [],
+        list_to_set(V, U),
+        makevars(X, Y, beta(U)),
+        retract(X),
+        assertz(Y),
+        fail
+    ;   true
+    ),
     % set engine values
     findall(Sc,
         (   scope(Sc)
@@ -1647,11 +1661,6 @@ djiti_assertz(A) :-
 
 '<http://www.w3.org/2000/10/swap/log#copy>'(X, Y) :-
     copy_term_nat(X, Y).
-
-'<http://www.w3.org/2000/10/swap/log#new>'(X, Y) :-
-    findvars(X, V, alpha),
-    list_to_set(V, U),
-    makevars(X, Y, beta(U)).
 
 '<http://www.w3.org/2000/10/swap/log#dtlit>'([A, B], C) :-
     when(

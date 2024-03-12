@@ -20,8 +20,7 @@
 
 _:filter_question {
     :Let :where (var:param var:where).
-    (var:param var:where) log:new (var:newParam var:newWhere).
-    (var:newParam var:newWhere var:filteredParams) log:collectAllIn var:scope.
+    (var:param var:where var:filteredParams) log:collectAllIn var:scope.
     var:filteredParams list:length 2.
 }
 
