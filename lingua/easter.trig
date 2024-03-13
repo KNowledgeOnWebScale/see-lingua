@@ -66,5 +66,5 @@ _:easter_question {
 }
 
 _:easter_answer {
-    var:x1 :easter (var:x2 var:x3).
+    (var:x1) :easter (var:x2 var:x3).
 }
