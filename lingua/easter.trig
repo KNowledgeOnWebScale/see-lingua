@@ -11,7 +11,7 @@
 @prefix : <#>.
 
 # calculate easter day
-:easter_rule lingua:head _:easter_rule_head;
+:easter_rule lingua:headback _:easter_rule_head;
     lingua:body _:easter_rule_body.
 
 _:easter_rule_head {

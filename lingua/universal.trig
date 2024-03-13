@@ -9,7 +9,7 @@
 @prefix : <#>.
 
 # \Every x: type(x, Resource
-:universal_statements_rule1 lingua:head _:universal_statements_rule1_head;
+:universal_statements_rule1 lingua:headback _:universal_statements_rule1_head;
     lingua:body true.
 
 _:universal_statements_rule1_head {
@@ -17,7 +17,7 @@ _:universal_statements_rule1_head {
 }
 
 # Everybody loves somebody who is lonely
-:universal_statements_rule2 lingua:head _:universal_statements_rule2_head;
+:universal_statements_rule2 lingua:headback _:universal_statements_rule2_head;
     lingua:body _:universal_statements_rule2_body.
 
 _:universal_statements_rule2_head {
@@ -28,7 +28,7 @@ _:universal_statements_rule2_body {
     (var:A) log:skolem var:B.
 }
 
-:universal_statements_rule3 lingua:head _:universal_statements_rule3_head;
+:universal_statements_rule3 lingua:headback _:universal_statements_rule3_head;
     lingua:body _:universal_statements_rule3_body.
 
 _:universal_statements_rule3_head {

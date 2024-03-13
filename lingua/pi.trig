@@ -9,7 +9,7 @@
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
 @prefix : <#>.
 
-:pi_rule1 lingua:head _:pi_rule1_head;
+:pi_rule1 lingua:headback _:pi_rule1_head;
     lingua:body _:pi_rule1_body.
 
 _:pi_rule1_head {
@@ -22,14 +22,14 @@ _:pi_rule1_body {
     (3 var:A) math:sum var:Pi.
 }
 
-:pi_rule2 lingua:head _:pi_rule2_head;
+:pi_rule2 lingua:headback _:pi_rule2_head;
     lingua:body true.
 
 _:pi_rule2_head {
     (var:N var:N var:P var:P var:S) :pi true.
 }
 
-:pi_rule3 lingua:head _:pi_rule3_head;
+:pi_rule3 lingua:headback _:pi_rule3_head;
     lingua:body _:pi_rule3_body.
 
 _:pi_rule3_head {

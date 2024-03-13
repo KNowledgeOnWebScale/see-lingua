@@ -10,14 +10,14 @@
 @prefix : <#>.
 
 # meta-interpreter rules
-:mi_rule1 lingua:head _:mi_rule1_head;
+:mi_rule1 lingua:headback _:mi_rule1_head;
     lingua:body true.
 
 _:mi_rule1_head {
     () :mi ().
 }
 
-:mi_rule2 lingua:head _:mi_rule2_head;
+:mi_rule2 lingua:headback _:mi_rule2_head;
     lingua:body _:mi_rule2_body.
 
 _:mi_rule2_head {
@@ -31,7 +31,7 @@ _:mi_rule2_body {
 }
 
 # general head-body rules
-:hb_rule1 lingua:head _:hb_rule1_head;
+:hb_rule1 lingua:headback _:hb_rule1_head;
     lingua:body true.
 
 _:hb_rule1_head {
@@ -42,7 +42,7 @@ _:hb_rule1_head_graph1 {
     () :mi ().
 }
 
-:hb_rule2 lingua:head _:hb_rule2_head;
+:hb_rule2 lingua:headback _:hb_rule2_head;
     lingua:body _:hb_rule2_body.
 
 _:hb_rule2_head {
@@ -67,7 +67,7 @@ _:hb_rule2_body_graph2 {
     () :mi var:Goals.
 }
 
-:hb_rule3 lingua:head _:hb_rule3_head;
+:hb_rule3 lingua:headback _:hb_rule3_head;
     lingua:body _:hb_rule3_body.
 
 _:hb_rule3_head {
@@ -83,7 +83,7 @@ _:hb_rule3_body {
 }
 
 # natnum head-body rules
-:natnum_hb_rule1 lingua:head _:natnum_hb_rule1_head;
+:natnum_hb_rule1 lingua:headback _:natnum_hb_rule1_head;
     lingua:body true.
 
 _:natnum_hb_rule1_head {
@@ -94,7 +94,7 @@ _:natnum_hb_rule1_head_graph1 {
     () :natnum (0).
 }
 
-:natnum_hb_rule2 lingua:head _:natnum_hb_rule2_head;
+:natnum_hb_rule2 lingua:headback _:natnum_hb_rule2_head;
     lingua:body _:natnum_hb_rule2_body.
 
 _:natnum_hb_rule2_head {

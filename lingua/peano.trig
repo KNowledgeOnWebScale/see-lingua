@@ -10,14 +10,14 @@
 @prefix : <#>.
 
 # add
-:peano_add_rule1 lingua:head _:peano_add_rule1_head;
+:peano_add_rule1 lingua:headback _:peano_add_rule1_head;
     lingua:body true.
 
 _:peano_add_rule1_head {
     (var:A 0) :add var:A.
 }
 
-:peano_add_rule2 lingua:head _:peano_add_rule2_head;
+:peano_add_rule2 lingua:headback _:peano_add_rule2_head;
     lingua:body _:peano_add_rule2_body.
 
 _:peano_add_rule2_head {
@@ -29,14 +29,14 @@ _:peano_add_rule2_body {
 }
 
 # multiply
-:peano_multiply_rule1 lingua:head _:peano_multiply_rule1_head;
+:peano_multiply_rule1 lingua:headback _:peano_multiply_rule1_head;
     lingua:body true.
 
 _:peano_multiply_rule1_head {
     (var:A 0) :multiply 0.
 }
 
-:peano_multiply_rule2 lingua:head _:peano_multiply_rule2_head;
+:peano_multiply_rule2 lingua:headback _:peano_multiply_rule2_head;
     lingua:body _:peano_multiply_rule2_body.
 
 _:peano_multiply_rule2_head {
@@ -49,7 +49,7 @@ _:peano_multiply_rule2_body {
 }
 
 # factorial
-:peano_factorial_rule lingua:head _:peano_factorial_rule_head;
+:peano_factorial_rule lingua:headback _:peano_factorial_rule_head;
     lingua:body _:peano_factorial_rule_body.
 
 _:peano_factorial_rule_head {
@@ -60,14 +60,14 @@ _:peano_factorial_rule_body {
     (var:A (:s 0)) :fac var:B.
 }
 
-:peano_fac_rule1 lingua:head _:peano_fac_rule1_head;
+:peano_fac_rule1 lingua:headback _:peano_fac_rule1_head;
     lingua:body true.
 
 _:peano_fac_rule1_head {
     (0 var:A) :fac var:A.
 }
 
-:peano_fac_rule2 lingua:head _:peano_fac_rule2_head;
+:peano_fac_rule2 lingua:headback _:peano_fac_rule2_head;
     lingua:body _:peano_fac_rule2_body.
 
 _:peano_fac_rule2_head {

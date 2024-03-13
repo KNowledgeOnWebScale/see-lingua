@@ -16,7 +16,7 @@
     :anyOf :C;
     :noneOf :D.
 
-:acp_rule1 lingua:head _:acp_rule1_head;
+:acp_rule1 lingua:headback _:acp_rule1_head;
     lingua:body _:acp_rule1_body.
 
 _:acp_rule1_head {
@@ -37,7 +37,7 @@ _:acp_rule1_fa2 {
     var:Test :has var:Field.
 }
 
-:acp_rule2 lingua:head _:acp_rule2_head;
+:acp_rule2 lingua:headback _:acp_rule2_head;
     lingua:body _:acp_rule2_body.
 
 _:acp_rule2_head {
@@ -57,7 +57,7 @@ _:acp_rule2_where {
     var:Test :has var:Field.
 }
 
-:acp_rule3 lingua:head _:acp_rule3_head;
+:acp_rule3 lingua:headback _:acp_rule3_head;
     lingua:body _:acp_rule3_body.
 
 _:acp_rule3_head {

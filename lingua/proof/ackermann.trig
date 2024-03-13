@@ -5,31 +5,31 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 
 :ackermann_rule0 lingua:body _:gn_1.
-:ackermann_rule0 lingua:head _:gn_2.
+:ackermann_rule0 lingua:headback _:gn_2.
 :ackermann_rule0 lingua:bindings ((var:Y 3) (var:A 4) (var:Z 2)).
 :ackermann_rule_main lingua:body _:gn_3.
-:ackermann_rule_main lingua:head _:gn_4.
+:ackermann_rule_main lingua:headback _:gn_4.
 :ackermann_rule_main lingua:bindings ((var:Y 0) (var:B 3) (var:X 0) (var:C 4) (var:A 1)).
 :ackermann_rule0 lingua:bindings ((var:Y 9) (var:A 10) (var:Z 2)).
 :ackermann_rule_main lingua:bindings ((var:Y 6) (var:B 9) (var:X 0) (var:C 10) (var:A 7)).
 :ackermann_rule1 lingua:body _:gn_5.
-:ackermann_rule1 lingua:head _:gn_6.
+:ackermann_rule1 lingua:headback _:gn_6.
 :ackermann_rule1 lingua:bindings ((var:Y 5) (var:Z 2) (var:A 7)).
 :ackermann_rule_main lingua:bindings ((var:Y 2) (var:B 5) (var:X 1) (var:C 7) (var:A 4)).
 :ackermann_rule1 lingua:bindings ((var:Y 10) (var:Z 2) (var:A 12)).
 :ackermann_rule_main lingua:bindings ((var:Y 7) (var:B 10) (var:X 1) (var:C 12) (var:A 9)).
 :ackermann_rule2 lingua:body _:gn_7.
-:ackermann_rule2 lingua:head _:gn_8.
+:ackermann_rule2 lingua:headback _:gn_8.
 :ackermann_rule2 lingua:bindings ((var:Y 5) (var:Z 2) (var:A 10)).
 :ackermann_rule_main lingua:bindings ((var:Y 2) (var:B 5) (var:X 2) (var:C 10) (var:A 7)).
 :ackermann_rule2 lingua:bindings ((var:Y 12) (var:Z 2) (var:A 24)).
 :ackermann_rule_main lingua:bindings ((var:Y 9) (var:B 12) (var:X 2) (var:C 24) (var:A 21)).
 :ackermann_rule3plus lingua:body _:gn_9.
-:ackermann_rule3plus lingua:head _:gn_10.
+:ackermann_rule3plus lingua:headback _:gn_10.
 :ackermann_rule3plus lingua:bindings ((var:X 3) (var:Z 2)).
 :ackermann_rule2 lingua:bindings ((var:Y 1) (var:Z 2) (var:A 2)).
 :ackermann_rule_final lingua:body _:gn_11.
-:ackermann_rule_final lingua:head _:gn_12.
+:ackermann_rule_final lingua:headback _:gn_12.
 :ackermann_rule_final lingua:bindings ((var:Y 1) (var:B 0) (var:X 3) (var:Z 2) (var:C 1) (var:D 2) (var:A 2)).
 :ackermann_rule2 lingua:bindings ((var:Y 2) (var:Z 2) (var:A 4)).
 :ackermann_rule_final lingua:bindings ((var:Y 2) (var:B 1) (var:X 3) (var:Z 2) (var:C 2) (var:D 2) (var:A 4)).

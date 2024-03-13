@@ -4,7 +4,7 @@ RDF as the web lingua.
 
 Lingua supports reasoning with forward rules described in RDF as
 ```
-:rulename lingua:premis _:premisename;
+:rulename lingua:premise _:premisename;
     lingua:conclusion _:conclusionname.
 
 _:premisename {
@@ -24,7 +24,7 @@ A forward rule with `lingua:conclusion` false is an inference fuse.
 
 Lingua also supports reasoning with backward rules described in RDF as
 ```
-:rulename lingua:head _:headname;
+:rulename lingua:headback _:headname;
     lingua:body _:bodyname.
 
 _:headname {

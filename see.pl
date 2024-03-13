@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v0.3.0 (2024-03-13)').
+version_info('SEE v0.4.0 (2024-03-13)').
 
 help_info('Usage: see <options>* <data>*
 see
@@ -77,7 +77,7 @@ see
 :- dynamic('<http://www.w3.org/2000/10/swap/lingua#bindings>'/2).
 :- dynamic('<http://www.w3.org/2000/10/swap/lingua#body>'/2).
 :- dynamic('<http://www.w3.org/2000/10/swap/lingua#conclusion>'/2).
-:- dynamic('<http://www.w3.org/2000/10/swap/lingua#head>'/2).
+:- dynamic('<http://www.w3.org/2000/10/swap/lingua#headback>'/2).
 :- dynamic('<http://www.w3.org/2000/10/swap/lingua#premise>'/2).
 :- dynamic('<http://www.w3.org/2000/10/swap/lingua#question>'/2).
 :- dynamic('<http://www.w3.org/2000/10/swap/log#callWithCleanup>'/2).
@@ -238,13 +238,13 @@ gre(Argus) :-
     % create backward rules
     assertz(implies((
             '<http://www.w3.org/2000/10/swap/lingua#body>'(R, A),
-            '<http://www.w3.org/2000/10/swap/lingua#head>'(R, B),
+            '<http://www.w3.org/2000/10/swap/lingua#headback>'(R, B),
             findvars([A, B], V, alpha),
             list_to_set(V, U),
             makevars([A, B, U], [Q, I, X], beta(U)),
             zip_list(U, X, W),
             conj_append(Q, remember(answer('<http://www.w3.org/2000/10/swap/lingua#body>', R, A)), D),
-            conj_append(D, remember(answer('<http://www.w3.org/2000/10/swap/lingua#head>', R, B)), E),
+            conj_append(D, remember(answer('<http://www.w3.org/2000/10/swap/lingua#headback>', R, B)), E),
             conj_append(E, remember(answer('<http://www.w3.org/2000/10/swap/lingua#bindings>', R, W)), F),
             C = ':-'(I, F),
             copy_term_nat(C, CC),

@@ -10,7 +10,7 @@
 @prefix : <#>.
 
 # something is more interesting if it is greater
-:backward_rule lingua:head _:backward_rule_head;
+:backward_rule lingua:headback _:backward_rule_head;
     lingua:body _:backward_rule_body.
 
 _:backward_rule_head {

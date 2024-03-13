@@ -4,15 +4,15 @@
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
 
 :hb_rule2 lingua:body _:gn_1.
-:hb_rule2 lingua:head _:gn_2.
+:hb_rule2 lingua:headback _:gn_2.
 :hb_rule2 lingua:bindings ((var:A (_:gn_3)) (var:G _:gn_3) (var:Gs ()) (var:B (_:gn_4 _:gn_5)) (var:Goals var:U_0) (var:C (_:gn_5)) (var:Rs ())).
 :hb_rule2 lingua:bindings ((var:A (_:gn_6)) (var:G _:gn_6) (var:Gs ()) (var:B (_:gn_7 _:gn_8)) (var:Goals var:U_1) (var:C (_:gn_8)) (var:Rs ())).
 :hb_rule3 lingua:body _:gn_9.
-:hb_rule3 lingua:head _:gn_10.
+:hb_rule3 lingua:headback _:gn_10.
 :hb_rule3 lingua:bindings ((var:Head _:gn_3) (var:Goals0 (_:gn_11 _:gn_12)) (var:Goals ()) (var:Rs (_:gn_13))).
 :hb_rule2 lingua:bindings ((var:A (_:gn_14 _:gn_15)) (var:G _:gn_14) (var:Gs (_:gn_15)) (var:B (_:gn_16 _:gn_17)) (var:Goals var:U_4) (var:C (_:gn_17)) (var:Rs ())).
 :natnum_hb_rule2 lingua:body _:gn_18.
-:natnum_hb_rule2 lingua:head _:gn_19.
+:natnum_hb_rule2 lingua:headback _:gn_19.
 :natnum_hb_rule2 lingua:bindings ((var:A (_:gn_20)) (var:X (:s (:s (:s (:s (0)))))) (var:Rs ())).
 :hb_rule3 lingua:bindings ((var:Head _:gn_6) (var:Goals0 (_:gn_20)) (var:Goals ()) (var:Rs (_:gn_21))).
 :hb_rule3 lingua:bindings ((var:Head _:gn_22) (var:Goals0 (_:gn_21)) (var:Goals (_:gn_21)) (var:Rs (_:gn_23))).
@@ -49,20 +49,20 @@
 :hb_rule3 lingua:bindings ((var:Head _:gn_81) (var:Goals0 (_:gn_88 _:gn_89)) (var:Goals ()) (var:Rs (_:gn_90))).
 :hb_rule2 lingua:bindings ((var:A (_:gn_91 _:gn_92)) (var:G _:gn_91) (var:Gs (_:gn_92)) (var:B (_:gn_93 _:gn_94)) (var:Goals var:U_29) (var:C (_:gn_94)) (var:Rs ())).
 :natnum_hb_rule1 lingua:body true.
-:natnum_hb_rule1 lingua:head _:gn_95.
+:natnum_hb_rule1 lingua:headback _:gn_95.
 :natnum_hb_rule1 lingua:bindings ((var:Rs ())).
 :hb_rule3 lingua:bindings ((var:Head _:gn_80) (var:Goals0 ()) (var:Goals ()) (var:Rs (_:gn_96))).
 :hb_rule3 lingua:bindings ((var:Head _:gn_97) (var:Goals0 (_:gn_96)) (var:Goals (_:gn_96)) (var:Rs (_:gn_98))).
 :hb_rule2 lingua:bindings ((var:A (_:gn_96)) (var:G _:gn_96) (var:Gs ()) (var:B (_:gn_99 _:gn_100)) (var:Goals var:U_30) (var:C (_:gn_100)) (var:Rs ())).
 :hb_rule1 lingua:body true.
-:hb_rule1 lingua:head _:gn_101.
+:hb_rule1 lingua:headback _:gn_101.
 :hb_rule1 lingua:bindings ((var:Rs ())).
 :hb_rule3 lingua:bindings ((var:Head _:gn_96) (var:Goals0 ()) (var:Goals ()) (var:Rs (_:gn_96))).
 :mi_rule1 lingua:body true.
-:mi_rule1 lingua:head _:gn_96.
+:mi_rule1 lingua:headback _:gn_96.
 :mi_rule1 lingua:bindings ().
 :mi_rule2 lingua:body _:gn_102.
-:mi_rule2 lingua:head _:gn_103.
+:mi_rule2 lingua:headback _:gn_103.
 :mi_rule2 lingua:bindings ((var:A (_:gn_96)) (var:G _:gn_96) (var:Gs ()) (var:Goals ())).
 :mi_rule2 lingua:bindings ((var:A (_:gn_104 _:gn_96)) (var:G _:gn_104) (var:Gs (_:gn_96)) (var:Goals (_:gn_96))).
 :mi_rule2 lingua:bindings ((var:A (_:gn_98)) (var:G _:gn_98) (var:Gs ()) (var:Goals (_:gn_104 _:gn_96))).
