@@ -80,10 +80,15 @@ _:peano_fac_rule2_body {
 }
 
 # query
-:peano_query lingua:question _:peano_question.
+:peano_query lingua:question _:peano_question;
+    lingua:answer _:peano_answer.
 
 _:peano_question {
-    ((:s 0) (:s (:s 0))) :add var:A.
-    (var:A (:s (:s 0))) :multiply var:B.
+    ((:s 0) (:s (:s 0))) :multiply var:A.
+    (var:A (:s (:s (:s 0)))) :add var:B.
+    var:B :factorial var:C.
+}
+
+_:peano_answer {
     var:B :factorial var:C.
 }

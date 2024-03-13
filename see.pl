@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v0.2.2 (2024-03-13)').
+version_info('SEE v0.3.0 (2024-03-13)').
 
 help_info('Usage: see <options>* <data>*
 see
@@ -1923,7 +1923,7 @@ djiti_assertz(A) :-
     raw_type(A, C),
     C = B.
 
-'<http://www.w3.org/2000/10/swap/log#repeat>'(A, B) :-
+'<http://www.w3.org/2000/10/swap/log#repeat>'([A], B) :-
     C is A-1,
     between(0, C, B).
 
