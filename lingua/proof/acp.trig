@@ -1,4 +1,4 @@
-@prefix : <https://eyereasoner.github.io/see/lingua/acp.trig#>.
+@prefix : <https://eyereasoner.github.io/see-lingua/lingua/acp.trig#>.
 @prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
@@ -6,13 +6,13 @@
 
 :acp_rule1 lingua:body _:gn_1.
 :acp_rule1 lingua:head _:node_1.
-:acp_rule1 lingua:bindings ((var:Test :test1) (var:Pol :PolicyX) (var:Field var:U_0) (var:X ((<https://eyereasoner.github.io/see/lingua/acp.trig>) 1))).
+:acp_rule1 lingua:bindings ((var:Test :test1) (var:Pol :PolicyX) (var:Field var:U_0) (var:X ((<https://eyereasoner.github.io/see-lingua/lingua/acp.trig>) 1))).
 :acp_rule2 lingua:body _:gn_2.
 :acp_rule2 lingua:head _:node_7.
-:acp_rule2 lingua:bindings ((var:Test :test1) (var:Pol :PolicyX) (var:Field var:U_1) (var:List (:C)) (var:X ((<https://eyereasoner.github.io/see/lingua/acp.trig>) 1)) (var:L 1)).
+:acp_rule2 lingua:bindings ((var:Test :test1) (var:Pol :PolicyX) (var:Field var:U_1) (var:List (:C)) (var:X ((<https://eyereasoner.github.io/see-lingua/lingua/acp.trig>) 1)) (var:L 1)).
 :acp_rule3 lingua:body _:gn_3.
 :acp_rule3 lingua:head _:node_13.
-:acp_rule3 lingua:bindings ((var:Test :test1) (var:Pol :PolicyX) (var:Field var:U_2) (var:List ()) (var:X ((<https://eyereasoner.github.io/see/lingua/acp.trig>) 1)) (var:L 0)).
+:acp_rule3 lingua:bindings ((var:Test :test1) (var:Pol :PolicyX) (var:Field var:U_2) (var:List ()) (var:X ((<https://eyereasoner.github.io/see-lingua/lingua/acp.trig>) 1)) (var:L 0)).
 :acp_query lingua:question _:node_19.
 :acp_query lingua:answer _:node_20.
 :acp_query lingua:bindings ((var:Pol :PolicyX)).

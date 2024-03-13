@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v0.2.1 (2024-03-12)').
+version_info('SEE v0.2.2 (2024-03-13)').
 
 help_info('Usage: see <options>* <data>*
 see
@@ -1742,6 +1742,20 @@ djiti_assertz(A) :-
     ->  true
     ;   B \= answer(_, _, _),
         B \= (answer(_, _, _), _)
+    ).
+
+'<http://www.w3.org/2000/10/swap/log#imports>'(_, X) :-
+    when(
+        (   nonvar(X)
+        ),
+        (   (   scope(X)
+            ->  true
+            ;   sub_atom(X, 0, 1, _, '<'),
+                sub_atom(X, _, 1, 0, '>'),
+                sub_atom(X, 1, _, 1, Z),
+                args([Z])
+            )
+        )
     ).
 
 '<http://www.w3.org/2000/10/swap/log#includes>'(X, Y) :-

@@ -1,4 +1,4 @@
-@prefix : <https://eyereasoner.github.io/see/lingua/gps.trig#>.
+@prefix : <https://eyereasoner.github.io/see-lingua/lingua/gps.trig#>.
 @prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
 @prefix gps: <http://eyereasoner.github.io/eye/reasoning/gps/gps-schema#>.
