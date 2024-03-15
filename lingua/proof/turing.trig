@@ -24,7 +24,7 @@
 :turing_rule11 lingua:headback _:gn_8.
 :turing_rule11 lingua:bindings ().
 :turing_rule12 lingua:body _:gn_9.
-:turing_rule12 lingua:headback _:node_113.
+:turing_rule12 lingua:headback _:node_113_1.
 :turing_rule12 lingua:bindings ((var:List (1)) (var:Head 1) (var:Tail ()) (var:R ()) (var:Reverse (1))).
 :turing_rule12 lingua:bindings ((var:List (0 1)) (var:Head 0) (var:Tail (1)) (var:R (1)) (var:Reverse (1 0))).
 :turing_rule12 lingua:bindings ((var:List (1 0 1)) (var:Head 1) (var:Tail (0 1)) (var:R (1 0)) (var:Reverse (1 0 1))).
@@ -54,7 +54,7 @@
 :turing_rule5 lingua:bindings ((var:State 0) (var:Left (1)) (var:Cell 0) (var:Right (1 0 0 1)) (var:OutTape (1 0 1 0 1 0 "#"))).
 :turing_rule3 lingua:bindings ((var:State 0) (var:Cell 1) (var:Write 1) (var:Move :right) (var:Next 0) (var:Left ()) (var:Right (0 1 0 0 1)) (var:A (1)) (var:B 0) (var:C (1 0 0 1)) (var:OutTape (1 0 1 0 1 0 "#"))).
 :turing_rule2 lingua:body _:gn_15.
-:turing_rule2 lingua:headback _:node_7.
+:turing_rule2 lingua:headback _:node_7_1.
 :turing_rule2 lingua:bindings ((var:List (1 0 1 0 0 1)) (var:Head 1) (var:Tail (0 1 0 0 1)) (var:Machine :add1) (var:I 0) (var:OutTape (1 0 1 0 1 0 "#"))).
 :turing_rule10 lingua:bindings ((var:List (0 1 1 1 1)) (var:Head 0) (var:Tail (1 1 1 1)) (var:L (1)) (var:Cell 1) (var:Left ())).
 :turing_rule10 lingua:bindings ((var:List (1 1 1 1)) (var:Head 1) (var:Tail (1 1 1)) (var:L (0 1)) (var:Cell 0) (var:Left (1))).
@@ -185,7 +185,7 @@ _:gn_9 {
     var:Tail :reverse var:R.
     (var:R (var:Head)) list:append var:Reverse.
 }
-_:node_113 {
+_:node_113_1 {
     var:List :reverse var:Reverse.
 }
 _:gn_10 {
@@ -212,7 +212,7 @@ _:gn_15 {
     var:Machine :start var:I.
     (var:I () var:Head var:Tail) :find var:OutTape.
 }
-_:node_7 {
+_:node_7_1 {
     var:List :compute var:OutTape.
 }
 _:gn_16 {

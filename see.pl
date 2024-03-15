@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v0.5.1 (2024-03-15)').
+version_info('SEE v0.5.2 (2024-03-15)').
 
 help_info('Usage: see <options>* <data>*
 see
@@ -167,8 +167,8 @@ gre(Argus) :-
     nb_setval(fdepth, 0),
     nb_setval(pdepth, 0),
     nb_setval(cdepth, 0),
-    nb_setval(current_scope, '<>'),
     nb_setval(wn, 0),
+    nb_setval(doc_nr, 0),
     opts(Argus, Args),
     (   Args = []
     ->  opts(['--help'], _)
@@ -633,6 +633,7 @@ args([Argument|Args]) :-
     absolute_uri(Argument, Arg),
     atomic_list_concat(['<', Arg, '>'], R),
     assertz(scope(R)),
+    cnt(doc_nr),
     (   wcacher(Arg, File)
     ->  open(File, read, In, [encoding(utf8)])
     ;   (   (   sub_atom(Arg, 0, 5, _, 'http:')
@@ -722,7 +723,8 @@ trig_term(literal(A), literal(E, type('<http://www.w3.org/2001/XMLSchema#string>
 trig_term(node(A), B) :-
     !,
     nb_getval(var_ns, Sns),
-    atomic_list_concat(['<', Sns, 'node_', A, '>'], B).
+    nb_getval(doc_nr, Dnr),
+    atomic_list_concat(['<', Sns, 'node_', A, '_', Dnr, '>'], B).
 trig_term(A, B) :-
     atomic_list_concat(['<', A, '>'], B).
 

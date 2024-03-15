@@ -9,7 +9,7 @@
 :complement_inference_fuse lingua:premise _:gn_2.
 :complement_inference_fuse lingua:conclusion false.
 _:gn_1 {
-    :complement_inference_fuse lingua:premise _:node_13.
+    :complement_inference_fuse lingua:premise _:node_13_1.
     :complement_inference_fuse lingua:conclusion false.
 }
 _:gn_2 {
@@ -17,7 +17,7 @@ _:gn_2 {
     var:S var:P var:O.
     var:S var:C var:O.
 }
-_:node_13 {
+_:node_13_1 {
     var:P log:complement var:C.
     var:S var:P var:O.
     var:S var:C var:O.

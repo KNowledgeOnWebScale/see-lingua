@@ -6,8 +6,8 @@
 :patch_rule lingua:premise _:gn_1.
 :patch_rule lingua:conclusion true.
 :patch_rule lingua:bindings ((var:person :pers001)).
-:patch_query lingua:question _:node_4.
-:patch_query lingua:answer _:node_4.
+:patch_query lingua:question _:node_4_1.
+:patch_query lingua:answer _:node_4_1.
 :patch_query lingua:bindings ((var:person :pers001) (var:fname "Garcia") (var:gname "Alex")).
 :pers001 :familyName "Garcia".
 :pers001 :givenName "Alex".
@@ -16,15 +16,15 @@
 :pers002 :givenName "Claudia".
 _:gn_1 {
     var:person :familyName "Garcia".
-    _:node_2 log:becomes _:node_3.
+    _:node_2_1 log:becomes _:node_3_1.
 }
-_:node_4 {
+_:node_4_1 {
     var:person :familyName var:fname.
     var:person :givenName var:gname.
 }
-_:node_2 {
+_:node_2_1 {
     var:person :givenName "Claudia".
 }
-_:node_3 {
+_:node_3_1 {
     var:person :givenName "Alex".
 }
