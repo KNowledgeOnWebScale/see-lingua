@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v0.5.0 (2024-03-15)').
+version_info('SEE v0.5.1 (2024-03-15)').
 
 help_info('Usage: see <options>* <data>*
 see
@@ -52,8 +52,7 @@ see
 :- dynamic(ns/2).
 :- dynamic(pfx/2).
 :- dynamic(pred/1).
-:- dynamic(quad/2).
-:- dynamic(query/2).
+:- dynamic(quad/4).
 :- dynamic(recursion/1).
 :- dynamic(rule_uvar/1).
 :- dynamic(scope/1).
@@ -183,16 +182,16 @@ gre(Argus) :-
     nb_setval(var_ns, Sns),
     args(Args),
     % create named graphs
-    (   quad(_, A),
+    (   quad(_, _, _, G),
         findall(C,
-            (   retract(quad(triple(S, P, O), A)),
+            (   retract(quad(S, P, O, G)),
                 C =.. [P, S, O]
             ),
             D
         ),
         D \= [],
         conjoin(D, E),
-        assertz(graph(A, E)),
+        assertz(graph(G, E)),
         fail
     ;   true
     ),
@@ -225,7 +224,7 @@ gre(Argus) :-
     % remove rdf lists
     retractall('<http://www.w3.org/1999/02/22-rdf-syntax-ns#first>'(_, _)),
     retractall('<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest>'(_, _)),
-    % create forward rules
+    % create forward rules for lingua
     assertz(implies((
             '<http://www.w3.org/2000/10/swap/lingua#premise>'(R, A),
             '<http://www.w3.org/2000/10/swap/lingua#conclusion>'(R, B),
@@ -239,6 +238,7 @@ gre(Argus) :-
                 conj_append(E, remember(answer('<http://www.w3.org/2000/10/swap/lingua#bindings>', R, W)), F)
             ;   F = I
             )), '<http://www.w3.org/2000/10/swap/log#implies>'(Q, F))),
+    % create forward rules for blogic
     assertz(implies((
             '<http://www.w3.org/2000/10/swap/blogic#onNegativeSurface>'(V, G),
             getlist(V, Vl),
@@ -248,7 +248,6 @@ gre(Argus) :-
             list_to_set(L, B),
             \+member('<http://www.w3.org/2000/10/swap/blogic#onAnswerSurface>'(_, _), B),
             select('<http://www.w3.org/2000/10/swap/blogic#onNegativeSurface>'(_, H), B, K),
-            H \= triple(_, _, _),
             conj_list(R, K),
             find_graffiti(K, D),
             append(Vl, D, U),
@@ -256,6 +255,7 @@ gre(Argus) :-
             findvars(S, W, beta),
             makevars(S, I, beta(W))
             ), '<http://www.w3.org/2000/10/swap/log#implies>'(Q, I))),
+    % create forward contrapositive rules for blogic
     assertz(implies((
             '<http://www.w3.org/2000/10/swap/blogic#onNegativeSurface>'(V, G),
             getlist(V, Vl),
@@ -287,7 +287,7 @@ gre(Argus) :-
             findvars(S, W, beta),
             makevars(S, I, beta(W))
             ), '<http://www.w3.org/2000/10/swap/log#implies>'(Q, I))),
-    % create backward rules
+    % create backward rules for lingua
     assertz(implies((
             '<http://www.w3.org/2000/10/swap/lingua#body>'(R, A),
             '<http://www.w3.org/2000/10/swap/lingua#headback>'(R, B),
@@ -307,6 +307,7 @@ gre(Argus) :-
                 retractall(brake)
             ;   true
             )), true)),
+    % create backward rules for blogic
     assertz(implies((
             '<http://www.w3.org/2000/10/swap/blogic#onNegativeSurface>'(V, G),
             getlist(V, Vl),
@@ -333,7 +334,7 @@ gre(Argus) :-
                 retractall(brake)
             ;   true
             )), true)),
-    % create queries
+    % create queries for lingua
     assertz(implies((
             '<http://www.w3.org/2000/10/swap/lingua#question>'(R, A),
             (   '<http://www.w3.org/2000/10/swap/lingua#answer>'(R, B)
@@ -357,6 +358,7 @@ gre(Argus) :-
                 retractall(brake)
             ;   true
             )), true)),
+    % create queries for blogic
     assertz(implies((
             '<http://www.w3.org/2000/10/swap/blogic#onNegativeSurface>'(V, G),
             getlist(V, Vl),
@@ -378,7 +380,7 @@ gre(Argus) :-
                 retractall(brake)
             ;   true
             )), true)),
-    % create universal statements
+    % create universal statements for lingua
     (   pred(P),
         \+atom_concat('<http://www.w3.org/2000/10/swap/', _, P),
         X =.. [P, _, _],
@@ -424,7 +426,6 @@ gre(Argus) :-
             getlist(Z, Zl),
             is_list(Zl),
             is_graph(H),
-            H \= triple(_, _, _),
             conj_list(H, M),
             list_to_set(M, T),
             select('<http://www.w3.org/2000/10/swap/blogic#onNegativeSurface>'(W, O), T, N),
@@ -691,7 +692,7 @@ args([Argument|Args]) :-
             trig_term(O, Object),
             G = H:_,
             trig_term(H, Graph),
-            assertz(quad(triple(Subject, Predicate, Object), Graph))
+            assertz(quad(Subject, Predicate, Object, Graph))
         )
     ),
     args(Args).
@@ -755,28 +756,6 @@ w3 :-
     nb_setval(fdepth, 0),
     nb_setval(pdepth, 0),
     nb_setval(cdepth, 0),
-    (   query(Q, A),
-        (   Q = \+(R)
-        ->  \+catch(call(R), _, fail)
-        ;   catch(call(Q), _, fail)
-        ),
-        nb_getval(wn, W),
-        labelvars(A, W, N, some),
-        nb_setval(wn, N),
-        relabel(A, B),
-        indent,
-        wt(B),
-        ws(B),
-        (   (   B = graph(_, _)
-            ;   B = exopred(graph, _, _)
-            )
-        ->  true
-        ;   write('.')
-        ),
-        nl,
-        fail
-    ;   true
-    ),
     (   answer(B1, B2, B3),
         relabel([B1, B2, B3], [C1, C2, C3]),
         djiti_answer(answer(C), answer(C1, C2, C3)),
@@ -1514,7 +1493,6 @@ djiti_fact(A, A) :-
     (   P \= '<http://www.w3.org/2000/10/swap/log#callWithCleanup>',
         P \= '<http://www.w3.org/1999/02/22-rdf-syntax-ns#first>',
         P \= '<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest>',
-        P \= query,
         P \= pfx,
         P \= flag,
         \+pred(P)
