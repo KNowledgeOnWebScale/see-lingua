@@ -1,0 +1,43 @@
+# ----------------------
+# Extended Deep Taxonomy
+# ----------------------
+#
+# See https://web.archive.org/web/20220119222608/http://responder.ruleml.org/WellnessRules/files/WellnessRulesN3-2009-11-10.pdf
+#
+# It is taking the depth as the number of elements in the classes.
+# It is closer to reality e.g. an ontology with 300000 classes (like SNOMED-CT)
+# and 100000 individuals belonging to those classes (like patients having
+# observations, diseases, treatments, ...).
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix blogic: <http://www.w3.org/2000/10/swap/blogic#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix edt: <http://eulersharp.sourceforge.net/2009/12dtb/test#>.
+
+# importing
+() blogic:onNegativeSurface _:ns1.
+
+_:ns1 {
+    <> log:imports <../../eye/reasoning/edt/test-facts.ttl>.
+    <> log:imports <../../eye/reasoning/edt/test-dl.ttl>.
+    () blogic:onNegativeSurface true.
+}
+
+(_:X _:D _:C) blogic:onNegativeSurface _:ns2.
+
+_:ns2 {
+    () blogic:negativeTriple _:nt.
+    _:C rdfs:subClassOf _:D.
+    _:X a _:C.
+}
+
+_:nt {
+    _:X a _:D.
+}
+
+# query
+() blogic:onQuerySurface _:qs.
+
+_:qs {
+    edt:i100000 a edt:N100000.
+}
