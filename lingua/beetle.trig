@@ -1,0 +1,60 @@
+# --------------
+# Beetle example
+# --------------
+#
+# See https://en.wikipedia.org/wiki/Disjunction_elimination
+
+@prefix blogic: <http://www.w3.org/2000/10/swap/blogic#>.
+@prefix : <#>.
+
+# beetle is a car
+:beetle a :Car.
+
+# all cars are green or blue
+(_:A) blogic:onNegativeSurface _:ns1.
+
+_:ns1 {
+    _:A a :Car.
+    () blogic:onNegativeSurface _:ns2.
+    () blogic:onNegativeSurface _:ns3.
+}
+
+_:ns2 {
+    _:A :is :green.
+}
+
+_:ns3 {
+    _:A :is :blue.
+}
+
+# green things are beautiful
+(_:A) blogic:onNegativeSurface _:ns4.
+
+_:ns4 {
+    _:A :is :green.
+    () blogic:onNegativeSurface _:ns5.
+}
+
+_:ns5 {
+    _:A :is :beautiful.
+}
+
+# blue things are beautiful
+(_:A) blogic:onNegativeSurface _:ns6.
+
+_:ns6 {
+    _:A :is :blue.
+    () blogic:onNegativeSurface _:ns7.
+}
+
+_:ns7 {
+    _:A :is :beautiful.
+}
+
+
+# query
+(_:S _:O) blogic:onQuerySurface _:qs.
+
+_:qs {
+    _:S :is _:O.
+}
