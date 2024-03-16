@@ -22,14 +22,14 @@
 version_info('SEE v0.5.2 (2024-03-15)').
 
 help_info('Usage: see <options>* <data>*
-see
-    swipl -g main see.pl --
+
 <options>
     --genid <genid>             use <genid> in Skolem IRIs
     --help                      show help info
     --output <file>             write reasoner output to <file>
     --version                   show version info
     --wcache <uri> <file>       to tell that <uri> is cached as <file>
+
 <data>
     <uri>                       TriG data').
 
