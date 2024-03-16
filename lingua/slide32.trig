@@ -1,0 +1,22 @@
+@prefix blogic: <http://www.w3.org/2000/10/swap/blogic#>.
+@prefix : <#>.
+
+:Ghent a :City.
+
+(_:x) blogic:onNegativeSurface _:ns1.
+
+_:ns1 {
+    _:x a :City.
+    () blogic:onNegativeSurface _:ns2.
+}
+
+_:ns2 {
+    _:x a :HumanCommunity.
+}
+
+# query
+(_:S _:C) blogic:onQuerySurface _:qs.
+
+_:qs {
+    _:S a _:C.
+}
