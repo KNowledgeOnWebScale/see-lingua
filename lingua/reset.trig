@@ -1,17 +1,17 @@
 @prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix : <#>.
 
-# Reset Policy : reset all triples from the resultSurface back to the main surface
+# Reset Policy: reset all triples from the neutral surface back to the main surface
 
-() lingua:onResultSurface _:rs.
+() lingua:onNeutralSurface _:ns.
 
-_:rs {
+_:ns {
     :n1 :p1 :n2.
 }
 
 (_:S) lingua:onQuestionSurface _:qs.
 
 _:qs {
-  () lingua:onResultSurface _:S.
+  () lingua:onNeutralSurface _:S.
   () lingua:onAnswerSurface _:S.
 }
