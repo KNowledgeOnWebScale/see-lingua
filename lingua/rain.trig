@@ -4,26 +4,26 @@
 #
 # Infer that the grass becomes wet.
 
-@prefix blogic: <http://www.w3.org/2000/10/swap/blogic#>.
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix : <#>.
 
 :currentWeather a :NormalWeather.
 :obs1 :ascribed :Rain.
 
-() blogic:onNegativeSurface _:ns1.
+() lingua:onNegativeSurface _:ns1.
 
 _:ns1 {
     :currentWeather a :NormalWeather.
-    () blogic:onNegativeSurface _:ns2.
+    () lingua:onNegativeSurface _:ns2.
 }
 
 _:ns2 {
-    (_:S) blogic:onNegativeSurface _:ns3.
+    (_:S) lingua:onNegativeSurface _:ns3.
 }
 
 _:ns3 {
     _:S :ascribed :Rain.
-    () blogic:onNegativeSurface _:ns4.
+    () lingua:onNegativeSurface _:ns4.
 }
 
 _:ns4 {
@@ -31,7 +31,7 @@ _:ns4 {
 }
 
 # query
-(_:S _:O) blogic:onQuerySurface _:qs.
+(_:S _:O) lingua:onQuerySurface _:qs.
 
 _:qs {
     _:S :ascribed _:O.

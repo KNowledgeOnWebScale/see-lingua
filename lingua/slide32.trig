@@ -1,13 +1,13 @@
-@prefix blogic: <http://www.w3.org/2000/10/swap/blogic#>.
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix : <#>.
 
 :Ghent a :City.
 
-(_:x) blogic:onNegativeSurface _:ns1.
+(_:x) lingua:onNegativeSurface _:ns1.
 
 _:ns1 {
     _:x a :City.
-    () blogic:onNegativeSurface _:ns2.
+    () lingua:onNegativeSurface _:ns2.
 }
 
 _:ns2 {
@@ -15,7 +15,7 @@ _:ns2 {
 }
 
 # query
-(_:S _:C) blogic:onQuerySurface _:qs.
+(_:S _:C) lingua:onQuerySurface _:qs.
 
 _:qs {
     _:S a _:C.

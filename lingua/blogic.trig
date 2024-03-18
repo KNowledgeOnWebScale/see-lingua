@@ -5,28 +5,28 @@
 # Infer that Socrates is mortal.
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix blogic: <http://www.w3.org/2000/10/swap/blogic#>.
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix : <#>.
 
 :Socrates a :Man.
 :Man rdfs:subClassOf :Human.
 :Human rdfs:subClassOf :Mortal.
 
-(_:A _:B _:S) blogic:onNegativeSurface _:subclass_surface1.
+(_:A _:B _:S) lingua:onNegativeSurface _:ns1.
 
-_:subclass_surface1 {
+_:ns1 {
     _:A rdfs:subClassOf _:B.
     _:S a _:A.
-    () blogic:onNegativeSurface _:subclass_surface2.
+    () lingua:onNegativeSurface _:ns2.
 }
 
-_:subclass_surface2 {
+_:ns2 {
     _:S a _:B.
 }
 
 # query
-(_:S _:C) blogic:onQuerySurface _:query_surface.
+(_:S _:C) lingua:onQuerySurface _:qs.
 
-_:query_surface {
+_:qs {
     _:S a _:C.
 }

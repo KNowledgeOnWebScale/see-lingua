@@ -4,19 +4,19 @@
 #
 # See https://en.wikipedia.org/wiki/Disjunction_elimination
 
-@prefix blogic: <http://www.w3.org/2000/10/swap/blogic#>.
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix : <#>.
 
 # beetle is a car
 :beetle a :Car.
 
 # all cars are green or blue
-(_:A) blogic:onNegativeSurface _:ns1.
+(_:A) lingua:onNegativeSurface _:ns1.
 
 _:ns1 {
     _:A a :Car.
-    () blogic:onNegativeSurface _:ns2.
-    () blogic:onNegativeSurface _:ns3.
+    () lingua:onNegativeSurface _:ns2.
+    () lingua:onNegativeSurface _:ns3.
 }
 
 _:ns2 {
@@ -28,11 +28,11 @@ _:ns3 {
 }
 
 # green things are beautiful
-(_:A) blogic:onNegativeSurface _:ns4.
+(_:A) lingua:onNegativeSurface _:ns4.
 
 _:ns4 {
     _:A :is :green.
-    () blogic:onNegativeSurface _:ns5.
+    () lingua:onNegativeSurface _:ns5.
 }
 
 _:ns5 {
@@ -40,11 +40,11 @@ _:ns5 {
 }
 
 # blue things are beautiful
-(_:A) blogic:onNegativeSurface _:ns6.
+(_:A) lingua:onNegativeSurface _:ns6.
 
 _:ns6 {
     _:A :is :blue.
-    () blogic:onNegativeSurface _:ns7.
+    () lingua:onNegativeSurface _:ns7.
 }
 
 _:ns7 {
@@ -53,7 +53,7 @@ _:ns7 {
 
 
 # query
-(_:S _:O) blogic:onQuerySurface _:qs.
+(_:S _:O) lingua:onQuerySurface _:qs.
 
 _:qs {
     _:S :is _:O.
