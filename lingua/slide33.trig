@@ -1,0 +1,75 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
+@prefix skolem: <http://eyereasoner.github.io/.well-known/genid/8b98b360-9a70-4845-b52c-c675af60ad01#>.
+@prefix : <#>.
+
+# slide 33 example from https://www.slideshare.net/PatHayes/blogic-iswc-2009-invited-talk
+
+# owl restriction
+:aaa owl:onProperty :bbb.
+:aaa owl:allValuesFrom :ccc.
+
+# the following 2 triples should entail :yyy a :ccc.
+#:xxx a :aaa.
+#:xxx :bbb :yyy.
+
+# the following codex should entail :xxx a :aaa.
+(_:y) lingua:onNegativeSurface _:ns1.
+
+_:ns1 {
+    :xxx :bbb _:y.
+    () lingua:onNegativeSurface _:ns2.
+}
+
+_:ns2 {
+    _:y a :ccc.
+}
+
+# owl:allValuseFrom description logic
+(_:a skolem:b _:c) lingua:onNegativeSurface _:ns3.
+
+_:ns3 {
+    _:a owl:onProperty skolem:b.
+    _:a owl:allValuesFrom _:c.
+    () lingua:onNegativeSurface _:ns4.
+}
+
+_:ns4 {
+    (_:x _:y) lingua:onNegativeSurface _:ns5.
+    (_:x) lingua:onNegativeSurface _:ns7.
+}
+
+_:ns5 {
+    _:x a _:a.
+    _:x skolem:b _:y.
+    () lingua:onNegativeSurface _:ns6.
+}
+
+_:ns6 {
+    _:y a _:c.
+}
+
+_:ns7 {
+    (_:y) lingua:onNegativeSurface _:ns8.
+    () lingua:onNegativeSurface _:ns10.
+}
+
+_:ns8 {
+    _:x skolem:b _:y.
+    () lingua:onNegativeSurface _:ns9.
+}
+
+_:ns9 {
+    _:y a _:c.
+}
+
+_:ns10 {
+    _:x a _:a.
+}
+
+# query
+(_:S _:C) lingua:onQuestionSurface _:qs.
+
+_:qs {
+    _:S a _:C.
+}

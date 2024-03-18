@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v0.5.3 (2024-03-18)').
+version_info('SEE v0.6.0 (2024-03-18)').
 
 help_info('Usage: see <options>* <data>*
 
@@ -79,7 +79,6 @@ help_info('Usage: see <options>* <data>*
 :- dynamic('<http://www.w3.org/2000/10/swap/lingua#headback>'/2).
 :- dynamic('<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'/2).
 :- dynamic('<http://www.w3.org/2000/10/swap/lingua#onPositiveSurface>'/2).
-:- dynamic('<http://www.w3.org/2000/10/swap/lingua#onQuerySurface>'/2).
 :- dynamic('<http://www.w3.org/2000/10/swap/lingua#onQuestionSurface>'/2).
 :- dynamic('<http://www.w3.org/2000/10/swap/lingua#premise>'/2).
 :- dynamic('<http://www.w3.org/2000/10/swap/lingua#question>'/2).
@@ -524,17 +523,16 @@ gre(Argus) :-
                 retractall(brake)
             ;   true
             )), true)),
-    % convert query surface
-    assertz(implies((
-            '<http://www.w3.org/2000/10/swap/lingua#onQuerySurface>'(V, G),
-            conj_list(G, L),
-            append(L, ['<http://www.w3.org/2000/10/swap/lingua#onAnswerSurface>'([], G)], M),
-            conj_list(H, M)
-            ), '<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(V, H))),
     % convert question surface
     assertz(implies((
-            '<http://www.w3.org/2000/10/swap/lingua#onQuestionSurface>'(V, G)
-            ), '<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(V, G))),
+            '<http://www.w3.org/2000/10/swap/lingua#onQuestionSurface>'(V, G),
+            conj_list(G, L),
+            (   \+member('<http://www.w3.org/2000/10/swap/lingua#onAnswerSurface>'(_, _), L)
+            ->  append(L, ['<http://www.w3.org/2000/10/swap/lingua#onAnswerSurface>'([], G)], M)
+            ;   M = L
+            ),
+            conj_list(H, M)
+            ), '<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(V, H))),
     % blow inference fuse
     assertz(implies((
             '<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(V, G),

@@ -36,7 +36,7 @@ _:nt {
 }
 
 # query
-() lingua:onQuerySurface _:qs.
+() lingua:onQuestionSurface _:qs.
 
 _:qs {
     edt:i100000 a edt:N100000.

@@ -53,7 +53,7 @@ _:ns7 {
 
 
 # query
-(_:S _:O) lingua:onQuerySurface _:qs.
+(_:S _:O) lingua:onQuestionSurface _:qs.
 
 _:qs {
     _:S :is _:O.
