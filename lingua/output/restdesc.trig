@@ -3,6 +3,8 @@
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
 @prefix http: <http://www.w3.org/2011/http#>.
 
+:x :relGoal :y.
+
 :restdesc_rule1 lingua:premise _:node_1_1.
 :restdesc_rule1 lingua:conclusion _:node_2_1.
 :restdesc_rule1 lingua:bindings ((var:a1 :x) (var:b1 :y) (var:request _:sk_72) (var:resp _:sk_73) (var:a2 _:sk_74) (var:b2 _:sk_75) (var:a3 _:sk_76) (var:b3 _:sk_77)).
@@ -241,7 +243,6 @@
 :restdesc_query lingua:question _:node_19_1.
 :restdesc_query lingua:answer _:node_19_1.
 :restdesc_query lingua:bindings ().
-:x :relGoal :y.
 :restdesc_rule1 lingua:bindings ((var:a1 :x) (var:b1 :y) (var:request _:sk_72) (var:resp _:sk_73) (var:a2 :x) (var:b2 :y) (var:a3 :x) (var:b3 :y)).
 :restdesc_rule2 lingua:bindings ((var:a1 :x) (var:b1 :y) (var:a2 :x) (var:b2 :y) (var:a3 :x) (var:b3 :y) (var:request _:sk_72) (var:resp _:sk_73)).
 :restdesc_rule2 lingua:bindings ((var:a1 :x) (var:b1 :y) (var:a2 :x) (var:b2 :y) (var:a3 _:sk_74) (var:b3 _:sk_75) (var:request _:sk_72) (var:resp _:sk_73)).

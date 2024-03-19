@@ -1,6 +1,9 @@
+@prefix : <https://eyereasoner.github.io/see-lingua/lingua/slide32.trig#>.
 @prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
-@prefix : <https://eyereasoner.github.io/see-lingua/lingua/slide32.trig#>.
+
+:Ghent a :City.
+:Ghent a :HumanCommunity.
 
 _:rl_6765725 lingua:premise _:gn_1.
 _:rl_6765725 lingua:conclusion _:gn_2.
@@ -11,9 +14,7 @@ _:rl_15240552 lingua:bindings ((var:node_2_1 :Ghent)).
 _:rl_9558734 lingua:question _:gn_4.
 _:rl_9558734 lingua:answer _:gn_4.
 _:rl_9558734 lingua:bindings ((var:node_6_1 :Ghent) (var:node_8_1 :City)).
-:Ghent a :City.
 _:rl_9558734 lingua:bindings ((var:node_6_1 :Ghent) (var:node_8_1 :HumanCommunity)).
-:Ghent a :HumanCommunity.
 _:rl_14856158 lingua:premise true.
 _:rl_14856158 lingua:conclusion _:gn_5.
 _:rl_14856158 lingua:bindings ().

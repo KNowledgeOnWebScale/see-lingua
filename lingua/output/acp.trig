@@ -4,6 +4,9 @@
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
 
+:test :for :PolicyX.
+:test :is true.
+
 :acp_rule1 lingua:body _:gn_1.
 :acp_rule1 lingua:headback _:node_1_1.
 :acp_rule1 lingua:bindings ((var:Test :test1) (var:Pol :PolicyX) (var:Field var:U_0) (var:X ((<https://eyereasoner.github.io/see-lingua/lingua/acp.trig>) 1))).
@@ -16,8 +19,6 @@
 :acp_query lingua:question _:node_19_1.
 :acp_query lingua:answer _:node_20_1.
 :acp_query lingua:bindings ((var:Pol :PolicyX)).
-:test :for :PolicyX.
-:test :is true.
 _:gn_1 {
     var:Test :policy var:Pol.
     var:Pol a :Policy.

@@ -4,6 +4,18 @@
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 
+(0 0) :ackermann 1 .
+(0 6) :ackermann 7 .
+(1 2) :ackermann 4 .
+(1 7) :ackermann 9 .
+(2 2) :ackermann 7 .
+(2 9) :ackermann 21 .
+(3 4) :ackermann 125 .
+(3 14) :ackermann 131069 .
+(4 0) :ackermann 13 .
+(4 1) :ackermann 65533 .
+(5 0) :ackermann 65533 .
+
 :ackermann_rule0 lingua:body _:gn_1.
 :ackermann_rule0 lingua:headback _:gn_2.
 :ackermann_rule0 lingua:bindings ((var:Y 3) (var:A 4) (var:Z 2)).
@@ -80,17 +92,6 @@
 :ackermann_query lingua:question _:gn_13.
 :ackermann_query lingua:answer _:gn_13.
 :ackermann_query lingua:bindings ((var:A0 1) (var:A1 7) (var:A2 4) (var:A3 9) (var:A4 7) (var:A5 21) (var:A6 125) (var:A7 131069) (var:A8 13) (var:A9 65533) (var:A11 65533)).
-(0 0) :ackermann 1 .
-(0 6) :ackermann 7 .
-(1 2) :ackermann 4 .
-(1 7) :ackermann 9 .
-(2 2) :ackermann 7 .
-(2 9) :ackermann 21 .
-(3 4) :ackermann 125 .
-(3 14) :ackermann 131069 .
-(4 0) :ackermann 13 .
-(4 1) :ackermann 65533 .
-(5 0) :ackermann 65533 .
 _:gn_1 {
     () log:equalTo ().
     _:true log:callWithCut true.

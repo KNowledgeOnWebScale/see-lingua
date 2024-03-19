@@ -2,6 +2,11 @@
 @prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
 
+:angers :path :nantes.
+:lemans :path :nantes.
+:chartres :path :nantes.
+:paris :path :nantes.
+
 :graph_rule1 lingua:premise _:node_1_1.
 :graph_rule1 lingua:conclusion _:node_2_1.
 :graph_rule1 lingua:bindings ((var:A :paris) (var:B :orleans)).
@@ -26,9 +31,7 @@
 :graph_query lingua:question _:node_5_1.
 :graph_query lingua:answer _:node_5_1.
 :graph_query lingua:bindings ((var:A :angers)).
-:angers :path :nantes.
 :graph_query lingua:bindings ((var:A :lemans)).
-:lemans :path :nantes.
 :graph_rule2 lingua:bindings ((var:A :paris) (var:B :orleans) (var:C :tours)).
 :graph_rule2 lingua:bindings ((var:A :paris) (var:B :chartres) (var:C :angers)).
 :graph_rule2 lingua:bindings ((var:A :paris) (var:B :chartres) (var:C :tours)).
@@ -39,9 +42,7 @@
 :graph_rule2 lingua:bindings ((var:A :paris) (var:B :lemans) (var:C :nantes)).
 :graph_rule2 lingua:bindings ((var:A :chartres) (var:B :angers) (var:C :nantes)).
 :graph_query lingua:bindings ((var:A :chartres)).
-:chartres :path :nantes.
 :graph_query lingua:bindings ((var:A :paris)).
-:paris :path :nantes.
 :graph_rule2 lingua:bindings ((var:A :paris) (var:B :chartres) (var:C :nantes)).
 :graph_rule2 lingua:bindings ((var:A :paris) (var:B :angers) (var:C :nantes)).
 _:node_1_1 {

@@ -2,6 +2,8 @@
 @prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
 
+:test :is true.
+
 :main_rule lingua:premise _:node_1_1.
 :main_rule lingua:conclusion _:gn_1.
 :main_rule lingua:bindings ((var:cat :Alice) (var:dog var:x_2)).
@@ -12,7 +14,6 @@
 :main_query lingua:question _:node_5_1.
 :main_query lingua:answer _:node_5_1.
 :main_query lingua:bindings ((var:result true)).
-:test :is true.
 _:node_1_1 {
     var:cat a :Cat.
 }

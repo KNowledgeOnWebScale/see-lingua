@@ -1,7 +1,11 @@
+@prefix : <https://eyereasoner.github.io/see-lingua/lingua/blogic.trig#>.
 @prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
-@prefix : <https://eyereasoner.github.io/see-lingua/lingua/blogic.trig#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+:Socrates a :Man.
+:Socrates a :Human.
+:Socrates a :Mortal.
 
 _:rl_15496116 lingua:premise _:gn_1.
 _:rl_15496116 lingua:conclusion _:gn_2.
@@ -14,11 +18,8 @@ _:rl_1168433 lingua:bindings ((var:node_2_1 :Human) (var:node_4_1 :Mortal) (var:
 _:rl_5122824 lingua:question _:gn_5.
 _:rl_5122824 lingua:answer _:gn_5.
 _:rl_5122824 lingua:bindings ((var:node_6_1 :Socrates) (var:node_11_1 :Man)).
-:Socrates a :Man.
 _:rl_5122824 lingua:bindings ((var:node_6_1 :Socrates) (var:node_11_1 :Human)).
-:Socrates a :Human.
 _:rl_5122824 lingua:bindings ((var:node_6_1 :Socrates) (var:node_11_1 :Mortal)).
-:Socrates a :Mortal.
 _:rl_268598 lingua:premise _:gn_6.
 _:rl_268598 lingua:conclusion _:gn_7.
 _:rl_268598 lingua:bindings ((var:some18 :Socrates)).

@@ -1,8 +1,15 @@
+@prefix complex: <http://eyereasoner.github.io/complex#>.
 @prefix : <https://eyereasoner.github.io/see-lingua/lingua/complex.trig#>.
 @prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
-@prefix complex: <http://eyereasoner.github.io/complex#>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
+
+((-1 0) (0.5 0)) complex:exponentiation (6.123233995736766e-17 1.0).
+((2.718281828459045 0) (0 3.141592653589793)) complex:exponentiation (-1.0 1.2246467991473532e-16).
+((0 1) (0 1)) complex:exponentiation (0.20787957635076193 0.0).
+((2.718281828459045 0) (-1.57079632679 0)) complex:exponentiation (0.20787957635177984 0.0).
+(2 0) complex:asin (1.5707963267948966 1.3169578969248166).
+(2 0) complex:acos (0.0 -1.3169578969248166).
 
 :complex_number_dial_rule2 lingua:body _:gn_1.
 :complex_number_dial_rule2 lingua:headback _:gn_2.
@@ -31,12 +38,6 @@
 :complex_number_query lingua:question _:gn_12.
 :complex_number_query lingua:answer _:gn_12.
 :complex_number_query lingua:bindings ((var:C1 (6.123233995736766e-17 1.0)) (var:C2 (-1.0 1.2246467991473532e-16)) (var:C3 (0.20787957635076193 0.0)) (var:C4 (0.20787957635177984 0.0)) (var:C5 (1.5707963267948966 1.3169578969248166)) (var:C6 (0.0 -1.3169578969248166))).
-((-1 0) (0.5 0)) complex:exponentiation (6.123233995736766e-17 1.0).
-((2.718281828459045 0) (0 3.141592653589793)) complex:exponentiation (-1.0 1.2246467991473532e-16).
-((0 1) (0 1)) complex:exponentiation (0.20787957635076193 0.0).
-((2.718281828459045 0) (-1.57079632679 0)) complex:exponentiation (0.20787957635177984 0.0).
-(2 0) complex:asin (1.5707963267948966 1.3169578969248166).
-(2 0) complex:acos (0.0 -1.3169578969248166).
 _:gn_1 {
     var:X math:lessThan 0 .
     var:Y math:notLessThan 0 .

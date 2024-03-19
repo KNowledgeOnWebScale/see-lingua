@@ -3,17 +3,18 @@
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 
+:pers001 :familyName "Garcia".
+:pers001 :givenName "Alex".
+:pers002 :familyName "Cardinale".
+:pers002 :givenName "Claudia".
+
 :patch_rule lingua:premise _:gn_1.
 :patch_rule lingua:conclusion true.
 :patch_rule lingua:bindings ((var:person :pers001)).
 :patch_query lingua:question _:node_4_1.
 :patch_query lingua:answer _:node_4_1.
 :patch_query lingua:bindings ((var:person :pers001) (var:fname "Garcia") (var:gname "Alex")).
-:pers001 :familyName "Garcia".
-:pers001 :givenName "Alex".
 :patch_query lingua:bindings ((var:person :pers002) (var:fname "Cardinale") (var:gname "Claudia")).
-:pers002 :familyName "Cardinale".
-:pers002 :givenName "Claudia".
 _:gn_1 {
     var:person :familyName "Garcia".
     _:node_2_1 log:becomes _:node_3_1.

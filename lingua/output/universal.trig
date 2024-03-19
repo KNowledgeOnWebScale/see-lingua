@@ -1,9 +1,13 @@
 @prefix : <https://eyereasoner.github.io/see-lingua/lingua/universal.trig#>.
-@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
-@prefix var: <http://www.w3.org/2000/10/swap/var#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix skolem: <http://eyereasoner.github.io/.well-known/genid/8b98b360-9a70-4845-b52c-c675af60ad01#>.
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
+@prefix var: <http://www.w3.org/2000/10/swap/var#>.
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
+
+:pat a rdfs:Resource.
+:bob :loves skolem:t_0.
+skolem:t_0 :is :lonely.
 
 :universal_statements_rule1 lingua:body true.
 :universal_statements_rule1 lingua:headback _:node_1_1.
@@ -11,7 +15,6 @@
 :universal_statements_query1 lingua:question _:node_8_1.
 :universal_statements_query1 lingua:answer _:node_8_1.
 :universal_statements_query1 lingua:bindings ().
-:pat a rdfs:Resource.
 :universal_statements_rule2 lingua:body _:gn_1.
 :universal_statements_rule2 lingua:headback _:node_2_1.
 :universal_statements_rule2 lingua:bindings ((var:A :bob) (var:B skolem:t_0)).
@@ -21,8 +24,6 @@
 :universal_statements_query2 lingua:question _:node_9_1.
 :universal_statements_query2 lingua:answer _:node_9_1.
 :universal_statements_query2 lingua:bindings ((var:X skolem:t_0)).
-:bob :loves skolem:t_0.
-skolem:t_0 :is :lonely.
 _:node_1_1 {
     var:X a rdfs:Resource.
 }

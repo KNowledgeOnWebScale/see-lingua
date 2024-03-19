@@ -1,7 +1,9 @@
+@prefix : <https://eyereasoner.github.io/see-lingua/lingua/slide33.trig#>.
 @prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
-@prefix : <https://eyereasoner.github.io/see-lingua/lingua/slide33.trig#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+:xxx a :aaa.
 
 _:rl_4972265 lingua:premise _:gn_1.
 _:rl_4972265 lingua:conclusion _:gn_2.
@@ -39,7 +41,6 @@ _:rl_15885633 lingua:bindings ((var:node_6_1 :aaa) (var:b :bbb) (var:node_9_1 _:
 _:rl_7338938 lingua:question _:gn_14.
 _:rl_7338938 lingua:answer _:gn_14.
 _:rl_7338938 lingua:bindings ((var:node_24_1 :xxx) (var:node_26_1 :aaa)).
-:xxx a :aaa.
 _:rl_3447776 lingua:premise _:gn_7.
 _:rl_3447776 lingua:conclusion _:gn_15.
 _:rl_3447776 lingua:bindings ((var:node_6_1 :aaa) (var:b :bbb) (var:node_9_1 _:sk_392) (var:node_13_1 _:sk_393) (var:node_2_1 _:sk_394)).

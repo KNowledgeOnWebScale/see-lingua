@@ -1,6 +1,9 @@
+@prefix : <https://eyereasoner.github.io/see-lingua/lingua/rain.trig#>.
 @prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
-@prefix : <https://eyereasoner.github.io/see-lingua/lingua/rain.trig#>.
+
+:obs1 :ascribed :Rain.
+:obs1 :ascribed :WetGrass.
 
 _:rl_6469833 lingua:premise _:gn_1.
 _:rl_6469833 lingua:conclusion _:gn_2.
@@ -14,9 +17,7 @@ _:rl_6892358 lingua:bindings ((var:node_4_1 _:sk_27)).
 _:rl_7218675 lingua:question _:gn_6.
 _:rl_7218675 lingua:answer _:gn_6.
 _:rl_7218675 lingua:bindings ((var:node_4_1 :obs1) (var:node_9_1 :Rain)).
-:obs1 :ascribed :Rain.
 _:rl_7218675 lingua:bindings ((var:node_4_1 :obs1) (var:node_9_1 :WetGrass)).
-:obs1 :ascribed :WetGrass.
 _:rl_6157382 lingua:premise _:gn_7.
 _:rl_6157382 lingua:conclusion _:gn_8.
 _:rl_6157382 lingua:bindings ((var:some26 :obs1)).

@@ -1,6 +1,8 @@
+@prefix : <https://eyereasoner.github.io/see-lingua/lingua/beetle.trig#>.
 @prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
-@prefix : <https://eyereasoner.github.io/see-lingua/lingua/beetle.trig#>.
+
+:beetle :is :beautiful.
 
 _:rl_12976060 lingua:premise _:gn_1.
 _:rl_12976060 lingua:conclusion _:gn_2.
@@ -14,7 +16,6 @@ _:rl_3586113 lingua:bindings ((var:node_2_1 :beetle)).
 _:rl_9331763 lingua:question _:gn_5.
 _:rl_9331763 lingua:answer _:gn_5.
 _:rl_9331763 lingua:bindings ((var:node_13_1 :beetle) (var:node_15_1 :beautiful)).
-:beetle :is :beautiful.
 _:rl_7283810 lingua:premise true.
 _:rl_7283810 lingua:conclusion _:gn_6.
 _:rl_7283810 lingua:bindings ().

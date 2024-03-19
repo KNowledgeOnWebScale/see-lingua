@@ -3,21 +3,22 @@
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
 @prefix graph: <http://www.w3.org/2000/10/swap/graph#>.
 
-:union_query lingua:question _:gn_1.
+:result :is _:gn_1.
+
+:union_query lingua:question _:gn_2.
 :union_query lingua:answer _:node_4_1.
-:union_query lingua:bindings ((var:U _:gn_2)).
-:result :is _:gn_2.
+:union_query lingua:bindings ((var:U _:gn_1)).
 _:gn_1 {
-    (_:node_1_1 _:node_2_1) graph:union var:U.
-}
-_:node_4_1 {
-    :result :is var:U.
-}
-_:gn_2 {
     :A :B :C.
     :A :X :C.
     :D :E :F.
     :A :Y :C.
+}
+_:gn_2 {
+    (_:node_1_1 _:node_2_1) graph:union var:U.
+}
+_:node_4_1 {
+    :result :is var:U.
 }
 _:node_1_1 {
     :A :B :C.

@@ -3,6 +3,11 @@
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
 
+(1 0 1 0 0 1) :compute (1 0 1 0 1 0 "#").
+(1 0 1 1 1 1) :compute (1 1 0 0 0 0 "#").
+(1 1 1 1 1 1) :compute (1 0 0 0 0 0 0 "#").
+() :compute (1 "#").
+
 :turing_rule10 lingua:body _:gn_1.
 :turing_rule10 lingua:headback _:gn_2.
 :turing_rule10 lingua:bindings ((var:List (0 1 0 0 1)) (var:Head 0) (var:Tail (1 0 0 1)) (var:L (1)) (var:Cell 1) (var:Left ())).
@@ -150,10 +155,6 @@
 :turing_query lingua:question _:gn_20.
 :turing_query lingua:answer _:gn_20.
 :turing_query lingua:bindings ((var:A1 (1 0 1 0 1 0 "#")) (var:A2 (1 1 0 0 0 0 "#")) (var:A3 (1 0 0 0 0 0 0 "#")) (var:A4 (1 "#"))).
-(1 0 1 0 0 1) :compute (1 0 1 0 1 0 "#").
-(1 0 1 1 1 1) :compute (1 1 0 0 0 0 "#").
-(1 1 1 1 1 1) :compute (1 0 0 0 0 0 0 "#").
-() :compute (1 "#").
 _:gn_1 {
     var:List list:firstRest (var:Head var:Tail).
     var:L list:firstRest (var:Cell var:Left).

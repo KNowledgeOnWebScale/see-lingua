@@ -3,6 +3,8 @@
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 
+(5000 3.1415926535917924) :pi true.
+
 :pi_rule2 lingua:body true.
 :pi_rule2 lingua:headback _:gn_1.
 :pi_rule2 lingua:bindings ((var:N 5000) (var:P 0.035398163397948094) (var:S -1)).
@@ -5013,7 +5015,6 @@
 :pi_query lingua:question _:gn_6.
 :pi_query lingua:answer _:gn_6.
 :pi_query lingua:bindings ((var:Pi 3.1415926535917924)).
-(5000 3.1415926535917924) :pi true.
 _:gn_1 {
     (var:N var:N var:P var:P var:S) :pi true.
 }

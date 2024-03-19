@@ -3,6 +3,8 @@
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
 
+() :natnum (:s (:s (:s (:s (:s (0)))))).
+
 :hb_rule2 lingua:body _:gn_1.
 :hb_rule2 lingua:headback _:gn_2.
 :hb_rule2 lingua:bindings ((var:A (_:gn_3)) (var:G _:gn_3) (var:Gs ()) (var:B (_:gn_4 _:gn_5)) (var:Goals var:U_0) (var:C (_:gn_5)) (var:Rs ())).
@@ -93,7 +95,6 @@
 :query lingua:question _:gn_124.
 :query lingua:answer _:gn_6.
 :query lingua:bindings ().
-() :natnum (:s (:s (:s (:s (:s (0)))))).
 _:gn_6 {
     () :natnum (:s (:s (:s (:s (:s (0)))))).
 }

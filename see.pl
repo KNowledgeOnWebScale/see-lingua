@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v0.6.1 (2024-03-19)').
+version_info('SEE v0.6.2 (2024-03-19)').
 
 help_info('Usage: see <options>* <data>*
 
@@ -40,6 +40,7 @@ help_info('Usage: see <options>* <data>*
 :- dynamic(cc/1).
 :- dynamic(cpred/1).
 :- dynamic(exopred/3).          % exopred(Predicate, Subject, Object)
+:- dynamic(explain/3).
 :- dynamic(flag/2).
 :- dynamic(fpred/1).
 :- dynamic(graph/2).
@@ -234,9 +235,9 @@ gre(Argus) :-
             makevars([A, B, U], [Q, I, X], beta(U)),
             (   I \= false
             ->  zip_list(U, X, W),
-                conj_append(I, remember(answer('<http://www.w3.org/2000/10/swap/lingua#premise>', R, A)), D),
-                conj_append(D, remember(answer('<http://www.w3.org/2000/10/swap/lingua#conclusion>', R, B)), E),
-                conj_append(E, remember(answer('<http://www.w3.org/2000/10/swap/lingua#bindings>', R, W)), F)
+                conj_append(I, remember(explain('<http://www.w3.org/2000/10/swap/lingua#premise>', R, A)), D),
+                conj_append(D, remember(explain('<http://www.w3.org/2000/10/swap/lingua#conclusion>', R, B)), E),
+                conj_append(E, remember(explain('<http://www.w3.org/2000/10/swap/lingua#bindings>', R, W)), F)
             ;   F = I
             )), '<http://www.w3.org/2000/10/swap/log#implies>'(Q, F))),
     % create backward rules
@@ -247,9 +248,9 @@ gre(Argus) :-
             list_to_set(V, U),
             makevars([A, B, U], [Q, I, X], beta(U)),
             zip_list(U, X, W),
-            conj_append(Q, remember(answer('<http://www.w3.org/2000/10/swap/lingua#body>', R, A)), D),
-            conj_append(D, remember(answer('<http://www.w3.org/2000/10/swap/lingua#headback>', R, B)), E),
-            conj_append(E, remember(answer('<http://www.w3.org/2000/10/swap/lingua#bindings>', R, W)), F),
+            conj_append(Q, remember(explain('<http://www.w3.org/2000/10/swap/lingua#body>', R, A)), D),
+            conj_append(D, remember(explain('<http://www.w3.org/2000/10/swap/lingua#headback>', R, B)), E),
+            conj_append(E, remember(explain('<http://www.w3.org/2000/10/swap/lingua#bindings>', R, W)), F),
             C = ':-'(I, F),
             copy_term_nat(C, CC),
             labelvars(CC, 0, _, avar),
@@ -271,9 +272,9 @@ gre(Argus) :-
             list_to_set(V, U),
             makevars([A, J, U], [Q, I, X], beta(U)),
             zip_list(U, X, W),
-            conj_append(Q, remember(answer('<http://www.w3.org/2000/10/swap/lingua#question>', R, A)), D),
-            conj_append(D, remember(answer('<http://www.w3.org/2000/10/swap/lingua#answer>', R, B)), E),
-            conj_append(E, remember(answer('<http://www.w3.org/2000/10/swap/lingua#bindings>', R, W)), F),
+            conj_append(Q, remember(explain('<http://www.w3.org/2000/10/swap/lingua#question>', R, A)), D),
+            conj_append(D, remember(explain('<http://www.w3.org/2000/10/swap/lingua#answer>', R, B)), E),
+            conj_append(E, remember(explain('<http://www.w3.org/2000/10/swap/lingua#bindings>', R, W)), F),
             C = implies(F, I),
             copy_term_nat(C, CC),
             labelvars(CC, 0, _, avar),
@@ -751,6 +752,23 @@ w3 :-
     (   answer(B1, B2, B3),
         relabel([B1, B2, B3], [C1, C2, C3]),
         djiti_answer(answer(C), answer(C1, C2, C3)),
+        indent,
+        wt(C),
+        ws(C),
+        (   (   C = graph(_, _)
+            ;   C = exopred(graph, _, _)
+            )
+        ->  true
+        ;   write('.')
+        ),
+        nl,
+        fail
+    ;   true
+    ),
+    nl,
+    (   explain(B1, B2, B3),
+        relabel([B1, B2, B3], [C1, C2, C3]),
+        djiti_explain(explain(C), explain(C1, C2, C3)),
         indent,
         wt(C),
         ws(C),
@@ -1423,6 +1441,26 @@ djiti_answer(answer(exopred(P, S, O)), answer(P, S, O)) :-
 djiti_answer(answer(A), answer(A, void, void)) :-
     !.
 djiti_answer(A, A).
+
+djiti_explain(explain((A, B)), (C, D)) :-
+    !,
+    djiti_explain(explain(A), C),
+    djiti_explain(explain(B), D).
+djiti_explain(explain(A), explain(P, S, O)) :-
+    (   nonvar(A)
+    ;   atom(P),
+        S \= void
+    ),
+    A =.. [P, S, O],
+    !.
+djiti_explain(explain(exopred(P, S, O)), explain(P, S, O)) :-
+    (   var(S)
+    ;   S \= void
+    ),
+    !.
+djiti_explain(explain(A), explain(A, void, void)) :-
+    !.
+djiti_explain(A, A).
 
 djiti_conc(':-'(exopred(P, S, O), B), ':-'(A, B)) :-
     !,
