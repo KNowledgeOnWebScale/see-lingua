@@ -39,5 +39,5 @@ _:nt {
 () lingua:onQuestionSurface _:qs.
 
 _:qs {
-    edt:i80000 a edt:N20000.
+    edt:i50000 a edt:N50000.
 }
