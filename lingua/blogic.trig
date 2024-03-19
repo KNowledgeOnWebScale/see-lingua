@@ -28,5 +28,5 @@ _:ns2 {
 (_:S) lingua:onQuestionSurface _:qs.
 
 _:qs {
-    _:S a :Socrates.
+    _:S a :Mortal.
 }
