@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v0.6.4 (2024-03-19)').
+version_info('SEE v0.6.5 (2024-03-19)').
 
 help_info('Usage: see <options>* <data>*
 
@@ -519,8 +519,6 @@ gre(Argus) :-
             conj_list(S, Y),
             append(Vl, X, U),
             makevars([M, S], [Q, I], alpha(U)),
-
-
             term_hash([Q, I], M),
             nb_getval(var_ns, Sns),
             atomic_list_concat(['<', Sns, 'rl_', M, '>'], A)
@@ -724,11 +722,264 @@ trig_term(node(A), B) :-
 trig_term(A, B) :-
     atomic_list_concat(['<', A, '>'], B).
 
+
+% ----------------------------
+% EAM (Euler Abstract Machine)
+% ----------------------------
+
+eam(Recursion) :-
+    (   implies(Prem, Conc),
+        ignore(Prem = true),
+        catch(call_residue_vars(ucall(Prem), []), Exc,
+            (   Exc = error(existence_error(procedure, _), _)
+            ->  fail
+            ;   throw(Exc)
+            )
+        ),
+        (   (   Conc = false
+            ;   Conc = answer(false, void, void)
+            )
+        ->  with_output_to(atom(Fuse), writeq('<http://www.w3.org/2000/10/swap/log#implies>'(Prem, false))),
+            throw(inference_fuse(Fuse))
+        ;   true
+        ),
+        \+atom(Conc),
+        \+is_list(Conc),
+        djiti_conc(Conc, Concd),
+        (   Concd = ':-'(Head, Body)
+        ->  \+clause(Head, Body)
+        ;   (   Concd = '<http://www.w3.org/2000/10/swap/log#implies>'(_, _)
+            ->  copy_term_nat(Concd, Concc),
+                labelvars(Concc, 0, _, avar),
+                \+cc(Concc),
+                assertz(cc(Concc))
+            ;   \+catch(ucall(Concd), _, fail)
+            )
+        ),
+        (   Concd \= ':-'(_, _)
+        ->  nb_getval(wn, W),
+            labelvars(Prem-Concd, W, N),        % failing when Prem contains attributed variables
+            nb_setval(wn, N)
+        ;   true
+        ),
+        astep(Prem, Concd),
+        retract(brake),
+        fail
+    ;   brake,
+        (   R is Recursion+1,
+            (   \+recursion(R)
+            ->  assertz(recursion(R))
+            ;   true
+            ),
+            nb_getval(limit, Limit),
+            Recursion < Limit,
+            eam(R)
+        ;   open_null_stream(Ws),
+            tell(Ws),
+            nb_getval(wn, Wn),
+            w3,
+            forall(
+                retract(keep_ng(NG)),
+                (   wt(NG),
+                    nl
+                )
+            ),
+            forall(
+                retract(keep_ng(NG)),
+                (   wt(NG),
+                    nl
+                )
+            ),
+            retractall(pfx(_, _)),
+            retractall(wpfx(_)),
+            nb_setval(wn, Wn),
+            forall(
+                apfx(Pfx, Uri),
+                assertz(pfx(Pfx, Uri))
+            ),
+            told,
+            (   flag('output', Output)
+            ->  tell(Output)
+            ;   true
+            ),
+            w3,
+            forall(
+                retract(keep_ng(NG)),
+                (   wt(NG),
+                    nl
+                )
+            ),
+            forall(
+                retract(keep_ng(NG)),
+                (   wt(NG),
+                    nl
+                )
+            )
+        ;   true
+        ),
+        !
+    ;   assertz(brake),
+        exogen,
+        eam(Recursion)
+    ).
+
+astep(B, Cn) :-
+    (   Cn = (Dn, En)
+    ->  functor(Dn, P, N),
+        (   \+pred(P),
+            P \= '<http://www.w3.org/2000/10/swap/log#implies>',
+            P \= '<http://www.w3.org/2000/10/swap/log#callWithCleanup>',
+            N = 2
+        ->  assertz(pred(P))
+        ;   true
+        ),
+        (   Dn \= '<http://www.w3.org/2000/10/swap/log#implies>'(_, _),
+            catch(call(Dn), _, fail)
+        ->  true
+        ;   djiti_assertz(Dn)
+        ),
+        astep(B, En)
+    ;   (   Cn = true
+        ->  true
+        ;   functor(Cn, P, N),
+            (   \+pred(P),
+                P \= '<http://www.w3.org/2000/10/swap/log#callWithCleanup>',
+                P \= '<http://www.w3.org/2000/10/swap/log#implies>',
+                N = 2
+            ->  assertz(pred(P))
+            ;   true
+            ),
+            (   Cn \= '<http://www.w3.org/2000/10/swap/log#implies>'(_, _),
+                catch(call(Cn), _, fail)
+            ->  true
+            ;   djiti_assertz(Cn)
+            )
+        )
+    ).
+
+%
+% DJITI (Deep Just In Time Indexing)
+%
+
+djiti_answer(answer((A, B)), (C, D)) :-
+    !,
+    djiti_answer(answer(A), C),
+    djiti_answer(answer(B), D).
+djiti_answer(answer(A), answer(P, S, O)) :-
+    (   nonvar(A)
+    ;   atom(P),
+        S \= void
+    ),
+    A =.. [P, S, O],
+    !.
+djiti_answer(answer(exopred(P, S, O)), answer(P, S, O)) :-
+    (   var(S)
+    ;   S \= void
+    ),
+    !.
+djiti_answer(answer(A), answer(A, void, void)) :-
+    !.
+djiti_answer(A, A).
+
+djiti_explain(explain((A, B)), (C, D)) :-
+    !,
+    djiti_explain(explain(A), C),
+    djiti_explain(explain(B), D).
+djiti_explain(explain(A), explain(P, S, O)) :-
+    (   nonvar(A)
+    ;   atom(P),
+        S \= void
+    ),
+    A =.. [P, S, O],
+    !.
+djiti_explain(explain(exopred(P, S, O)), explain(P, S, O)) :-
+    (   var(S)
+    ;   S \= void
+    ),
+    !.
+djiti_explain(explain(A), explain(A, void, void)) :-
+    !.
+djiti_explain(A, A).
+
+djiti_conc(':-'(exopred(P, S, O), B), ':-'(A, B)) :-
+    !,
+    A =.. [P, S, O].
+djiti_conc(answer((A, B), void, void), (answer(A, void, void), D)) :-
+    !,
+    djiti_conc(answer(B, void, void), D).
+djiti_conc(A, A).
+
+djiti_fact(answer(P, S, O), answer(P, S, O)) :-
+    atomic(P),
+    !,
+    (   P \= '<http://www.w3.org/2000/10/swap/log#callWithCleanup>',
+        \+pred(P)
+    ->  assertz(pred(P))
+    ;   true
+    ).
+djiti_fact(implies(A, B), implies(A, B)) :-
+    nonvar(B),
+    conj_list(B, D),
+    forall(
+        member(E, D),
+        (   unify(E, F),
+            F =.. [P, _, _],
+            (   \+fpred(P)
+            ->  assertz(fpred(P))
+            ;   true
+            )
+        )
+    ),
+    !.
+djiti_fact('<http://www.w3.org/2000/10/swap/log#implies>'(A, B), C) :-
+    nonvar(B),
+    (   conj_list(B, D)
+    ->  true
+    ;   D = B
+    ),
+    forall(
+        member(E, D),
+        (   unify(E, F),
+            (   F =.. [P, _, _],
+                \+fpred(P)
+            ->  assertz(fpred(P))
+            ;   true
+            )
+        )
+    ),
+    !,
+    makevars(implies(A, B), C, zeta).
+djiti_fact(':-'(A, B), ':-'(C, D)) :-
+    !,
+    makevars((A, B), (C, D), eta).
+djiti_fact('<http://www.w3.org/2000/10/swap/log#dcg>'(_, literal(A, type('<http://www.w3.org/2001/XMLSchema#string>'))), B) :-
+    !,
+    read_term_from_atom(A, C, []),
+    dcg_translate_rule(C, B).
+djiti_fact(A, A) :-
+    ground(A),
+    A =.. [P, _, _],
+    (   P \= '<http://www.w3.org/2000/10/swap/log#callWithCleanup>',
+        P \= '<http://www.w3.org/1999/02/22-rdf-syntax-ns#first>',
+        P \= '<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest>',
+        P \= pfx,
+        P \= flag,
+        \+pred(P)
+    ->  assertz(pred(P))
+    ;   true
+    ),
+    !.
+djiti_fact(A, A).
+
+djiti_assertz(A) :-
+    djiti_fact(A, B),
+    assertz(B).
+
 %
 % Reasoning output
 %
 
-wh :-
+w3 :-
     nb_setval(wpfx, false),
     forall(
         (   pfx(A, B),
@@ -742,10 +993,7 @@ wh :-
     (   nb_getval(wpfx, true)
     ->  nl
     ;   true
-    ).
-
-w3 :-
-    wh,
+    ),
     nb_setval(fdepth, 0),
     nb_setval(pdepth, 0),
     nb_setval(cdepth, 0),
@@ -1120,24 +1368,6 @@ wt2(graph(X, Y)) :-
     nb_setval(keep_ng, false),
     retractall(keep_ng(graph(X, Y))),
     wg(Y).
-wt2(is(O, T)) :-
-    !,
-    (   number(T),
-        T < 0
-    ->  P = -,
-        Q is -T,
-        S = [Q]
-    ;   T =.. [P|S]
-    ),
-    wg(S),
-    write(' '),
-    wp(P),
-    write(' '),
-    wg(O).
-wt2(X-Y) :-
-    !,
-    term_to_atom(X-Y, Z),
-    wt0(Z).
 wt2(X) :-
     X =.. [P, S, O],
     (   atom(P),
@@ -1282,259 +1512,6 @@ indentation(C) :-
     nb_getval(indentation, A),
     B is A+C,
     nb_setval(indentation, B).
-
-
-% ----------------------------
-% EAM (Euler Abstract Machine)
-% ----------------------------
-
-eam(Recursion) :-
-    (   implies(Prem, Conc),
-        ignore(Prem = true),
-        catch(call_residue_vars(ucall(Prem), []), Exc,
-            (   Exc = error(existence_error(procedure, _), _)
-            ->  fail
-            ;   throw(Exc)
-            )
-        ),
-        (   (   Conc = false
-            ;   Conc = answer(false, void, void)
-            )
-        ->  with_output_to(atom(Fuse), writeq('<http://www.w3.org/2000/10/swap/log#implies>'(Prem, false))),
-            throw(inference_fuse(Fuse))
-        ;   true
-        ),
-        \+atom(Conc),
-        \+is_list(Conc),
-        djiti_conc(Conc, Concd),
-        (   Concd = ':-'(Head, Body)
-        ->  \+clause(Head, Body)
-        ;   (   Concd = '<http://www.w3.org/2000/10/swap/log#implies>'(_, _)
-            ->  copy_term_nat(Concd, Concc),
-                labelvars(Concc, 0, _, avar),
-                \+cc(Concc),
-                assertz(cc(Concc))
-            ;   \+catch(ucall(Concd), _, fail)
-            )
-        ),
-        (   Concd \= ':-'(_, _)
-        ->  nb_getval(wn, W),
-            labelvars(Prem-Concd, W, N),        % failing when Prem contains attributed variables
-            nb_setval(wn, N)
-        ;   true
-        ),
-        astep(Prem, Concd),
-        retract(brake),
-        fail
-    ;   brake,
-        (   R is Recursion+1,
-            (   \+recursion(R)
-            ->  assertz(recursion(R))
-            ;   true
-            ),
-            nb_getval(limit, Limit),
-            Recursion < Limit,
-            eam(R)
-        ;   open_null_stream(Ws),
-            tell(Ws),
-            nb_getval(wn, Wn),
-            w3,
-            forall(
-                retract(keep_ng(NG)),
-                (   wt(NG),
-                    nl
-                )
-            ),
-            forall(
-                retract(keep_ng(NG)),
-                (   wt(NG),
-                    nl
-                )
-            ),
-            retractall(pfx(_, _)),
-            retractall(wpfx(_)),
-            nb_setval(wn, Wn),
-            forall(
-                apfx(Pfx, Uri),
-                assertz(pfx(Pfx, Uri))
-            ),
-            told,
-            (   flag('output', Output)
-            ->  tell(Output)
-            ;   true
-            ),
-            w3,
-            forall(
-                retract(keep_ng(NG)),
-                (   wt(NG),
-                    nl
-                )
-            ),
-            forall(
-                retract(keep_ng(NG)),
-                (   wt(NG),
-                    nl
-                )
-            )
-        ;   true
-        ),
-        !
-    ;   assertz(brake),
-        exogen,
-        eam(Recursion)
-    ).
-
-astep(B, Cn) :-
-    (   Cn = (Dn, En)
-    ->  functor(Dn, P, N),
-        (   \+pred(P),
-            P \= '<http://www.w3.org/2000/10/swap/log#implies>',
-            P \= '<http://www.w3.org/2000/10/swap/log#callWithCleanup>',
-            N = 2
-        ->  assertz(pred(P))
-        ;   true
-        ),
-        (   Dn \= '<http://www.w3.org/2000/10/swap/log#implies>'(_, _),
-            catch(call(Dn), _, fail)
-        ->  true
-        ;   djiti_assertz(Dn)
-        ),
-        astep(B, En)
-    ;   (   Cn = true
-        ->  true
-        ;   functor(Cn, P, N),
-            (   \+pred(P),
-                P \= '<http://www.w3.org/2000/10/swap/log#callWithCleanup>',
-                P \= '<http://www.w3.org/2000/10/swap/log#implies>',
-                N = 2
-            ->  assertz(pred(P))
-            ;   true
-            ),
-            (   Cn \= '<http://www.w3.org/2000/10/swap/log#implies>'(_, _),
-                catch(call(Cn), _, fail)
-            ->  true
-            ;   djiti_assertz(Cn)
-            )
-        )
-    ).
-
-%
-% DJITI (Deep Just In Time Indexing)
-%
-
-djiti_answer(answer((A, B)), (C, D)) :-
-    !,
-    djiti_answer(answer(A), C),
-    djiti_answer(answer(B), D).
-djiti_answer(answer(A), answer(P, S, O)) :-
-    (   nonvar(A)
-    ;   atom(P),
-        S \= void
-    ),
-    A =.. [P, S, O],
-    !.
-djiti_answer(answer(exopred(P, S, O)), answer(P, S, O)) :-
-    (   var(S)
-    ;   S \= void
-    ),
-    !.
-djiti_answer(answer(A), answer(A, void, void)) :-
-    !.
-djiti_answer(A, A).
-
-djiti_explain(explain((A, B)), (C, D)) :-
-    !,
-    djiti_explain(explain(A), C),
-    djiti_explain(explain(B), D).
-djiti_explain(explain(A), explain(P, S, O)) :-
-    (   nonvar(A)
-    ;   atom(P),
-        S \= void
-    ),
-    A =.. [P, S, O],
-    !.
-djiti_explain(explain(exopred(P, S, O)), explain(P, S, O)) :-
-    (   var(S)
-    ;   S \= void
-    ),
-    !.
-djiti_explain(explain(A), explain(A, void, void)) :-
-    !.
-djiti_explain(A, A).
-
-djiti_conc(':-'(exopred(P, S, O), B), ':-'(A, B)) :-
-    !,
-    A =.. [P, S, O].
-djiti_conc(answer((A, B), void, void), (answer(A, void, void), D)) :-
-    !,
-    djiti_conc(answer(B, void, void), D).
-djiti_conc(A, A).
-
-djiti_fact(answer(P, S, O), answer(P, S, O)) :-
-    atomic(P),
-    !,
-    (   P \= '<http://www.w3.org/2000/10/swap/log#callWithCleanup>',
-        \+pred(P)
-    ->  assertz(pred(P))
-    ;   true
-    ).
-djiti_fact(implies(A, B), implies(A, B)) :-
-    nonvar(B),
-    conj_list(B, D),
-    forall(
-        member(E, D),
-        (   unify(E, F),
-            F =.. [P, _, _],
-            (   \+fpred(P)
-            ->  assertz(fpred(P))
-            ;   true
-            )
-        )
-    ),
-    !.
-djiti_fact('<http://www.w3.org/2000/10/swap/log#implies>'(A, B), C) :-
-    nonvar(B),
-    (   conj_list(B, D)
-    ->  true
-    ;   D = B
-    ),
-    forall(
-        member(E, D),
-        (   unify(E, F),
-            (   F =.. [P, _, _],
-                \+fpred(P)
-            ->  assertz(fpred(P))
-            ;   true
-            )
-        )
-    ),
-    !,
-    makevars(implies(A, B), C, zeta).
-djiti_fact(':-'(A, B), ':-'(C, D)) :-
-    !,
-    makevars((A, B), (C, D), eta).
-djiti_fact('<http://www.w3.org/2000/10/swap/log#dcg>'(_, literal(A, type('<http://www.w3.org/2001/XMLSchema#string>'))), B) :-
-    !,
-    read_term_from_atom(A, C, []),
-    dcg_translate_rule(C, B).
-djiti_fact(A, A) :-
-    ground(A),
-    A =.. [P, _, _],
-    (   P \= '<http://www.w3.org/2000/10/swap/log#callWithCleanup>',
-        P \= '<http://www.w3.org/1999/02/22-rdf-syntax-ns#first>',
-        P \= '<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest>',
-        P \= pfx,
-        P \= flag,
-        \+pred(P)
-    ->  assertz(pred(P))
-    ;   true
-    ),
-    !.
-djiti_fact(A, A).
-
-djiti_assertz(A) :-
-    djiti_fact(A, B),
-    assertz(B).
 
 %
 % Built-ins
