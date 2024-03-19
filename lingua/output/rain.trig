@@ -1,4 +1,97 @@
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
+@prefix var: <http://www.w3.org/2000/10/swap/var#>.
 @prefix : <https://eyereasoner.github.io/see-lingua/lingua/rain.trig#>.
 
+_:rl_6469833 lingua:premise _:gn_1.
+_:rl_6469833 lingua:conclusion _:gn_2.
+_:rl_6469833 lingua:bindings ((var:node_4_1 _:sk_26)).
+_:rl_10965800 lingua:premise _:gn_3.
+_:rl_10965800 lingua:conclusion _:gn_4.
+_:rl_10965800 lingua:bindings ((var:node_4_1 :obs1)).
+_:rl_6892358 lingua:premise _:gn_1.
+_:rl_6892358 lingua:conclusion _:gn_5.
+_:rl_6892358 lingua:bindings ((var:node_4_1 _:sk_27)).
+_:rl_7218675 lingua:question _:gn_6.
+_:rl_7218675 lingua:answer _:gn_6.
+_:rl_7218675 lingua:bindings ((var:node_4_1 :obs1) (var:node_9_1 :Rain)).
 :obs1 :ascribed :Rain.
+_:rl_7218675 lingua:bindings ((var:node_4_1 :obs1) (var:node_9_1 :WetGrass)).
 :obs1 :ascribed :WetGrass.
+_:rl_6157382 lingua:premise _:gn_7.
+_:rl_6157382 lingua:conclusion _:gn_8.
+_:rl_6157382 lingua:bindings ((var:some26 :obs1)).
+_:rl_1594912 lingua:premise true.
+_:rl_1594912 lingua:conclusion _:gn_9.
+_:rl_1594912 lingua:bindings ((var:some27 _:sk_26)).
+_:rl_16254286 lingua:premise _:gn_10.
+_:rl_16254286 lingua:conclusion _:gn_11.
+_:rl_16254286 lingua:bindings ((var:some27 :obs1)).
+_:rl_7797759 lingua:premise _:gn_7.
+_:rl_7797759 lingua:conclusion _:gn_12.
+_:rl_7797759 lingua:bindings ((var:some26 :obs1)).
+_:rl_13216952 lingua:premise _:gn_10.
+_:rl_13216952 lingua:conclusion _:gn_13.
+_:rl_13216952 lingua:bindings ((var:some27 :obs1)).
+_:rl_11914204 lingua:premise true.
+_:rl_11914204 lingua:conclusion _:gn_14.
+_:rl_11914204 lingua:bindings ().
+_:gn_4 {
+    var:node_4_1 :ascribed :WetGrass.
+}
+_:gn_2 {
+    (var:node_4_1) lingua:onNegativeSurface _:gn_15.
+}
+_:gn_11 {
+    var:some27 :ascribed :WetGrass.
+}
+_:gn_8 {
+    var:some26 :ascribed :WetGrass.
+}
+_:gn_1 {
+    :currentWeather a :NormalWeather.
+}
+_:gn_3 {
+    :currentWeather a :NormalWeather.
+    var:node_4_1 :ascribed :Rain.
+}
+_:gn_5 {
+    () lingua:onNegativeSurface _:gn_16.
+}
+_:gn_6 {
+    var:node_4_1 :ascribed var:node_9_1.
+}
+_:gn_7 {
+    var:some26 :ascribed :Rain.
+}
+_:gn_9 {
+    (var:some27) lingua:onNegativeSurface _:gn_17.
+}
+_:gn_10 {
+    var:some27 :ascribed :Rain.
+}
+_:gn_12 {
+    () lingua:onNegativeSurface _:gn_18.
+}
+_:gn_13 {
+    () lingua:onNegativeSurface _:gn_19.
+}
+_:gn_14 {
+    :obs1 :ascribed :WetGrass.
+}
+_:gn_15 {
+    var:node_4_1 :ascribed :Rain.
+    () lingua:onNegativeSurface _:gn_4.
+}
+_:gn_16 {
+    () lingua:onNegativeSurface _:gn_2.
+}
+_:gn_17 {
+    var:some27 :ascribed :Rain.
+    () lingua:onNegativeSurface _:gn_11.
+}
+_:gn_18 {
+    () lingua:onNegativeSurface _:gn_8.
+}
+_:gn_19 {
+    () lingua:onNegativeSurface _:gn_11.
+}

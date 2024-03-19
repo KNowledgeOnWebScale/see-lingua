@@ -1,3 +1,51 @@
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
+@prefix var: <http://www.w3.org/2000/10/swap/var#>.
 @prefix : <https://eyereasoner.github.io/see-lingua/lingua/beetle.trig#>.
 
+_:rl_12976060 lingua:premise _:gn_1.
+_:rl_12976060 lingua:conclusion _:gn_2.
+_:rl_12976060 lingua:bindings ((var:node_2_1 :beetle)).
+_:rl_1850074 lingua:premise _:gn_1.
+_:rl_1850074 lingua:conclusion _:gn_3.
+_:rl_1850074 lingua:bindings ((var:node_2_1 :beetle)).
+_:rl_3586113 lingua:premise _:gn_1.
+_:rl_3586113 lingua:conclusion _:gn_4.
+_:rl_3586113 lingua:bindings ((var:node_2_1 :beetle)).
+_:rl_9331763 lingua:question _:gn_5.
+_:rl_9331763 lingua:answer _:gn_5.
+_:rl_9331763 lingua:bindings ((var:node_13_1 :beetle) (var:node_15_1 :beautiful)).
 :beetle :is :beautiful.
+_:rl_7283810 lingua:premise true.
+_:rl_7283810 lingua:conclusion _:gn_6.
+_:rl_7283810 lingua:bindings ().
+_:gn_9 {
+    var:node_2_1 :is :green.
+}
+_:gn_10 {
+    var:node_2_1 :is :blue.
+}
+_:gn_3 {
+    var:node_2_1 :is :beautiful.
+}
+_:gn_1 {
+    var:node_2_1 a :Car.
+}
+_:gn_2 {
+    () lingua:onNegativeSurface _:gn_7.
+}
+_:gn_4 {
+    () lingua:onNegativeSurface _:gn_8.
+}
+_:gn_5 {
+    var:node_13_1 :is var:node_15_1.
+}
+_:gn_6 {
+    :beetle :is :beautiful.
+}
+_:gn_7 {
+    () lingua:onNegativeSurface _:gn_9.
+    () lingua:onNegativeSurface _:gn_10.
+}
+_:gn_8 {
+    () lingua:onNegativeSurface _:gn_3.
+}

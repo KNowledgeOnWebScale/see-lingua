@@ -1,3 +1,14 @@
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
+@prefix var: <http://www.w3.org/2000/10/swap/var#>.
 @prefix : <https://eyereasoner.github.io/see-lingua/lingua/reset.trig#>.
 
+_:rl_14598100 lingua:question _:gn_1.
+_:rl_14598100 lingua:answer var:node_3_1.
+_:rl_14598100 lingua:bindings ((var:node_3_1 _:node_1_1)).
 :n1 :p1 :n2.
+_:gn_1 {
+    () lingua:onNeutralSurface var:node_3_1.
+}
+_:node_1_1 {
+    :n1 :p1 :n2.
+}

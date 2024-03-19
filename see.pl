@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v0.6.0 (2024-03-18)').
+version_info('SEE v0.6.1 (2024-03-19)').
 
 help_info('Usage: see <options>* <data>*
 
@@ -179,6 +179,8 @@ gre(Argus) :-
     ),
     atomic_list_concat(['http://eyereasoner.github.io/.well-known/genid/', Genid, '#'], Sns),
     nb_setval(var_ns, Sns),
+    put_pfx('skolem', Sns),
+    put_pfx('var', 'http://www.w3.org/2000/10/swap/var#'),
     args(Args),
     % create named graphs
     (   quad(_, _, _, G),
@@ -223,7 +225,7 @@ gre(Argus) :-
     % remove rdf lists
     retractall('<http://www.w3.org/1999/02/22-rdf-syntax-ns#first>'(_, _)),
     retractall('<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest>'(_, _)),
-    % create forward rules for lingua
+    % create forward rules
     assertz(implies((
             '<http://www.w3.org/2000/10/swap/lingua#premise>'(R, A),
             '<http://www.w3.org/2000/10/swap/lingua#conclusion>'(R, B),
@@ -237,56 +239,7 @@ gre(Argus) :-
                 conj_append(E, remember(answer('<http://www.w3.org/2000/10/swap/lingua#bindings>', R, W)), F)
             ;   F = I
             )), '<http://www.w3.org/2000/10/swap/log#implies>'(Q, F))),
-    % create forward rules for lingua
-    assertz(implies((
-            '<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(V, G),
-            getlist(V, Vl),
-            is_list(Vl),
-            is_graph(G),
-            conj_list(G, L),
-            list_to_set(L, B),
-            \+member('<http://www.w3.org/2000/10/swap/lingua#onAnswerSurface>'(_, _), B),
-            select('<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(_, H), B, K),
-            conj_list(R, K),
-            find_graffiti(K, D),
-            append(Vl, D, U),
-            makevars([R, H], [Q, S], beta(U)),
-            findvars(S, W, beta),
-            makevars(S, I, beta(W))
-            ), '<http://www.w3.org/2000/10/swap/log#implies>'(Q, I))),
-    % create forward contrapositive rules for lingua
-    assertz(implies((
-            '<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(V, G),
-            getlist(V, Vl),
-            is_list(Vl),
-            is_graph(G),
-            conj_list(G, L),
-            list_to_set(L, B),
-            \+member('<http://www.w3.org/2000/10/swap/lingua#negativeTriple>'(_, _), B),
-            \+member('<http://www.w3.org/2000/10/swap/lingua#onAnswerSurface>'(_, _), B),
-            \+member(exopred(_, _, _), B),
-            (   length(B, O),
-                O =< 2
-            ->  select(R, B, J),
-                J \= []
-            ;   B = [R|J]
-            ),
-            conj_list(T, J),
-            findvars(R, N, beta),
-            findall(A,
-                (   member(A, Vl),
-                    \+member(A, N)
-                ),
-                Z
-            ),
-            E = '<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(Z, T),
-            find_graffiti([R], D),
-            append(Vl, D, U),
-            makevars([R, E], [Q, S], beta(U)),
-            findvars(S, W, beta),
-            makevars(S, I, beta(W))
-            ), '<http://www.w3.org/2000/10/swap/log#implies>'(Q, I))),
-    % create backward rules for lingua
+    % create backward rules
     assertz(implies((
             '<http://www.w3.org/2000/10/swap/lingua#body>'(R, A),
             '<http://www.w3.org/2000/10/swap/lingua#headback>'(R, B),
@@ -306,34 +259,7 @@ gre(Argus) :-
                 retractall(brake)
             ;   true
             )), true)),
-    % create backward rules for lingua
-    assertz(implies((
-            '<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(V, G),
-            getlist(V, Vl),
-            is_list(Vl),
-            is_graph(G),
-            conj_list(G, L),
-            list_to_set(L, B),
-            select('<http://www.w3.org/2000/10/swap/lingua#negativeTriple>'(_, T), B, K),
-            (   T = [St, Pt, Ot]
-            ->  Tt =.. [Pt, St, Ot]
-            ;   T =.. [_, _, _],
-                Tt = T
-            ),
-            conj_list(R, K),
-            conjify(R, S),
-            find_graffiti([R], D),
-            append(Vl, D, U),
-            makevars(':-'(Tt, S), C, beta(U)),
-            copy_term_nat(C, CC),
-            labelvars(CC, 0, _, avar),
-            (   \+cc(CC)
-            ->  assertz(cc(CC)),
-                assertz(C),
-                retractall(brake)
-            ;   true
-            )), true)),
-    % create queries for lingua
+    % create queries
     assertz(implies((
             '<http://www.w3.org/2000/10/swap/lingua#question>'(R, A),
             (   '<http://www.w3.org/2000/10/swap/lingua#answer>'(R, B)
@@ -357,29 +283,7 @@ gre(Argus) :-
                 retractall(brake)
             ;   true
             )), true)),
-    % create queries for lingua
-    assertz(implies((
-            '<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(V, G),
-            getlist(V, Vl),
-            is_list(Vl),
-            is_graph(G),
-            conj_list(G, L),
-            list_to_set(L, B),
-            select('<http://www.w3.org/2000/10/swap/lingua#onAnswerSurface>'(_, H), B, K),
-            conj_list(I, K),
-            djiti_answer(answer(H), J),
-            find_graffiti(K, D),
-            append(Vl, D, U),
-            makevars(implies(I, J), C, beta(U)),
-            copy_term_nat(C, CC),
-            labelvars(CC, 0, _, avar),
-            (   \+cc(CC)
-            ->  assertz(cc(CC)),
-                assertz(C),
-                retractall(brake)
-            ;   true
-            )), true)),
-    % create universal statements for lingua
+    % create universal statements
     (   pred(P),
         \+atom_concat('<http://www.w3.org/2000/10/swap/', _, P),
         X =.. [P, _, _],
@@ -490,7 +394,106 @@ gre(Argus) :-
             conj_list(H, T),
             ground('<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(Vl, H))
             ), '<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(Vl, H))),
-    % convert universal statement
+    % convert surfaces to forward rules
+    assertz(implies((
+            '<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(V, G),
+            getlist(V, Vl),
+            is_list(Vl),
+            is_graph(G),
+            conj_list(G, L),
+            list_to_set(L, B),
+            \+member('<http://www.w3.org/2000/10/swap/lingua#onAnswerSurface>'(_, _), B),
+            select('<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(_, H), B, K),
+            conj_list(R, K),
+            find_graffiti(K, D),
+            append(Vl, D, U),
+            makevars([R, H], [Q, S], alpha(U)),
+            findvars(S, W, beta),
+            makevars(S, I, alpha(W)),
+            term_hash([Q, I], M),
+            nb_getval(var_ns, Sns),
+            atomic_list_concat(['<', Sns, 'rl_', M, '>'], A)
+            ), ('<http://www.w3.org/2000/10/swap/lingua#premise>'(A, Q),
+            '<http://www.w3.org/2000/10/swap/lingua#conclusion>'(A, I)))),
+    % convert surfaces to forward contrapositive rules
+    assertz(implies((
+            '<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(V, G),
+            getlist(V, Vl),
+            is_list(Vl),
+            is_graph(G),
+            conj_list(G, L),
+            list_to_set(L, B),
+            \+member('<http://www.w3.org/2000/10/swap/lingua#negativeTriple>'(_, _), B),
+            \+member('<http://www.w3.org/2000/10/swap/lingua#onAnswerSurface>'(_, _), B),
+            \+member(exopred(_, _, _), B),
+            (   length(B, O),
+                O =< 2
+            ->  select(R, B, J),
+                J \= []
+            ;   B = [R|J]
+            ),
+            conj_list(T, J),
+            findvars(R, N, beta),
+            findall(A,
+                (   member(A, Vl),
+                    \+member(A, N)
+                ),
+                Z
+            ),
+            E = '<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(Z, T),
+            find_graffiti([R], D),
+            append(Vl, D, U),
+            makevars([R, E], [Q, S], alpha(U)),
+            findvars(S, W, beta),
+            makevars(S, I, alpha(W)),
+            term_hash([Q, I], M),
+            nb_getval(var_ns, Sns),
+            atomic_list_concat(['<', Sns, 'rl_', M, '>'], A)
+            ), ('<http://www.w3.org/2000/10/swap/lingua#premise>'(A, Q),
+            '<http://www.w3.org/2000/10/swap/lingua#conclusion>'(A, I)))),
+    % convert surfaces to backward rules
+    assertz(implies((
+            '<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(V, G),
+            getlist(V, Vl),
+            is_list(Vl),
+            is_graph(G),
+            conj_list(G, L),
+            list_to_set(L, B),
+            select('<http://www.w3.org/2000/10/swap/lingua#negativeTriple>'(_, T), B, K),
+            (   T = [St, Pt, Ot]
+            ->  Tt =.. [Pt, St, Ot]
+            ;   T =.. [_, _, _],
+                Tt = T
+            ),
+            conj_list(R, K),
+            conjify(R, S),
+            find_graffiti([R], D),
+            append(Vl, D, U),
+            makevars([Tt, S], [Q, I], alpha(U)),
+            term_hash([Q, I], M),
+            nb_getval(var_ns, Sns),
+            atomic_list_concat(['<', Sns, 'rl_', M, '>'], A)
+            ), ('<http://www.w3.org/2000/10/swap/lingua#headback>'(A, Q),
+            '<http://www.w3.org/2000/10/swap/lingua#body>'(A, I)))),
+    % convert surfaces to queries
+    assertz(implies((
+            '<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(V, G),
+            getlist(V, Vl),
+            is_list(Vl),
+            is_graph(G),
+            conj_list(G, L),
+            list_to_set(L, B),
+            select('<http://www.w3.org/2000/10/swap/lingua#onAnswerSurface>'(_, H), B, K),
+            conj_list(J, K),
+            find_graffiti(K, D),
+            append(Vl, D, U),
+            makevars([J, H], [Q, I], alpha(U)),
+            term_hash([Q, I], M),
+            nb_getval(var_ns, Sns),
+            atomic_list_concat(['<', Sns, 'rl_', M, '>'], A)
+            ), ('<http://www.w3.org/2000/10/swap/lingua#question>'(A, Q),
+            '<http://www.w3.org/2000/10/swap/lingua#answer>'(A, I)))),
+    % convert surfaces to universal statement
     assertz(implies((
             '<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(V, G),
             getlist(V, Vl),
@@ -514,15 +517,14 @@ gre(Argus) :-
             ),
             conj_list(S, Y),
             append(Vl, X, U),
-            makevars(':-'(M, S), C, beta(U)),
-            copy_term_nat(C, CC),
-            labelvars(CC, 0, _, avar),
-            (   \+cc(CC)
-            ->  assertz(cc(CC)),
-                assertz(C),
-                retractall(brake)
-            ;   true
-            )), true)),
+            makevars([M, S], [Q, I], alpha(U)),
+
+
+            term_hash([Q, I], M),
+            nb_getval(var_ns, Sns),
+            atomic_list_concat(['<', Sns, 'rl_', M, '>'], A)
+            ), ('<http://www.w3.org/2000/10/swap/lingua#headback>'(A, Q),
+            '<http://www.w3.org/2000/10/swap/lingua#body>'(A, I)))),
     % convert question surface
     assertz(implies((
             '<http://www.w3.org/2000/10/swap/lingua#onQuestionSurface>'(V, G),
@@ -659,20 +661,15 @@ args([Argument|Args]) :-
         assertz(base_uri(Abu))
     ;   assertz(base_uri(Arg))
     ),
-    retractall(ns(_, _)),
-    (   Arg = '-'
-    ->  D = '#'
-    ;   atomic_list_concat([Arg, '#'], D)
-    ),
-    assertz(ns('', D)),
-    nb_getval(var_ns, Sns),
-    assertz(ns(skolem, Sns)),
-    nb_setval(sc, 0),
     rdf_read_turtle(stream(In), Triples, [base_uri(Arg), format(trig), prefixes(Pfxs), on_error(error)]),
     close(In),
     forall(
         member(Pfx-Ns, Pfxs),
         put_pfx(Pfx, Ns)
+    ),
+    (   Arg = '-'
+    ->  D = '#'
+    ;   atomic_list_concat([Arg, '#'], D)
     ),
     put_pfx('', D),
     forall(
@@ -731,11 +728,6 @@ trig_term(A, B) :-
 %
 
 wh :-
-    (   keep_skolem(_)
-    ->  nb_getval(var_ns, Sns),
-        put_pfx('skolem', Sns)
-    ;   true
-    ),
     nb_setval(wpfx, false),
     forall(
         (   pfx(A, B),
@@ -794,7 +786,7 @@ wt(X) :-
 
 wt0(!) :-
     !,
-    write('_:true'),
+    write('_:true '),
     wp('<http://www.w3.org/2000/10/swap/log#callWithCut>'),
     write(' true').
 wt0(:-) :-
@@ -3690,6 +3682,23 @@ commonvars(A, B, C) :-
         C
     ).
 
+makevars(A, B, alpha(C)) :-
+    !,
+    distinct(C, D),
+    findvars(A, Z, zeta),
+    append(D, Z, E),
+    findall([X, Y],
+        (   member(X, E),
+            (   sub_atom(X, _, 1, I, '#')
+            ->  J is I-1,
+                sub_atom(X, _, J, 1, Q)
+            ;   Q = X
+            ),
+            atomic_list_concat(['<http://www.w3.org/2000/10/swap/var#', Q, '>'], Y)
+        ),
+        F
+    ),
+    makevar(A, B, F).
 makevars(A, B, beta(C)) :-
     !,
     distinct(C, D),
@@ -4484,7 +4493,8 @@ regexp_wildcard([A|B], [A|C]) :-
     regexp_wildcard(B, C).
 
 fm(A) :-
-    (   A = !
+    (   nonvar(A),
+        A = !
     ->  true
     ;   format(user_error, '*** ~q~n', [A]),
         flush_output(user_error)

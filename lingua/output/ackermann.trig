@@ -93,7 +93,7 @@
 (5 0) :ackermann 65533 .
 _:gn_1 {
     () log:equalTo ().
-    _:truelog:callWithCut true.
+    _:true log:callWithCut true.
     (var:Y 1) math:sum var:A.
 }
 _:gn_2 {
@@ -109,7 +109,7 @@ _:gn_4 {
 }
 _:gn_5 {
     () log:equalTo ().
-    _:truelog:callWithCut true.
+    _:true log:callWithCut true.
     (var:Y var:Z) math:sum var:A.
 }
 _:gn_6 {
@@ -117,7 +117,7 @@ _:gn_6 {
 }
 _:gn_7 {
     () log:equalTo ().
-    _:truelog:callWithCut true.
+    _:true log:callWithCut true.
     (var:Y var:Z) math:product var:A.
 }
 _:gn_8 {
@@ -125,7 +125,7 @@ _:gn_8 {
 }
 _:gn_9 {
     () log:equalTo ().
-    _:truelog:callWithCut true.
+    _:true log:callWithCut true.
 }
 _:gn_10 {
     (var:X 0 var:Z) :ackermann 1.
