@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v0.6.3 (2024-03-19)').
+version_info('SEE v0.6.4 (2024-03-19)').
 
 help_info('Usage: see <options>* <data>*
 
@@ -409,6 +409,42 @@ gre(Argus) :-
             find_graffiti(K, D),
             append(Vl, D, U),
             makevars([R, H], [Q, S], alpha(U)),
+            findvars(S, W, beta),
+            makevars(S, I, alpha(W)),
+            term_hash([Q, I], M),
+            nb_getval(var_ns, Sns),
+            atomic_list_concat(['<', Sns, 'rl_', M, '>'], A)
+            ), ('<http://www.w3.org/2000/10/swap/lingua#premise>'(A, Q),
+            '<http://www.w3.org/2000/10/swap/lingua#conclusion>'(A, I)))),
+    % convert surfaces to forward contrapositive rules
+    assertz(implies((
+            '<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(V, G),
+            getlist(V, Vl),
+            is_list(Vl),
+            is_graph(G),
+            conj_list(G, L),
+            list_to_set(L, B),
+            \+member('<http://www.w3.org/2000/10/swap/lingua#negativeTriple>'(_, _), B),
+            \+member('<http://www.w3.org/2000/10/swap/lingua#onAnswerSurface>'(_, _), B),
+            \+member(exopred(_, _, _), B),
+            (   length(B, O),
+                O =< 2
+            ->  select(R, B, J),
+                J \= []
+            ;   B = [R|J]
+            ),
+            conj_list(T, J),
+            findvars(R, N, beta),
+            findall(A,
+                (   member(A, Vl),
+                    \+member(A, N)
+                ),
+                Z
+            ),
+            E = '<http://www.w3.org/2000/10/swap/lingua#onNegativeSurface>'(Z, T),
+            find_graffiti([R], D),
+            append(Vl, D, U),
+            makevars([R, E], [Q, S], alpha(U)),
             findvars(S, W, beta),
             makevars(S, I, alpha(W)),
             term_hash([Q, I], M),

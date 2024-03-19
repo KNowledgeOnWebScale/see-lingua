@@ -7,76 +7,428 @@
 
 _:rl_4972265 lingua:premise _:gn_1.
 _:rl_4972265 lingua:conclusion _:gn_2.
-_:rl_4972265 lingua:bindings ((var:node_6_1 :aaa) (var:b :bbb) (var:node_9_1 :ccc) (var:node_13_1 _:sk_97) (var:node_2_1 _:sk_98)).
+_:rl_4972265 lingua:bindings ((var:node_6_1 :aaa) (var:b :bbb) (var:node_9_1 :ccc) (var:node_13_1 _:sk_264) (var:node_2_1 _:sk_265)).
 _:rl_4051120 lingua:premise _:gn_1.
 _:rl_4051120 lingua:conclusion _:gn_3.
-_:rl_4051120 lingua:bindings ((var:node_6_1 :aaa) (var:b :bbb) (var:node_9_1 :ccc) (var:node_13_1 _:sk_97) (var:node_2_1 _:sk_98)).
+_:rl_4051120 lingua:bindings ((var:node_6_1 :aaa) (var:b :bbb) (var:node_9_1 :ccc) (var:node_13_1 _:sk_264) (var:node_2_1 _:sk_265)).
 _:rl_12737638 lingua:premise _:gn_4.
 _:rl_12737638 lingua:conclusion _:gn_5.
 _:rl_12737638 lingua:bindings ((var:node_6_1 :aaa) (var:b :bbb) (var:node_9_1 :ccc) (var:node_2_1 _:node_2_1) (var:node_13_1 :xxx)).
 _:rl_3649092 lingua:premise _:gn_1.
 _:rl_3649092 lingua:conclusion _:gn_6.
-_:rl_3649092 lingua:bindings ((var:node_6_1 :aaa) (var:b :bbb) (var:node_9_1 :ccc) (var:node_13_1 _:sk_97) (var:node_2_1 _:sk_98)).
+_:rl_3649092 lingua:bindings ((var:node_6_1 :aaa) (var:b :bbb) (var:node_9_1 :ccc) (var:node_13_1 _:sk_264) (var:node_2_1 _:sk_265)).
+_:rl_11993212 lingua:premise _:gn_7.
+_:rl_11993212 lingua:conclusion _:gn_8.
+_:rl_11993212 lingua:bindings ((var:node_6_1 :aaa) (var:b :bbb) (var:node_9_1 _:sk_266) (var:node_13_1 _:sk_267) (var:node_2_1 _:sk_268)).
+_:rl_5527999 lingua:premise _:gn_7.
+_:rl_5527999 lingua:conclusion _:gn_9.
+_:rl_5527999 lingua:bindings ((var:node_6_1 :aaa) (var:b :bbb) (var:node_9_1 _:sk_269) (var:node_13_1 _:sk_270) (var:node_2_1 _:sk_271)).
+_:rl_3469539 lingua:premise _:gn_7.
+_:rl_3469539 lingua:conclusion _:gn_10.
+_:rl_3469539 lingua:bindings ((var:node_6_1 :aaa) (var:b :bbb) (var:node_9_1 _:sk_272) (var:node_13_1 _:sk_273) (var:node_2_1 _:sk_274)).
 _:rl_12332409 lingua:premise _:gn_1.
 _:rl_12332409 lingua:conclusion true.
 _:rl_12332409 lingua:bindings ((var:node_6_1 :aaa) (var:b :bbb) (var:node_9_1 :ccc)).
-_:rl_7338938 lingua:question _:gn_7.
-_:rl_7338938 lingua:answer _:gn_7.
+_:rl_11463797 lingua:premise _:gn_7.
+_:rl_11463797 lingua:conclusion _:gn_11.
+_:rl_11463797 lingua:bindings ((var:node_6_1 :aaa) (var:b :bbb) (var:node_9_1 _:sk_392) (var:node_13_1 _:sk_393) (var:node_2_1 _:sk_394)).
+_:rl_187285 lingua:premise _:gn_7.
+_:rl_187285 lingua:conclusion _:gn_12.
+_:rl_187285 lingua:bindings ((var:node_6_1 :aaa) (var:b :bbb) (var:node_9_1 _:sk_272) (var:node_13_1 _:sk_273) (var:node_2_1 _:sk_274)).
+_:rl_15885633 lingua:premise _:gn_7.
+_:rl_15885633 lingua:conclusion _:gn_13.
+_:rl_15885633 lingua:bindings ((var:node_6_1 :aaa) (var:b :bbb) (var:node_9_1 _:sk_395) (var:node_13_1 _:sk_396) (var:node_2_1 _:sk_397)).
+_:rl_7338938 lingua:question _:gn_14.
+_:rl_7338938 lingua:answer _:gn_14.
 _:rl_7338938 lingua:bindings ((var:node_24_1 :xxx) (var:node_26_1 :aaa)).
-_:rl_16060359 lingua:premise _:gn_8.
-_:rl_16060359 lingua:conclusion _:gn_9.
-_:rl_16060359 lingua:bindings ((var:some98 _:node_2_1) (var:some97 :xxx)).
-_:gn_14 {
+_:rl_3447776 lingua:premise _:gn_7.
+_:rl_3447776 lingua:conclusion _:gn_15.
+_:rl_3447776 lingua:bindings ((var:node_6_1 :aaa) (var:b :bbb) (var:node_9_1 _:sk_392) (var:node_13_1 _:sk_393) (var:node_2_1 _:sk_394)).
+_:rl_13159677 lingua:premise _:gn_16.
+_:rl_13159677 lingua:conclusion _:gn_17.
+_:rl_13159677 lingua:bindings ((var:some265 _:node_2_1) (var:some264 :xxx)).
+_:rl_10074782 lingua:premise _:gn_18.
+_:rl_10074782 lingua:conclusion _:gn_19.
+_:rl_10074782 lingua:bindings ((var:some266 :ccc) (var:some267 _:sk_264) (var:some268 _:sk_265)).
+_:rl_5947973 lingua:premise _:gn_20.
+_:rl_5947973 lingua:conclusion _:gn_21.
+_:rl_5947973 lingua:bindings ((var:some272 :ccc) (var:some274 _:node_2_1) (var:some273 :xxx)).
+_:rl_16036961 lingua:premise _:gn_22.
+_:rl_16036961 lingua:conclusion _:gn_23.
+_:rl_16036961 lingua:bindings ((var:some266 :ccc) (var:some268 _:node_2_1) (var:some267 :xxx)).
+_:rl_2040450 lingua:premise _:gn_16.
+_:rl_2040450 lingua:conclusion _:gn_24.
+_:rl_2040450 lingua:bindings ((var:some265 _:node_2_1) (var:some264 :xxx)).
+_:rl_4157624 lingua:premise _:gn_18.
+_:rl_4157624 lingua:conclusion _:gn_25.
+_:rl_4157624 lingua:bindings ((var:some266 :ccc) (var:some267 _:sk_570) (var:some268 _:sk_571)).
+_:rl_9702210 lingua:premise _:gn_26.
+_:rl_9702210 lingua:conclusion _:gn_27.
+_:rl_9702210 lingua:bindings ((var:some272 :ccc) (var:some273 _:sk_264) (var:some274 _:sk_265)).
+_:rl_6888620 lingua:premise _:gn_18.
+_:rl_6888620 lingua:conclusion _:gn_28.
+_:rl_6888620 lingua:bindings ((var:some266 :ccc) (var:some267 _:sk_264) (var:some268 _:sk_265)).
+_:rl_9426417 lingua:premise _:gn_26.
+_:rl_9426417 lingua:conclusion _:gn_29.
+_:rl_9426417 lingua:bindings ((var:some272 :ccc) (var:some273 _:sk_264) (var:some274 _:sk_265)).
+_:rl_16775334 lingua:premise _:gn_30.
+_:rl_16775334 lingua:conclusion _:gn_31.
+_:rl_16775334 lingua:bindings ((var:b lingua:onNegativeSurface) (var:node_13_1 ()) (var:node_2_1 _:gn_32) (var:node_6_1 _:sk_600) (var:node_9_1 _:sk_601)).
+_:rl_16775334 lingua:bindings ((var:b lingua:onNegativeSurface) (var:node_13_1 ()) (var:node_2_1 _:gn_33) (var:node_6_1 _:sk_600) (var:node_9_1 _:sk_601)).
+_:rl_333867 lingua:premise _:gn_34.
+_:rl_333867 lingua:conclusion _:gn_35.
+_:rl_333867 lingua:bindings ((var:some392 :ccc) (var:some394 _:node_2_1) (var:some393 :xxx)).
+_:rl_16095135 lingua:premise _:gn_36.
+_:rl_16095135 lingua:conclusion _:gn_37.
+_:rl_16095135 lingua:bindings ((var:some392 :ccc) (var:some393 _:sk_602) (var:some394 _:sk_603)).
+_:rl_5784182 lingua:premise _:gn_18.
+_:rl_5784182 lingua:conclusion _:gn_38.
+_:rl_5784182 lingua:bindings ((var:some266 :ccc) (var:some267 _:sk_264) (var:some268 _:sk_265)).
+_:rl_6147923 lingua:premise _:gn_36.
+_:rl_6147923 lingua:conclusion _:gn_39.
+_:rl_6147923 lingua:bindings ((var:some392 :ccc) (var:some393 _:sk_604) (var:some394 _:sk_605)).
+_:rl_7871533 lingua:premise true.
+_:rl_7871533 lingua:conclusion _:gn_32.
+_:rl_7871533 lingua:bindings ().
+_:rl_3267850 lingua:premise true.
+_:rl_3267850 lingua:conclusion _:gn_40.
+_:rl_3267850 lingua:bindings ((var:some570 _:sk_264) (var:some571 _:sk_265)).
+_:rl_9539827 lingua:premise _:gn_41.
+_:rl_9539827 lingua:conclusion _:gn_42.
+_:rl_9539827 lingua:bindings ((var:some571 _:node_2_1) (var:some570 :xxx)).
+_:rl_6821665 lingua:premise _:gn_41.
+_:rl_6821665 lingua:conclusion _:gn_43.
+_:rl_6821665 lingua:bindings ((var:some571 _:node_2_1) (var:some570 :xxx)).
+_:rl_3135782 lingua:premise _:gn_44.
+_:rl_3135782 lingua:conclusion _:gn_45.
+_:rl_3135782 lingua:bindings ((var:some603 _:node_2_1) (var:some602 :xxx)).
+_:rl_11776574 lingua:premise _:gn_44.
+_:rl_11776574 lingua:conclusion _:gn_46.
+_:rl_11776574 lingua:bindings ((var:some603 _:node_2_1) (var:some602 :xxx)).
+_:gn_77 {
     var:node_2_1 a var:node_9_1.
 }
 _:gn_5 {
     var:node_13_1 a var:node_6_1.
 }
-_:gn_15 {
-    var:some98 a :ccc.
+_:gn_2 {
+    (var:node_13_1 var:node_2_1) lingua:onNegativeSurface _:gn_47.
+    (var:node_13_1) lingua:onNegativeSurface _:gn_48.
+}
+_:gn_49 {
+    var:node_13_1 var:b var:node_2_1.
+    () lingua:onNegativeSurface _:gn_77.
+}
+_:gn_78 {
+    var:some265 a :ccc.
+}
+_:gn_79 {
+    var:some268 a var:some266.
+}
+_:gn_23 {
+    var:some267 a :aaa.
+}
+_:gn_80 {
+    var:some274 a var:some272.
+}
+_:gn_17 {
+    var:some264 a :aaa.
+}
+_:gn_19 {
+    (var:some267 var:some268) lingua:onNegativeSurface _:gn_55.
+    (var:some267) lingua:onNegativeSurface _:gn_56.
+}
+_:gn_57 {
+    var:some273 :bbb var:some274.
+    () lingua:onNegativeSurface _:gn_80.
+}
+_:gn_21 {
+    var:some273 a :aaa.
+}
+_:gn_81 {
+    _:sk_571 a :ccc.
+}
+_:gn_82 {
+    _:sk_570 :bbb _:sk_571.
+    () lingua:onNegativeSurface _:gn_81.
+}
+_:gn_83 {
+    _:sk_570 a :aaa.
+}
+_:gn_84 {
+    var:some394 a var:some392.
+}
+_:gn_67 {
+    var:some393 :bbb var:some394.
+    () lingua:onNegativeSurface _:gn_84.
+}
+_:gn_35 {
+    var:some393 a :aaa.
+}
+_:gn_85 {
+    var:some571 a :ccc.
+}
+_:gn_42 {
+    var:some570 a :aaa.
+}
+_:gn_86 {
+    var:some603 a :ccc.
+}
+_:gn_45 {
+    var:some602 a :aaa.
 }
 _:gn_1 {
     var:node_6_1 owl:onProperty var:b.
     var:node_6_1 owl:allValuesFrom var:node_9_1.
 }
-_:gn_2 {
-    (var:node_13_1 var:node_2_1) lingua:onNegativeSurface _:gn_10.
-    (var:node_13_1) lingua:onNegativeSurface _:gn_11.
-}
 _:gn_3 {
-    (var:node_13_1) lingua:onNegativeSurface _:gn_11.
+    (var:node_13_1) lingua:onNegativeSurface _:gn_48.
 }
 _:gn_4 {
     var:node_6_1 owl:onProperty var:b.
     var:node_6_1 owl:allValuesFrom var:node_9_1.
-    (var:node_2_1) lingua:onNegativeSurface _:gn_12.
+    (var:node_2_1) lingua:onNegativeSurface _:gn_49.
 }
 _:gn_6 {
-    (var:node_13_1 var:node_2_1) lingua:onNegativeSurface _:gn_10.
+    (var:node_13_1 var:node_2_1) lingua:onNegativeSurface _:gn_47.
 }
 _:gn_7 {
-    var:node_24_1 a var:node_26_1.
+    var:node_6_1 owl:onProperty var:b.
 }
 _:gn_8 {
-    (var:some98) lingua:onNegativeSurface _:gn_13.
+    (var:node_9_1) lingua:onNegativeSurface _:gn_50.
 }
 _:gn_9 {
-    var:some97 a :aaa.
+    (var:node_9_1 var:node_13_1 var:node_2_1) lingua:onNegativeSurface _:gn_51.
 }
 _:gn_10 {
-    var:node_13_1 a var:node_6_1.
-    var:node_13_1 var:b var:node_2_1.
-    () lingua:onNegativeSurface _:gn_14.
+    (var:node_9_1 var:node_13_1) lingua:onNegativeSurface _:gn_52.
 }
 _:gn_11 {
-    (var:node_2_1) lingua:onNegativeSurface _:gn_12.
-    () lingua:onNegativeSurface _:gn_5.
+    (var:node_9_1 var:node_13_1 var:node_2_1 var:node_13_1) lingua:onNegativeSurface _:gn_52.
 }
 _:gn_12 {
-    var:node_13_1 var:b var:node_2_1.
-    () lingua:onNegativeSurface _:gn_14.
+    (var:node_9_1 var:node_13_1 var:node_2_1) lingua:onNegativeSurface _:gn_53.
 }
 _:gn_13 {
-    var:some97 :bbb var:some98.
-    () lingua:onNegativeSurface _:gn_15.
+    (var:node_9_1 var:node_13_1 var:node_13_1 var:node_2_1) lingua:onNegativeSurface _:gn_51.
+}
+_:gn_14 {
+    var:node_24_1 a var:node_26_1.
+}
+_:gn_15 {
+    (var:node_9_1 var:node_13_1 var:node_2_1 var:node_13_1 var:node_2_1) lingua:onNegativeSurface _:gn_53.
+}
+_:gn_16 {
+    (var:some265) lingua:onNegativeSurface _:gn_54.
+}
+_:gn_18 {
+    :aaa owl:allValuesFrom var:some266.
+}
+_:gn_20 {
+    :aaa owl:allValuesFrom var:some272.
+    (var:some274) lingua:onNegativeSurface _:gn_57.
+}
+_:gn_22 {
+    :aaa owl:allValuesFrom var:some266.
+    (var:some268) lingua:onNegativeSurface _:gn_58.
+}
+_:gn_24 {
+    () lingua:onNegativeSurface _:gn_59.
+}
+_:gn_25 {
+    () lingua:onNegativeSurface _:gn_60.
+}
+_:gn_26 {
+    :aaa owl:allValuesFrom var:some272.
+}
+_:gn_27 {
+    (var:some273) lingua:onNegativeSurface _:gn_61.
+}
+_:gn_28 {
+    (var:some267) lingua:onNegativeSurface _:gn_56.
+}
+_:gn_29 {
+    (var:some273 var:some274) lingua:onNegativeSurface _:gn_62.
+}
+_:gn_30 {
+    () lingua:onNegativeSurface _:gn_63.
+}
+_:gn_31 {
+    (var:node_6_1 var:node_9_1) lingua:onNegativeSurface _:gn_64.
+}
+_:gn_32 {
+    :xxx a :aaa.
+}
+_:gn_33 {
+    (_:sk_570 _:sk_571) lingua:onNegativeSurface _:gn_65.
+    (_:sk_570) lingua:onNegativeSurface _:gn_66.
+}
+_:gn_34 {
+    :aaa owl:allValuesFrom var:some392.
+    (var:some394) lingua:onNegativeSurface _:gn_67.
+}
+_:gn_36 {
+    :aaa owl:allValuesFrom var:some392.
+}
+_:gn_37 {
+    (var:some393 var:some394 var:some393) lingua:onNegativeSurface _:gn_68.
+}
+_:gn_38 {
+    (var:some267 var:some268) lingua:onNegativeSurface _:gn_69.
+}
+_:gn_39 {
+    (var:some393 var:some394 var:some393 var:some394) lingua:onNegativeSurface _:gn_70.
+}
+_:gn_40 {
+    (var:some570 var:some571) lingua:onNegativeSurface _:gn_71.
+    (var:some570) lingua:onNegativeSurface _:gn_72.
+}
+_:gn_41 {
+    (var:some571) lingua:onNegativeSurface _:gn_73.
+}
+_:gn_43 {
+    () lingua:onNegativeSurface _:gn_74.
+}
+_:gn_44 {
+    (var:some603) lingua:onNegativeSurface _:gn_75.
+}
+_:gn_46 {
+    () lingua:onNegativeSurface _:gn_76.
+}
+_:gn_47 {
+    var:node_13_1 a var:node_6_1.
+    var:node_13_1 var:b var:node_2_1.
+    () lingua:onNegativeSurface _:gn_77.
+}
+_:gn_48 {
+    (var:node_2_1) lingua:onNegativeSurface _:gn_49.
+    () lingua:onNegativeSurface _:gn_5.
+}
+_:gn_77 {
+    var:node_2_1 a var:node_9_1.
+}
+_:gn_55 {
+    var:some267 a :aaa.
+    var:some267 :bbb var:some268.
+    () lingua:onNegativeSurface _:gn_79.
+}
+_:gn_56 {
+    (var:some268) lingua:onNegativeSurface _:gn_58.
+    () lingua:onNegativeSurface _:gn_23.
+}
+_:gn_80 {
+    var:some274 a var:some272.
+}
+_:gn_81 {
+    _:sk_571 a :ccc.
+}
+_:gn_84 {
+    var:some394 a var:some392.
+}
+_:gn_49 {
+    var:node_13_1 var:b var:node_2_1.
+    () lingua:onNegativeSurface _:gn_77.
+}
+_:gn_50 {
+    var:node_6_1 owl:allValuesFrom var:node_9_1.
+    () lingua:onNegativeSurface _:gn_2.
+}
+_:gn_51 {
+    var:node_6_1 owl:allValuesFrom var:node_9_1.
+    var:node_13_1 a var:node_6_1.
+    var:node_13_1 var:b var:node_2_1.
+    () lingua:onNegativeSurface _:gn_77.
+}
+_:gn_52 {
+    var:node_6_1 owl:allValuesFrom var:node_9_1.
+    (var:node_2_1) lingua:onNegativeSurface _:gn_49.
+    () lingua:onNegativeSurface _:gn_5.
+}
+_:gn_53 {
+    var:node_6_1 owl:allValuesFrom var:node_9_1.
+    () lingua:onNegativeSurface _:gn_5.
+    var:node_2_1 a var:node_9_1.
+}
+_:gn_54 {
+    var:some264 :bbb var:some265.
+    () lingua:onNegativeSurface _:gn_78.
+}
+_:gn_57 {
+    var:some273 :bbb var:some274.
+    () lingua:onNegativeSurface _:gn_80.
+}
+_:gn_58 {
+    var:some267 :bbb var:some268.
+    () lingua:onNegativeSurface _:gn_79.
+}
+_:gn_59 {
+    () lingua:onNegativeSurface _:gn_17.
+}
+_:gn_60 {
+    () lingua:onNegativeSurface _:gn_19.
+}
+_:gn_61 {
+    (var:some274) lingua:onNegativeSurface _:gn_57.
+    () lingua:onNegativeSurface _:gn_21.
+}
+_:gn_62 {
+    () lingua:onNegativeSurface _:gn_21.
+    var:some274 a var:some272.
+}
+_:gn_63 {
+    var:node_13_1 var:b var:node_2_1.
+}
+_:gn_64 {
+    var:node_6_1 owl:onProperty var:b.
+    var:node_6_1 owl:allValuesFrom var:node_9_1.
+    () lingua:onNegativeSurface _:gn_5.
+}
+_:gn_65 {
+    _:sk_570 a :aaa.
+    _:sk_570 :bbb _:sk_571.
+    () lingua:onNegativeSurface _:gn_81.
+}
+_:gn_66 {
+    (_:sk_571) lingua:onNegativeSurface _:gn_82.
+    () lingua:onNegativeSurface _:gn_83.
+}
+_:gn_67 {
+    var:some393 :bbb var:some394.
+    () lingua:onNegativeSurface _:gn_84.
+}
+_:gn_68 {
+    (var:some394) lingua:onNegativeSurface _:gn_67.
+    () lingua:onNegativeSurface _:gn_35.
+}
+_:gn_69 {
+    () lingua:onNegativeSurface _:gn_23.
+    var:some268 a var:some266.
+}
+_:gn_70 {
+    () lingua:onNegativeSurface _:gn_35.
+    var:some394 a var:some392.
+}
+_:gn_71 {
+    var:some570 a :aaa.
+    var:some570 :bbb var:some571.
+    () lingua:onNegativeSurface _:gn_85.
+}
+_:gn_72 {
+    (var:some571) lingua:onNegativeSurface _:gn_73.
+    () lingua:onNegativeSurface _:gn_42.
+}
+_:gn_73 {
+    var:some570 :bbb var:some571.
+    () lingua:onNegativeSurface _:gn_85.
+}
+_:gn_74 {
+    () lingua:onNegativeSurface _:gn_42.
+}
+_:gn_75 {
+    var:some602 :bbb var:some603.
+    () lingua:onNegativeSurface _:gn_86.
+}
+_:gn_76 {
+    () lingua:onNegativeSurface _:gn_45.
 }

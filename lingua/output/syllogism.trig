@@ -1,0 +1,313 @@
+@prefix : <https://eyereasoner.github.io/see-lingua/lingua/syllogism.trig#>.
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
+@prefix var: <http://www.w3.org/2000/10/swap/var#>.
+
+:test :is true.
+
+_:rl_3797462 lingua:premise _:gn_1.
+_:rl_3797462 lingua:conclusion _:gn_2.
+_:rl_3797462 lingua:bindings ((var:node_2_1 _:node_12_1)).
+_:rl_3335922 lingua:premise _:gn_1.
+_:rl_3335922 lingua:conclusion _:gn_3.
+_:rl_3335922 lingua:bindings ((var:node_2_1 _:node_12_1)).
+_:rl_11116465 lingua:premise _:gn_1.
+_:rl_11116465 lingua:conclusion _:gn_4.
+_:rl_11116465 lingua:bindings ((var:node_2_1 _:node_12_1)).
+_:rl_15175356 lingua:premise _:gn_5.
+_:rl_15175356 lingua:conclusion _:gn_6.
+_:rl_15175356 lingua:bindings ((var:node_6_1 :Tweety)).
+_:rl_11509322 lingua:premise _:gn_1.
+_:rl_11509322 lingua:conclusion _:gn_7.
+_:rl_11509322 lingua:bindings ((var:node_2_1 _:node_12_1)).
+_:rl_5284571 lingua:premise _:gn_8.
+_:rl_5284571 lingua:conclusion _:gn_9.
+_:rl_5284571 lingua:bindings ((var:node_14_1 _:node_17_1)).
+_:rl_8680548 lingua:premise _:gn_5.
+_:rl_8680548 lingua:conclusion _:gn_10.
+_:rl_8680548 lingua:bindings ((var:node_6_1 :Tweety)).
+_:rl_9849479 lingua:premise _:gn_11.
+_:rl_9849479 lingua:conclusion _:gn_12.
+_:rl_9849479 lingua:bindings ((var:node_6_1 _:node_12_1)).
+_:rl_7053401 lingua:premise _:gn_8.
+_:rl_7053401 lingua:conclusion _:gn_13.
+_:rl_7053401 lingua:bindings ((var:node_14_1 _:node_17_1)).
+_:rl_498408 lingua:premise _:gn_14.
+_:rl_498408 lingua:conclusion _:gn_12.
+_:rl_498408 lingua:bindings ((var:node_6_1 _:node_12_1)).
+_:rl_3004408 lingua:premise _:gn_5.
+_:rl_3004408 lingua:conclusion _:gn_15.
+_:rl_3004408 lingua:bindings ((var:node_6_1 :Tweety)).
+_:rl_4052122 lingua:premise _:gn_16.
+_:rl_4052122 lingua:conclusion _:node_21_1.
+_:rl_4052122 lingua:bindings ().
+_:rl_14682571 lingua:premise _:gn_17.
+_:rl_14682571 lingua:conclusion _:gn_18.
+_:rl_14682571 lingua:bindings ((var:node_2_1 :Tweety)).
+_:rl_14485414 lingua:premise _:gn_19.
+_:rl_14485414 lingua:conclusion _:gn_20.
+_:rl_14485414 lingua:bindings ((var:node_12_1 _:sk_152) (var:node_17_1 _:sk_153)).
+_:rl_4751358 lingua:question _:node_21_1.
+_:rl_4751358 lingua:answer _:node_21_1.
+_:rl_4751358 lingua:bindings ().
+_:rl_15522365 lingua:premise true.
+_:rl_15522365 lingua:conclusion _:gn_21.
+_:rl_15522365 lingua:bindings ((var:node_12_1 _:node_12_1)).
+_:rl_15848993 lingua:premise true.
+_:rl_15848993 lingua:conclusion _:gn_22.
+_:rl_15848993 lingua:bindings ((var:node_12_1 _:node_12_1)).
+_:rl_414478 lingua:premise _:gn_23.
+_:rl_414478 lingua:conclusion _:node_21_1.
+_:rl_414478 lingua:bindings ((var:some152 _:node_12_1) (var:some153 _:node_17_1)).
+_:rl_2760788 lingua:premise _:gn_24.
+_:rl_2760788 lingua:conclusion _:node_21_1.
+_:rl_2760788 lingua:bindings ((var:some152 _:node_12_1) (var:some153 _:node_17_1)).
+_:rl_8394410 lingua:premise _:gn_25.
+_:rl_8394410 lingua:conclusion _:gn_26.
+_:rl_8394410 lingua:bindings ((var:some152 _:node_12_1) (var:some153 _:sk_203)).
+_:rl_6492655 lingua:premise _:gn_27.
+_:rl_6492655 lingua:conclusion _:gn_28.
+_:rl_6492655 lingua:bindings ((var:some152 _:node_12_1) (var:some153 _:sk_204)).
+_:rl_6789785 lingua:premise _:gn_29.
+_:rl_6789785 lingua:conclusion _:node_21_1.
+_:rl_6789785 lingua:bindings ((var:some203 _:node_17_1)).
+_:rl_40397 lingua:premise _:gn_30.
+_:rl_40397 lingua:conclusion _:node_21_1.
+_:rl_40397 lingua:bindings ((var:some204 _:node_17_1)).
+_:rl_4809350 lingua:premise _:gn_31.
+_:rl_4809350 lingua:conclusion _:node_21_1.
+_:rl_4809350 lingua:bindings ((var:some203 _:node_17_1)).
+_:rl_16047335 lingua:premise _:gn_32.
+_:rl_16047335 lingua:conclusion _:gn_33.
+_:rl_16047335 lingua:bindings ((var:some203 _:sk_261)).
+_:rl_12826470 lingua:premise _:gn_34.
+_:rl_12826470 lingua:conclusion _:gn_35.
+_:rl_12826470 lingua:bindings ((var:some204 _:sk_261)).
+_:rl_15911845 lingua:premise _:gn_36.
+_:rl_15911845 lingua:conclusion _:gn_33.
+_:rl_15911845 lingua:bindings ((var:some203 _:sk_261)).
+_:rl_10261383 lingua:premise _:gn_37.
+_:rl_10261383 lingua:conclusion _:node_21_1.
+_:rl_10261383 lingua:bindings ((var:some261 _:node_17_1)).
+_:rl_10072013 lingua:premise _:gn_8.
+_:rl_10072013 lingua:conclusion _:node_21_1.
+_:rl_10072013 lingua:bindings ((var:node_14_1 _:node_17_1)).
+_:rl_10902805 lingua:premise true.
+_:rl_10902805 lingua:conclusion _:node_21_1.
+_:rl_10902805 lingua:bindings ().
+_:rl_16663893 lingua:premise _:gn_37.
+_:rl_16663893 lingua:conclusion _:gn_38.
+_:rl_16663893 lingua:bindings ((var:some261 _:node_17_1)).
+_:rl_5090826 lingua:premise _:gn_8.
+_:rl_5090826 lingua:conclusion _:gn_38.
+_:rl_5090826 lingua:bindings ((var:node_14_1 _:node_17_1)).
+_:gn_11 {
+    var:node_6_1 a :Mammal.
+}
+_:gn_3 {
+    var:node_2_1 a :Feline.
+}
+_:gn_53 {
+    var:node_17_1 a :Christian.
+}
+_:node_21_1 {
+    :test :is true.
+}
+_:gn_44 {
+    var:some153 a :Christian.
+}
+_:gn_47 {
+    var:some203 a :Christian.
+}
+_:gn_48 {
+    var:some204 a :Christian.
+}
+_:gn_1 {
+    var:node_2_1 a :Cat.
+}
+_:gn_2 {
+    var:node_2_1 a :Mammal.
+}
+_:gn_4 {
+    () lingua:onNegativeSurface _:gn_17.
+}
+_:gn_5 {
+    var:node_6_1 a :Bird.
+}
+_:gn_6 {
+    () lingua:onNegativeSurface _:gn_39.
+}
+_:gn_7 {
+    () lingua:onNegativeSurface _:gn_40.
+}
+_:gn_8 {
+    var:node_14_1 a :Muslim.
+}
+_:gn_9 {
+    () lingua:onNegativeSurface _:gn_41.
+}
+_:gn_10 {
+    () lingua:onNegativeSurface _:gn_11.
+}
+_:gn_12 {
+    () lingua:onNegativeSurface _:gn_5.
+}
+_:gn_13 {
+    () lingua:onNegativeSurface _:gn_42.
+}
+_:gn_14 {
+    var:node_6_1 a :Cat.
+}
+_:gn_15 {
+    () lingua:onNegativeSurface _:gn_14.
+}
+_:gn_16 {
+    () lingua:onNegativeSurface _:node_19_1.
+    _:node_12_1 a :White.
+    _:node_12_1 a :Feline.
+    () lingua:onNegativeSurface _:node_20_1.
+}
+_:gn_17 {
+    () lingua:onNegativeSurface _:gn_2.
+}
+_:gn_18 {
+    () lingua:onNegativeSurface _:gn_1.
+}
+_:gn_19 {
+    () lingua:onNegativeSurface _:node_19_1.
+}
+_:gn_20 {
+    () lingua:onNegativeSurface _:gn_43.
+}
+_:gn_21 {
+    var:node_12_1 a :Mammal.
+}
+_:gn_22 {
+    var:node_12_1 a :Feline.
+}
+_:gn_23 {
+    var:some152 a :White.
+    var:some152 a :Feline.
+    () lingua:onNegativeSurface _:gn_44.
+}
+_:gn_24 {
+    var:some152 a :Cat.
+    var:some152 a :White.
+    () lingua:onNegativeSurface _:gn_44.
+}
+_:gn_25 {
+    var:some152 a :White.
+}
+_:gn_26 {
+    () lingua:onNegativeSurface _:gn_45.
+}
+_:gn_27 {
+    var:some152 a :Cat.
+}
+_:gn_28 {
+    () lingua:onNegativeSurface _:gn_46.
+}
+_:gn_29 {
+    _:node_12_1 a :Feline.
+    () lingua:onNegativeSurface _:gn_47.
+}
+_:gn_30 {
+    _:node_12_1 a :White.
+    () lingua:onNegativeSurface _:gn_48.
+}
+_:gn_31 {
+    _:node_12_1 a :Cat.
+    () lingua:onNegativeSurface _:gn_47.
+}
+_:gn_32 {
+    _:node_12_1 a :Feline.
+}
+_:gn_33 {
+    () lingua:onNegativeSurface _:gn_49.
+}
+_:gn_34 {
+    _:node_12_1 a :White.
+}
+_:gn_35 {
+    () lingua:onNegativeSurface _:gn_50.
+}
+_:gn_36 {
+    _:node_12_1 a :Cat.
+}
+_:gn_37 {
+    () lingua:onNegativeSurface _:gn_51.
+}
+_:gn_38 {
+    () lingua:onNegativeSurface _:gn_52.
+}
+_:gn_39 {
+    () lingua:onPositiveSurface _:gn_11.
+}
+_:gn_40 {
+    () lingua:onNegativeSurface _:gn_3.
+}
+_:gn_41 {
+    () lingua:onPositiveSurface _:gn_42.
+}
+_:gn_11 {
+    var:node_6_1 a :Mammal.
+}
+_:gn_5 {
+    var:node_6_1 a :Bird.
+}
+_:gn_42 {
+    var:node_14_1 a :Christian.
+}
+_:gn_14 {
+    var:node_6_1 a :Cat.
+}
+_:node_19_1 {
+    :Tweety a :Cat.
+}
+_:node_20_1 {
+    _:node_17_1 a :Christian.
+}
+_:gn_2 {
+    var:node_2_1 a :Mammal.
+}
+_:gn_1 {
+    var:node_2_1 a :Cat.
+}
+_:gn_43 {
+    var:node_12_1 a :White.
+    var:node_12_1 a :Feline.
+    () lingua:onNegativeSurface _:gn_53.
+    () lingua:onNegativeSurface _:node_21_1.
+}
+_:gn_44 {
+    var:some153 a :Christian.
+}
+_:gn_45 {
+    var:some152 a :Feline.
+    () lingua:onNegativeSurface _:gn_44.
+    () lingua:onNegativeSurface _:node_21_1.
+}
+_:gn_46 {
+    var:some152 a :White.
+    () lingua:onNegativeSurface _:gn_44.
+    () lingua:onNegativeSurface _:node_21_1.
+}
+_:gn_47 {
+    var:some203 a :Christian.
+}
+_:gn_48 {
+    var:some204 a :Christian.
+}
+_:gn_49 {
+    () lingua:onNegativeSurface _:gn_47.
+    () lingua:onNegativeSurface _:node_21_1.
+}
+_:gn_50 {
+    () lingua:onNegativeSurface _:gn_48.
+    () lingua:onNegativeSurface _:node_21_1.
+}
+_:gn_51 {
+    var:some261 a :Christian.
+}
+_:gn_52 {
+    () lingua:onNegativeSurface _:node_21_1.
+}

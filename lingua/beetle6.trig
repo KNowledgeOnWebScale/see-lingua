@@ -1,0 +1,78 @@
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
+@prefix : <#>.
+
+# beetle is a car
+:beetle a :Car.
+
+# all cars are green or blue
+(_:A) lingua:onNegativeSurface _:ns1.
+
+_:ns1 {
+    _:A a :Car.
+    () lingua:onNegativeSurface _:ns2.
+    () lingua:onNegativeSurface _:ns3.
+}
+
+_:ns2 {
+    _:A :is :green.
+}
+
+_:ns3 {
+    _:A :is :blue.
+}
+
+# green things are nice or pretty
+(_:A) lingua:onNegativeSurface _:ns4.
+
+_:ns4 {
+    _:A :is :green.
+    () lingua:onNegativeSurface _:ns5.
+    () lingua:onNegativeSurface _:ns6.
+}
+
+_:ns5 {
+    _:A :is :nice.
+}
+
+_:ns6 {
+    _:A :is :pretty.
+}
+
+# pretty things are beautiful
+(_:A) lingua:onNegativeSurface _:ns7.
+
+_:ns7 {
+    _:A :is :pretty.
+    () lingua:onNegativeSurface _:ns8.
+}
+
+_:ns8 {
+    _:A :is :beautiful.
+}
+
+# cars are not beautiful
+(_:A) lingua:onNegativeSurface _:ns9.
+
+_:ns9 {
+    _:A a :Car.
+    _:A :is :beautiful.
+}
+
+# blue things are beautiful
+(_:A) lingua:onNegativeSurface _:ns10.
+
+_:ns10 {
+    _:A :is :blue.
+    () lingua:onNegativeSurface _:ns11.
+}
+
+_:ns11 {
+    _:A :is :beautiful.
+}
+
+# query
+(_:S) lingua:onQuestionSurface _:qs.
+
+_:qs {
+    _:S :is :nice.
+}

@@ -1,0 +1,212 @@
+@prefix : <https://eyereasoner.github.io/see-lingua/lingua/beetle6.trig#>.
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
+@prefix var: <http://www.w3.org/2000/10/swap/var#>.
+
+:beetle :is :nice.
+
+_:rl_1576225 lingua:premise _:gn_1.
+_:rl_1576225 lingua:conclusion _:gn_2.
+_:rl_1576225 lingua:bindings ((var:node_2_1 :beetle)).
+_:rl_2598431 lingua:premise _:gn_1.
+_:rl_2598431 lingua:conclusion _:gn_3.
+_:rl_2598431 lingua:bindings ((var:node_2_1 :beetle)).
+_:rl_14290968 lingua:premise _:gn_3.
+_:rl_14290968 lingua:conclusion _:gn_4.
+_:rl_14290968 lingua:bindings ((var:node_2_1 :beetle)).
+_:rl_9837994 lingua:premise _:gn_3.
+_:rl_9837994 lingua:conclusion _:gn_5.
+_:rl_9837994 lingua:bindings ((var:node_2_1 :beetle)).
+_:rl_9720545 lingua:premise _:gn_3.
+_:rl_9720545 lingua:conclusion _:gn_6.
+_:rl_9720545 lingua:bindings ((var:node_2_1 :beetle)).
+_:rl_3712382 lingua:premise _:gn_1.
+_:rl_3712382 lingua:conclusion _:gn_7.
+_:rl_3712382 lingua:bindings ((var:node_2_1 :beetle)).
+_:rl_6076392 lingua:premise _:gn_1.
+_:rl_6076392 lingua:conclusion _:gn_4.
+_:rl_6076392 lingua:bindings ((var:node_2_1 :beetle)).
+_:rl_12984145 lingua:premise _:gn_8.
+_:rl_12984145 lingua:conclusion _:gn_9.
+_:rl_12984145 lingua:bindings ((var:node_2_1 :beetle)).
+_:rl_14914286 lingua:premise _:gn_10.
+_:rl_14914286 lingua:conclusion _:gn_11.
+_:rl_14914286 lingua:bindings ((var:node_2_1 :beetle)).
+_:rl_9406647 lingua:premise _:gn_12.
+_:rl_9406647 lingua:conclusion _:gn_9.
+_:rl_9406647 lingua:bindings ((var:node_2_1 :beetle)).
+_:rl_4100930 lingua:premise _:gn_13.
+_:rl_4100930 lingua:conclusion _:gn_11.
+_:rl_4100930 lingua:bindings ((var:node_2_1 :beetle)).
+_:rl_4417203 lingua:premise _:gn_9.
+_:rl_4417203 lingua:conclusion _:gn_14.
+_:rl_4417203 lingua:bindings ((var:node_2_1 :beetle)).
+_:rl_15698614 lingua:premise _:gn_3.
+_:rl_15698614 lingua:conclusion _:gn_7.
+_:rl_15698614 lingua:bindings ((var:node_2_1 :beetle)).
+_:rl_15047450 lingua:question _:gn_15.
+_:rl_15047450 lingua:answer _:gn_15.
+_:rl_15047450 lingua:bindings ((var:node_19_1 :beetle)).
+_:rl_3089515 lingua:premise _:gn_16.
+_:rl_3089515 lingua:conclusion _:gn_17.
+_:rl_3089515 lingua:bindings ().
+_:rl_13090796 lingua:premise _:gn_18.
+_:rl_13090796 lingua:conclusion _:gn_17.
+_:rl_13090796 lingua:bindings ().
+_:rl_5522524 lingua:premise _:gn_17.
+_:rl_5522524 lingua:conclusion _:gn_19.
+_:rl_5522524 lingua:bindings ().
+_:rl_1114629 lingua:premise _:gn_20.
+_:rl_1114629 lingua:conclusion _:gn_17.
+_:rl_1114629 lingua:bindings ().
+_:rl_10052148 lingua:premise _:gn_16.
+_:rl_10052148 lingua:conclusion _:gn_19.
+_:rl_10052148 lingua:bindings ().
+_:rl_7358899 lingua:premise true.
+_:rl_7358899 lingua:conclusion _:gn_17.
+_:rl_7358899 lingua:bindings ().
+_:rl_1492613 lingua:premise true.
+_:rl_1492613 lingua:conclusion _:gn_19.
+_:rl_1492613 lingua:bindings ().
+_:rl_14900858 lingua:premise _:gn_16.
+_:rl_14900858 lingua:conclusion _:gn_21.
+_:rl_14900858 lingua:bindings ().
+_:rl_6470213 lingua:premise _:gn_18.
+_:rl_6470213 lingua:conclusion _:gn_21.
+_:rl_6470213 lingua:bindings ().
+_:rl_14319099 lingua:premise _:gn_17.
+_:rl_14319099 lingua:conclusion _:gn_22.
+_:rl_14319099 lingua:bindings ().
+_:rl_9363826 lingua:premise _:gn_20.
+_:rl_9363826 lingua:conclusion _:gn_21.
+_:rl_9363826 lingua:bindings ().
+_:rl_12015538 lingua:premise _:gn_16.
+_:rl_12015538 lingua:conclusion _:gn_22.
+_:rl_12015538 lingua:bindings ().
+_:rl_3061686 lingua:premise _:gn_23.
+_:rl_3061686 lingua:conclusion _:gn_19.
+_:rl_3061686 lingua:bindings ().
+_:rl_13605608 lingua:premise _:gn_20.
+_:rl_13605608 lingua:conclusion _:gn_19.
+_:rl_13605608 lingua:bindings ().
+_:rl_9774483 lingua:premise _:gn_23.
+_:rl_9774483 lingua:conclusion _:gn_22.
+_:rl_9774483 lingua:bindings ().
+_:rl_11366037 lingua:premise _:gn_20.
+_:rl_11366037 lingua:conclusion _:gn_22.
+_:rl_11366037 lingua:bindings ().
+_:gn_9 {
+    var:node_2_1 :is :green.
+}
+_:gn_11 {
+    var:node_2_1 :is :nice.
+}
+_:gn_29 {
+    var:node_2_1 :is :pretty.
+}
+_:gn_17 {
+    :beetle :is :green.
+}
+_:gn_19 {
+    :beetle :is :nice.
+}
+_:gn_1 {
+    var:node_2_1 a :Car.
+}
+_:gn_2 {
+    () lingua:onNegativeSurface _:gn_24.
+}
+_:gn_3 {
+    () lingua:onNegativeSurface _:gn_25.
+}
+_:gn_4 {
+    () lingua:onNegativeSurface _:gn_26.
+}
+_:gn_5 {
+    () lingua:onNegativeSurface _:gn_27.
+}
+_:gn_6 {
+    () lingua:onNegativeSurface _:gn_28.
+}
+_:gn_7 {
+    () lingua:onNegativeSurface _:gn_29.
+}
+_:gn_8 {
+    var:node_2_1 a :Car.
+    () lingua:onNegativeSurface _:gn_26.
+}
+_:gn_10 {
+    var:node_2_1 :is :green.
+    () lingua:onNegativeSurface _:gn_29.
+}
+_:gn_12 {
+    () lingua:onNegativeSurface _:gn_25.
+    var:node_2_1 a :Car.
+}
+_:gn_13 {
+    () lingua:onNegativeSurface _:gn_25.
+    var:node_2_1 :is :green.
+}
+_:gn_14 {
+    () lingua:onNegativeSurface _:gn_30.
+}
+_:gn_15 {
+    var:node_19_1 :is :nice.
+}
+_:gn_16 {
+    () lingua:onNegativeSurface _:gn_31.
+}
+_:gn_18 {
+    :beetle a :Car.
+}
+_:gn_20 {
+    () lingua:onNegativeSurface _:gn_32.
+}
+_:gn_21 {
+    () lingua:onNegativeSurface _:gn_33.
+}
+_:gn_22 {
+    () lingua:onNegativeSurface _:gn_34.
+}
+_:gn_23 {
+    () lingua:onNegativeSurface _:gn_35.
+}
+_:gn_24 {
+    () lingua:onNegativeSurface _:gn_9.
+    () lingua:onNegativeSurface _:gn_26.
+}
+_:gn_25 {
+    var:node_2_1 :is :beautiful.
+}
+_:gn_26 {
+    var:node_2_1 :is :blue.
+}
+_:gn_27 {
+    var:node_2_1 a :Car.
+    () lingua:onNegativeSurface _:gn_9.
+}
+_:gn_28 {
+    var:node_2_1 :is :green.
+    () lingua:onNegativeSurface _:gn_11.
+}
+_:gn_29 {
+    var:node_2_1 :is :pretty.
+}
+_:gn_30 {
+    () lingua:onNegativeSurface _:gn_11.
+    () lingua:onNegativeSurface _:gn_29.
+}
+_:gn_31 {
+    :beetle :is :blue.
+}
+_:gn_32 {
+    :beetle :is :beautiful.
+}
+_:gn_33 {
+    () lingua:onNegativeSurface _:gn_17.
+}
+_:gn_34 {
+    () lingua:onNegativeSurface _:gn_19.
+}
+_:gn_35 {
+    :beetle :is :pretty.
+}

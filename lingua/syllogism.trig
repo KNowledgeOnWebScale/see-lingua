@@ -1,0 +1,106 @@
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
+@prefix : <#>.
+
+# Examples from "Neeltje Komt Dinsdag In Evakostuum" , M.C. Gomperts
+
+:Tweety a :Bird.
+
+## Syllogism 1 : Camestres
+
+# All cats are mammals
+(_:Cat) lingua:onNegativeSurface _:ns1.
+
+_:ns1 {
+    _:Cat a :Cat.
+    () lingua:onNegativeSurface _:ns2.
+}
+
+_:ns2 {
+    _:Cat a :Mammal.
+}
+
+# No bird is a mammal
+(_:Bird) lingua:onNegativeSurface _:ns3.
+
+_:ns3 {
+    _:Bird a :Bird.
+    () lingua:onPositiveSurface _:ns4.
+}
+
+_:ns4 {
+    _:Bird a :Mammal.
+}
+
+# IMPLIES: Bird is not a Cat
+
+## Syllogism 2 : Datasi
+
+# All cats are feline
+(_:Cat) lingua:onNegativeSurface _:ns5.
+
+_:ns5 {
+    _:Cat a :Cat.
+    () lingua:onNegativeSurface _:ns6.
+}
+
+_:ns6 {
+    _:Cat a :Feline.
+}
+
+# Some cats are white
+_:X a :Cat , :White.
+
+# IMPLIES : Some white are feline 
+
+# Syllogism 3 : Ferio
+
+# No muslim is a christian
+(_:M) lingua:onNegativeSurface _:ns7.
+
+_:ns7 {
+    _:M a :Muslim.
+    () lingua:onPositiveSurface _:ns8.
+}
+
+_:ns8 {
+    _:M a :Christian.
+}
+
+# Some worshippers are muslim
+_:P a :Worshipper , :Muslim.
+
+# IMPLIES : Some worshipper is not a christian 
+
+() lingua:onNegativeSurface _:ns9.
+
+_:ns9 {
+    # 1
+    () lingua:onNegativeSurface _:ns10.
+
+    # 2 
+    _:X a :White, :Feline.
+
+    # 3
+    () lingua:onNegativeSurface _:ns11.
+
+    () lingua:onNegativeSurface _:ns12.
+}
+
+_:ns10 {
+    :Tweety a :Cat.
+}
+
+_:ns11 {
+    _:P a :Christian.
+}
+
+_:ns12 {
+    :test :is true.
+}
+
+# Test
+() lingua:onQuestionSurface _:qs.
+
+_:qs {
+    :test :is true.
+}
