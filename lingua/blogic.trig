@@ -25,8 +25,8 @@ _:ns2 {
 }
 
 # query
-(_:S _:C) lingua:onQuestionSurface _:qs.
+(_:S) lingua:onQuestionSurface _:qs.
 
 _:qs {
-    _:S a _:C.
+    _:S a :Socrates.
 }

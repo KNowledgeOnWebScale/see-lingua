@@ -1,90 +1,17 @@
-@prefix : <https://eyereasoner.github.io/see-lingua/lingua/blogic.trig#>.
 @prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
+@prefix : <https://eyereasoner.github.io/see-lingua/lingua/blogic.trig#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 
-:Socrates a :Man.
-:Socrates a :Human.
-:Socrates a :Mortal.
 
 _:rl_15496116 lingua:premise _:gn_1.
 _:rl_15496116 lingua:conclusion _:gn_2.
 _:rl_15496116 lingua:bindings ((var:node_2_1 :Man) (var:node_4_1 :Human) (var:node_6_1 :Socrates)).
 _:rl_15496116 lingua:bindings ((var:node_2_1 :Human) (var:node_4_1 :Mortal) (var:node_6_1 :Socrates)).
-_:rl_1168433 lingua:premise _:gn_3.
-_:rl_1168433 lingua:conclusion _:gn_4.
-_:rl_1168433 lingua:bindings ((var:node_2_1 :Man) (var:node_4_1 :Human) (var:node_6_1 _:sk_18)).
-_:rl_1168433 lingua:bindings ((var:node_2_1 :Human) (var:node_4_1 :Mortal) (var:node_6_1 _:sk_19)).
-_:rl_5122824 lingua:question _:gn_5.
-_:rl_5122824 lingua:answer _:gn_5.
-_:rl_5122824 lingua:bindings ((var:node_6_1 :Socrates) (var:node_11_1 :Man)).
-_:rl_5122824 lingua:bindings ((var:node_6_1 :Socrates) (var:node_11_1 :Human)).
-_:rl_5122824 lingua:bindings ((var:node_6_1 :Socrates) (var:node_11_1 :Mortal)).
-_:rl_268598 lingua:premise _:gn_6.
-_:rl_268598 lingua:conclusion _:gn_7.
-_:rl_268598 lingua:bindings ((var:some18 :Socrates)).
-_:rl_15438215 lingua:premise _:gn_8.
-_:rl_15438215 lingua:conclusion _:gn_9.
-_:rl_15438215 lingua:bindings ((var:some19 :Socrates)).
-_:rl_15322818 lingua:premise _:gn_6.
-_:rl_15322818 lingua:conclusion _:gn_10.
-_:rl_15322818 lingua:bindings ((var:some18 :Socrates)).
-_:rl_3380434 lingua:premise _:gn_8.
-_:rl_3380434 lingua:conclusion _:gn_11.
-_:rl_3380434 lingua:bindings ((var:some19 :Socrates)).
-_:rl_13199473 lingua:premise true.
-_:rl_13199473 lingua:conclusion _:gn_12.
-_:rl_13199473 lingua:bindings ().
-_:rl_4476983 lingua:premise true.
-_:rl_4476983 lingua:conclusion _:gn_13.
-_:rl_4476983 lingua:bindings ().
-_:gn_2 {
-    var:node_6_1 a var:node_4_1.
-}
-_:gn_7 {
-    var:some18 a :Human.
-}
-_:gn_9 {
-    var:some19 a :Mortal.
-}
 _:gn_1 {
     var:node_2_1 rdfs:subClassOf var:node_4_1.
     var:node_6_1 a var:node_2_1.
 }
-_:gn_3 {
-    var:node_2_1 rdfs:subClassOf var:node_4_1.
-}
-_:gn_4 {
-    (var:node_6_1) lingua:onNegativeSurface _:gn_14.
-}
-_:gn_5 {
-    var:node_6_1 a var:node_11_1.
-}
-_:gn_6 {
-    var:some18 a :Man.
-}
-_:gn_8 {
-    var:some19 a :Human.
-}
-_:gn_10 {
-    () lingua:onNegativeSurface _:gn_15.
-}
-_:gn_11 {
-    () lingua:onNegativeSurface _:gn_16.
-}
-_:gn_12 {
-    :Socrates a :Human.
-}
-_:gn_13 {
-    :Socrates a :Mortal.
-}
-_:gn_14 {
-    var:node_6_1 a var:node_2_1.
-    () lingua:onNegativeSurface _:gn_2.
-}
-_:gn_15 {
-    () lingua:onNegativeSurface _:gn_7.
-}
-_:gn_16 {
-    () lingua:onNegativeSurface _:gn_9.
+_:gn_2 {
+    var:node_6_1 a var:node_4_1.
 }
