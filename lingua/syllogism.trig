@@ -24,10 +24,6 @@ _:ng2 {
 
 _:ng3 {
     _:Bird a :Bird.
-    () lingua:and _:ng4.
-}
-
-_:ng4 {
     _:Bird a :Mammal.
 }
 
@@ -59,10 +55,6 @@ _:X a :Cat , :White.
 
 _:ng7 {
     _:M a :Muslim.
-    () lingua:and _:ng8.
-}
-
-_:ng8 {
     _:M a :Christian.
 }
 
@@ -99,8 +91,8 @@ _:ng12 {
 }
 
 # Test
-() lingua:question _:qs.
+_:ng13 lingua:query _:ng13.
 
-_:qs {
+_:ng13 {
     :test :is true.
 }

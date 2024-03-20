@@ -15,8 +15,8 @@ _:ng2 {
 }
 
 # query
-(_:S _:C) lingua:question _:qs.
+_:ng3 lingua:query _:ng3.
 
-_:qs {
-    _:S a _:C.
+_:ng3 {
+    :Ghent a :HumanCommunity.
 }

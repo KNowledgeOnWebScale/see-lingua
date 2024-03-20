@@ -5,6 +5,7 @@
 # See https://en.wikipedia.org/wiki/Disjunction_elimination
 
 @prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix : <#>.
 
 # beetle is a car
@@ -53,8 +54,8 @@ _:ng7 {
 
 
 # query
-(_:S _:O) lingua:question _:qs.
+_:ng8 lingua:query _:ng8.
 
-_:qs {
-    _:S :is _:O.
+_:ng8 {
+    :beetle :is :beautiful.
 }

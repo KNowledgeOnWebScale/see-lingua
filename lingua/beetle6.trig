@@ -71,8 +71,8 @@ _:ng11 {
 }
 
 # query
-(_:S) lingua:question _:qs.
+_:ng12 lingua:query _:ng12.
 
-_:qs {
-    _:S :is :nice.
+_:ng12 {
+    :beetle :is :nice.
 }

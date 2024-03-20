@@ -31,8 +31,8 @@ _:ng4 {
 }
 
 # query
-(_:S _:O) lingua:question _:qs.
+_:ng5 lingua:query _:ng5.
 
-_:qs {
-    _:S :ascribed _:O.
+_:ng5 {
+    :obs1 :ascribed :WetGrass.
 }

@@ -68,8 +68,8 @@ _:ng10 {
 }
 
 # query
-(_:S _:C) lingua:question _:qs.
+_:ng11 lingua:query _:ng11.
 
-_:qs {
-    _:S a _:C.
+_:ng11 {
+    :xxx a :aaa.
 }
