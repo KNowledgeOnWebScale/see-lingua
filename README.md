@@ -76,15 +76,8 @@ See https://www.slideshare.net/PatHayes/blogic-iswc-2009-invited-talk
 
 The top level surface is an implicit positive surface with implicit graffiti.
 
-`lingua:and` is a positive surface.
-
 `lingua:nand` is a negative surface used to express NAND based logic:
 - nand (not and) is a `lingua:nand`
 - negation is a `lingua:nand`
 - disjunction is a `lingua:nand` containing only `lingua:nand`'s
 - implication is a `lingua:nand` containing a `lingua:nand`
-- if is a `lingua:nand` containing a `lingua:not`
-
-`lingua:question` is a question surface containing an optional `lingua:answer`.
-
-`lingua:neutral` is a neutral surface.
