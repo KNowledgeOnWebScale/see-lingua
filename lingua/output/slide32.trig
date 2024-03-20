@@ -1,38 +1,4 @@
 @prefix : <https://eyereasoner.github.io/see-lingua/lingua/slide32.trig#>.
-@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
-@prefix var: <http://www.w3.org/2000/10/swap/var#>.
 
 :Ghent a :City.
 :Ghent a :HumanCommunity.
-
-_:rl_6765725 lingua:premise _:gn_1.
-_:rl_6765725 lingua:conclusion _:gn_2.
-_:rl_6765725 lingua:bindings ((var:node_2_1 :Ghent)).
-_:rl_15240552 lingua:premise _:gn_1.
-_:rl_15240552 lingua:conclusion _:gn_3.
-_:rl_15240552 lingua:bindings ((var:node_2_1 :Ghent)).
-_:rl_9558734 lingua:question _:gn_4.
-_:rl_9558734 lingua:answer _:gn_4.
-_:rl_9558734 lingua:bindings ((var:node_6_1 :Ghent) (var:node_8_1 :City)).
-_:rl_9558734 lingua:bindings ((var:node_6_1 :Ghent) (var:node_8_1 :HumanCommunity)).
-_:rl_14856158 lingua:premise true.
-_:rl_14856158 lingua:conclusion _:gn_5.
-_:rl_14856158 lingua:bindings ().
-_:gn_2 {
-    var:node_2_1 a :HumanCommunity.
-}
-_:gn_1 {
-    var:node_2_1 a :City.
-}
-_:gn_3 {
-    () lingua:onNegativeSurface _:gn_6.
-}
-_:gn_4 {
-    var:node_6_1 a var:node_8_1.
-}
-_:gn_5 {
-    :Ghent a :HumanCommunity.
-}
-_:gn_6 {
-    () lingua:onNegativeSurface _:gn_2.
-}

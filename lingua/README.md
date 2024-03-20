@@ -15,10 +15,6 @@ _:conclusionname {
     RDF triples
 }
 ```
-and is able to give proof explanations as
-```
-:rulename lingua:bindings list of (var:name value) pairs.
-```
 
 A forward rule with `lingua:conclusion` false is an inference fuse.
 
@@ -35,10 +31,6 @@ _:bodyname {
     RDF triples
 }
 ```
-and is able to give proof explanations as
-```
-:rulename lingua:bindings list of (var:name value) pairs.
-```
 
 Lingua also supports querying with queries described in RDF as
 ```
@@ -53,10 +45,6 @@ _:answername {
     RDF triples
 }
 ```
-and is able to give proof explanations as
-```
-:queryname lingua:bindings list of (var:name value) pairs.
-```
 
 When `lingua:answer` is omitted it is the repetition of `lingua:question`.
 
@@ -66,3 +54,20 @@ in the "Semantic Web Area for Play" `http://www.w3.org/2000/10/swap/` URI.
 The `var:` prefix is `<http://www.w3.org/2000/10/swap/var#>` and is used for
 variables that are interpreted as universally quantified variables except for
 forward rule conclusion-only variables which are interpreted existentially.
+
+Lingua also supports blogic https://www.slideshare.net/PatHayes/blogic-iswc-2009-invited-talk
+
+The top level surface is an implicit positive surface with implicit graffiti.
+
+`lingua:onPositiveSurface` is a positive surface.
+
+`lingua:onNegativeSurface` is a negative surface used to express NAND based logic:
+- nand (not and) is a `lingua:onNegativeSurface`
+- negation is a `lingua:onNegativeSurface`
+- disjunction is a `lingua:onNegativeSurface` containing only `lingua:onNegativeSurface`'s
+- => is a `lingua:onNegativeSurface` containing a `lingua:onNegativeSurface`
+- <= is a `lingua:onNegativeSurface` containing a `lingua:negativeTriple`
+
+`lingua:onQuestionSurface` is a question surface containing an optional `lingua:onAnswerSurface`.
+
+`lingua:onNeutralSurface` is a neutral surface.

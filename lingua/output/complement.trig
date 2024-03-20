@@ -5,20 +5,7 @@
 
 :complement_inference_fuse lingua:premise _:gn_1.
 :complement_inference_fuse lingua:conclusion false.
-
-:complement_query lingua:question _:gn_2.
-:complement_query lingua:answer _:gn_2.
-:complement_query lingua:bindings ((var:P var:P) (var:C var:C) (var:S var:S) (var:O var:O)).
 _:gn_1 {
-    var:P log:complement var:C.
-    var:S var:P var:O.
-    var:S var:C var:O.
-}
-_:gn_2 {
-    :complement_inference_fuse lingua:premise _:node_13_1.
-    :complement_inference_fuse lingua:conclusion false.
-}
-_:node_13_1 {
     var:P log:complement var:C.
     var:S var:P var:O.
     var:S var:C var:O.
