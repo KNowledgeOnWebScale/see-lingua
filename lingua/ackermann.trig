@@ -27,14 +27,13 @@
 @prefix : <#>.
 
 # ackermann(x, y)
-:ackermann_rule_main lingua:headback _:ackermann_rule_main_head;
-    lingua:body _:ackermann_rule_main_body.
+_:ng1 lingua:if _:ng2.
 
-_:ackermann_rule_main_head {
+_:ng1 {
     (var:X var:Y) :ackermann var:A.
 }
 
-_:ackermann_rule_main_body {
+_:ng2 {
     (var:Y 3) math:sum var:B.
     (var:X var:B 2) :ackermann var:C.
     (var:C 3) math:difference var:A.
@@ -42,64 +41,59 @@ _:ackermann_rule_main_body {
 
 # ackermann(x, y, z)
 # succ (x=0)
-:ackermann_rule0 lingua:headback _:ackermann_rule0_head;
-    lingua:body _:ackermann_rule0_body.
+_:ng3 lingua:if _:ng4.
 
-_:ackermann_rule0_head {
+_:ng3 {
     (0 var:Y var:Z) :ackermann var:A.
 }
 
-_:ackermann_rule0_body {
-    :true log:callWithCut true.
+_:ng4 {
+    _:ng13 log:callWithCut true.
     (var:Y 1) math:sum var:A.
 }
 
 # sum (x=1)
-:ackermann_rule1 lingua:headback _:ackermann_rule1_head;
-    lingua:body _:ackermann_rule1_body.
+_:ng5 lingua:if _:ng6.
 
-_:ackermann_rule1_head {
+_:ng5 {
     (1 var:Y var:Z) :ackermann var:A.
 }
 
-_:ackermann_rule1_body {
-    :true log:callWithCut true.
+_:ng6 {
+    _:ng13 log:callWithCut true.
     (var:Y var:Z) math:sum var:A.
 }
 
 # product (x=2)
-:ackermann_rule2 lingua:headback _:ackermann_rule2_head;
-    lingua:body _:ackermann_rule2_body.
+_:ng7 lingua:if _:ng8.
 
-_:ackermann_rule2_head {
+_:ng7 {
     (2 var:Y var:Z) :ackermann var:A.
 }
 
-_:ackermann_rule2_body {
-    :true log:callWithCut true.
+_:ng8 {
+    _:ng13 log:callWithCut true.
     (var:Y var:Z) math:product var:A.
 }
 
 # exponentiation (x=3), tetration (x=4), pentation (x=5), hexation (x=6), etc
-:ackermann_rule3plus lingua:headback _:ackermann_rule3plus_head;
-    lingua:body _:ackermann_rule3plus_body.
+_:ng9 lingua:if _:ng10.
 
-_:ackermann_rule3plus_head {
+_:ng9 {
     (var:X 0 var:Z) :ackermann 1.
 }
 
-_:ackermann_rule3plus_body {
-    :true log:callWithCut true.
+_:ng10 {
+    _:ng13 log:callWithCut true.
 }
 
-:ackermann_rule_final lingua:headback _:ackermann_rule_final_head;
-    lingua:body _:ackermann_rule_final_body.
+_:ng11 lingua:if _:ng12.
 
-_:ackermann_rule_final_head {
+_:ng11 {
     (var:X var:Y var:Z) :ackermann var:A.
 }
 
-_:ackermann_rule_final_body {
+_:ng12 {
     (var:Y 1) math:difference var:B.
     (var:X var:B var:Z) :ackermann var:C.
     (var:X 1) math:difference var:D.
@@ -107,14 +101,14 @@ _:ackermann_rule_final_body {
 }
 
 # workaround to avoid true as subject
-:true {
+_:ng13 {
     () log:equalTo ().
 }
 
 # query
-:ackermann_query lingua:question _:ackermann_question.
+_:ng14 lingua:query _:ng14.
 
-_:ackermann_question {
+_:ng14 {
     (0 0) :ackermann var:A0.
     (0 6) :ackermann var:A1.
     (1 2) :ackermann var:A2.

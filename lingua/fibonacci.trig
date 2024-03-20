@@ -10,39 +10,35 @@
 @prefix : <#>.
 
 # backward rules
-:fibonacci_rule1 lingua:headback _:fibonacci_rule1_head;
-    lingua:body _:fibonacci_rule1_body.
+_:ng1 lingua:if _:ng2.
 
-_:fibonacci_rule1_head {
+_:ng1 {
     (var:X) :fibonacci var:Y.
 }
 
-_:fibonacci_rule1_body {
+_:ng2 {
     (var:X 0 1) :fib var:Y.
 }
 
-:fibonacci_rule2 lingua:headback _:fibonacci_rule2_head;
-    lingua:body true.
+_:ng3 lingua:if true.
 
-_:fibonacci_rule2_head {
+_:ng3 {
     (0 var:A var:B) :fib var:A.
 }
 
-:fibonacci_rule3 lingua:headback _:fibonacci_rule3_head;
-    lingua:body true.
+_:ng4 lingua:if true.
 
-_:fibonacci_rule3_head {
+_:ng4 {
     (1 var:A var:B) :fib var:B.
 }
 
-:fibonacci_rule4 lingua:headback _:fibonacci_rule4_head;
-    lingua:body _:fibonacci_rule4_body.
+_:ng5 lingua:if _:ng6.
 
-_:fibonacci_rule4_head {
+_:ng5 {
     (var:X var:A var:B) :fib var:Y.
 }
 
-_:fibonacci_rule4_body {
+_:ng6 {
     var:X math:greaterThan 1.
     (var:X 1) math:difference var:C.
     (var:A var:B) math:sum var:D.
@@ -50,9 +46,9 @@ _:fibonacci_rule4_body {
 }
 
 # query
-:fibonacci_query lingua:question _:fibonacci_question.
+_:ng7 lingua:query _:ng7.
 
-_:fibonacci_question {
+_:ng7 {
     (0) :fibonacci var:F1.
     (1) :fibonacci var:F2.
     (6) :fibonacci var:F3.

@@ -10,85 +10,77 @@
 @prefix : <#>.
 
 # add
-:peano_add_rule1 lingua:headback _:peano_add_rule1_head;
-    lingua:body true.
+_:ng1 lingua:if true.
 
-_:peano_add_rule1_head {
+_:ng1 {
     (var:A 0) :add var:A.
 }
 
-:peano_add_rule2 lingua:headback _:peano_add_rule2_head;
-    lingua:body _:peano_add_rule2_body.
+_:ng2 lingua:if _:ng3.
 
-_:peano_add_rule2_head {
+_:ng2 {
     (var:A (:s var:B)) :add (:s var:C).
 }
 
-_:peano_add_rule2_body {
+_:ng3 {
     (var:A var:B) :add var:C.
 }
 
 # multiply
-:peano_multiply_rule1 lingua:headback _:peano_multiply_rule1_head;
-    lingua:body true.
+_:ng4 lingua:if true.
 
-_:peano_multiply_rule1_head {
+_:ng4 {
     (var:A 0) :multiply 0.
 }
 
-:peano_multiply_rule2 lingua:headback _:peano_multiply_rule2_head;
-    lingua:body _:peano_multiply_rule2_body.
+_:ng5 lingua:if _:ng6.
 
-_:peano_multiply_rule2_head {
+_:ng5 {
     (var:A (:s var:B)) :multiply var:C.
 }
 
-_:peano_multiply_rule2_body {
+_:ng6 {
     (var:A var:B) :multiply var:D.
     (var:A var:D) :add var:C.
 }
 
 # factorial
-:peano_factorial_rule lingua:headback _:peano_factorial_rule_head;
-    lingua:body _:peano_factorial_rule_body.
+_:ng7 lingua:if _:ng8.
 
-_:peano_factorial_rule_head {
+_:ng7 {
     var:A :factorial var:B.
 }
 
-_:peano_factorial_rule_body {
+_:ng8 {
     (var:A (:s 0)) :fac var:B.
 }
 
-:peano_fac_rule1 lingua:headback _:peano_fac_rule1_head;
-    lingua:body true.
+_:ng9 lingua:if true.
 
-_:peano_fac_rule1_head {
+_:ng9 {
     (0 var:A) :fac var:A.
 }
 
-:peano_fac_rule2 lingua:headback _:peano_fac_rule2_head;
-    lingua:body _:peano_fac_rule2_body.
+_:ng10 lingua:if _:ng11.
 
-_:peano_fac_rule2_head {
+_:ng10 {
     ((:s var:A) var:B) :fac var:C.
 }
 
-_:peano_fac_rule2_body {
+_:ng11 {
     (var:B (:s var:A)) :multiply var:D.
     (var:A var:D) :fac var:C.
 }
 
 # query
-:peano_query lingua:question _:peano_question;
-    lingua:answer _:peano_answer.
+_:ng12 lingua:query _:ng13.
 
-_:peano_question {
+_:ng12 {
     ((:s 0) (:s (:s 0))) :multiply var:A.
     (var:A (:s (:s (:s 0)))) :add var:B.
     var:B :factorial var:C.
 }
 
-_:peano_answer {
+_:ng13 {
     var:B :factorial var:C.
 }

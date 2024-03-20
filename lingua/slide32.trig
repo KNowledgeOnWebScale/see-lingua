@@ -3,19 +3,19 @@
 
 :Ghent a :City.
 
-(_:x) lingua:onNegativeSurface _:ns1.
+(_:x) lingua:nand _:ng1.
 
-_:ns1 {
+_:ng1 {
     _:x a :City.
-    () lingua:onNegativeSurface _:ns2.
+    () lingua:nand _:ng2.
 }
 
-_:ns2 {
+_:ng2 {
     _:x a :HumanCommunity.
 }
 
 # query
-(_:S _:C) lingua:onQuestionSurface _:qs.
+(_:S _:C) lingua:question _:qs.
 
 _:qs {
     _:S a _:C.

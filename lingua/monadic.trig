@@ -12,10 +12,9 @@
 @prefix : <#>.
 
 # importing
-:imports_rule lingua:premise _:imports_rule_premise;
-    lingua:conclusion true.
+_:ng1 lingua:implication true.
 
-_:imports_rule_premise {
+_:ng1 {
     <> log:imports <../../eye/reasoning/bmt/1tt1.ttl>.
     <> log:imports <../../eye/reasoning/bmt/1tt2.ttl>.
     <> log:imports <../../eye/reasoning/bmt/1tt3.ttl>.
@@ -29,10 +28,9 @@ _:imports_rule_premise {
 }
 
 #query
-:bmt_query lingua:question _:bmt_question;
-    lingua:answer _:bmt_answer.
+_:ng2 lingua:query _:ng3.
 
-_:bmt_question {
+_:ng2 {
     var:D0 var:R var:D1.
     var:D1 var:R var:D2.
     var:D2 var:R var:D3.
@@ -45,6 +43,6 @@ _:bmt_question {
     var:D9 var:R var:D0.
 }
 
-_:bmt_answer {
+_:ng3 {
     var:R bmt:cycle (var:D0 var:D1 var:D2 var:D3 var:D4 var:D5 var:D6 var:D7 var:D8 var:D9).
 }

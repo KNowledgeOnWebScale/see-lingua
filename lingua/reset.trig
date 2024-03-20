@@ -3,15 +3,15 @@
 
 # Reset Policy: reset all triples from the neutral surface back to the main surface
 
-() lingua:onNeutralSurface _:ns.
+() lingua:neutral _:ng.
 
-_:ns {
+_:ng {
     :n1 :p1 :n2.
 }
 
-(_:S) lingua:onQuestionSurface _:qs.
+(_:S) lingua:question _:qs.
 
 _:qs {
-  () lingua:onNeutralSurface _:S.
-  () lingua:onAnswerSurface _:S.
+  () lingua:neutral _:S.
+  () lingua:answer _:S.
 }

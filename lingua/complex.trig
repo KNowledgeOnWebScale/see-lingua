@@ -11,14 +11,13 @@
 @prefix : <#>.
 
 # exponentiation
-:complex_number_exponentiation_rule lingua:headback _:complex_number_exponentiation_rule_head;
-    lingua:body _:complex_number_exponentiation_rule_body.
+_:ng1 lingua:if _:ng2.
 
-_:complex_number_exponentiation_rule_head {
+_:ng1 {
     ((var:A var:B) (var:C var:D)) complex:exponentiation (var:E var:F).
 }
 
-_:complex_number_exponentiation_rule_body {
+_:ng2 {
     (var:A var:B) complex:polar (var:R var:T).
     (var:R var:C) math:exponentiation var:Z1.
     var:D math:negation var:Z2.
@@ -35,14 +34,13 @@ _:complex_number_exponentiation_rule_body {
 }
 
 # asin
-:complex_number_asin_rule lingua:headback _:complex_number_asin_rule_head;
-    lingua:body _:complex_number_asin_rule_body.
+_:ng3 lingua:if _:ng4.
 
-_:complex_number_asin_rule_head {
+_:ng3 {
     (var:A var:B) complex:asin (var:C var:D).
 }
 
-_:complex_number_asin_rule_body {
+_:ng4 {
     (1 var:A) math:sum var:Z1.
     (var:Z1 2) math:exponentiation var:Z2.
     (var:B 2) math:exponentiation var:Z3.
@@ -65,14 +63,13 @@ _:complex_number_asin_rule_body {
 }
 
 # acos
-:complex_number_acos_rule lingua:headback _:complex_number_acos_rule_head;
-    lingua:body _:complex_number_acos_rule_body.
+_:ng5 lingua:if _:ng6.
 
-_:complex_number_acos_rule_head {
+_:ng5 {
     (var:A var:B) complex:acos (var:C var:D).
 }
 
-_:complex_number_acos_rule_body {
+_:ng6 {
     (1 var:A) math:sum var:Z1.
     (var:Z1 2) math:exponentiation var:Z2.
     (var:B 2) math:exponentiation var:Z3.
@@ -96,14 +93,13 @@ _:complex_number_acos_rule_body {
 }
 
 # polar
-:complex_number_polar_rule lingua:headback _:complex_number_polar_rule_head;
-    lingua:body _:complex_number_polar_rule_body.
+_:ng7 lingua:if _:ng8.
 
-_:complex_number_polar_rule_head {
+_:ng7 {
     (var:X var:Y) complex:polar(var:R var:Tp).
 }
 
-_:complex_number_polar_rule_body {
+_:ng8 {
     (var:X 2) math:exponentiation var:Z1.
     (var:Y 2) math:exponentiation var:Z2.
     (var:Z1 var:Z2) math:sum var:Z3.
@@ -115,53 +111,49 @@ _:complex_number_polar_rule_body {
 }
 
 # dial
-:complex_number_dial_rule1 lingua:headback _:complex_number_dial_rule1_head;
-    lingua:body _:complex_number_dial_rule1_body.
+_:ng9 lingua:if _:ng10.
 
-_:complex_number_dial_rule1_head {
+_:ng9 {
     (var:X var:Y var:T) complex:dial var:Tp.
 }
 
-_:complex_number_dial_rule1_body {
+_:ng10 {
     var:X math:notLessThan 0.
     var:Y math:notLessThan 0.
     (0 var:T) math:sum var:Tp.
 }
 
-:complex_number_dial_rule2 lingua:headback _:complex_number_dial_rule2_head;
-    lingua:body _:complex_number_dial_rule2_body.
+_:ng11 lingua:if _:ng12.
 
-_:complex_number_dial_rule2_head {
+_:ng11 {
     (var:X var:Y var:T) complex:dial var:Tp.
 }
 
-_:complex_number_dial_rule2_body {
+_:ng12 {
     var:X math:lessThan 0.
     var:Y math:notLessThan 0.
     (3.141592653589793 var:T) math:difference var:Tp.
 }
 
-:complex_number_dial_rule3 lingua:headback _:complex_number_dial_rule3_head;
-    lingua:body _:complex_number_dial_rule3_body.
+_:ng13 lingua:if _:ng14.
 
-_:complex_number_dial_rule3_head {
+_:ng13 {
     (var:X var:Y var:T) complex:dial var:Tp.
 }
 
-_:complex_number_dial_rule3_body {
+_:ng14 {
     var:X math:lessThan 0.
     var:Y math:lessThan 0.
     (3.141592653589793 var:T) math:sum var:Tp.
 }
 
-:complex_number_dial_rule4 lingua:headback _:complex_number_dial_rule4_head;
-    lingua:body _:complex_number_dial_rule4_body.
+_:ng15 lingua:if _:ng16.
 
-_:complex_number_dial_rule4_head {
+_:ng15 {
     (var:X var:Y var:T) complex:dial var:Tp.
 }
 
-_:complex_number_dial_rule4_body {
+_:ng16 {
     var:X math:notLessThan 0.
     var:Y math:lessThan 0.
     (3.141592653589793 2) math:product var:Z1.
@@ -169,9 +161,9 @@ _:complex_number_dial_rule4_body {
 }
 
 # query
-:complex_number_query lingua:question _:complex_number_question.
+_:ng17 lingua:query _:ng17.
 
-_:complex_number_question {
+_:ng17 {
     ((-1 0) (0.5 0)) complex:exponentiation var:C1.
     ((2.718281828459045 0) (0 3.141592653589793)) complex:exponentiation var:C2.
     ((0 1) (0 1)) complex:exponentiation var:C3.

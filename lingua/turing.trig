@@ -11,136 +11,124 @@
 @prefix : <#>.
 
 # interpreter for Turing machine
-:turing_rule1 lingua:headback _:turing_rule1_head;
-    lingua:body _:turing_rule1_body.
+_:ng1 lingua:if _:ng2.
 
-_:turing_rule1_head {
+_:ng1 {
     () :compute var:OutTape.
 }
 
-_:turing_rule1_body {
+_:ng2 {
     var:Machine :start var:I.
     (var:I () "#" ()) :find var:OutTape.
 }
 
-:turing_rule2 lingua:headback _:turing_rule2_head;
-    lingua:body _:turing_rule2_body.
+_:ng3 lingua:if _:ng4.
 
-_:turing_rule2_head {
+_:ng3 {
     var:List :compute var:OutTape.
 }
 
-_:turing_rule2_body {
+_:ng4 {
     var:List list:firstRest (var:Head var:Tail).
     var:Machine :start var:I.
     (var:I () var:Head var:Tail) :find var:OutTape.
 }
 
-:turing_rule3 lingua:headback _:turing_rule3_head;
-    lingua:body _:turing_rule3_body.
+_:ng5 lingua:if _:ng6.
 
-_:turing_rule3_head {
+_:ng5 {
     (var:State var:Left var:Cell var:Right) :find var:OutTape.
 }
 
-_:turing_rule3_body {
+_:ng6 {
     (var:State var:Cell var:Write var:Move) :tape var:Next.
     (var:Move var:Left var:Write var:Right var:A var:B var:C) :move true.
     (var:Next var:A var:B var:C) :continue var:OutTape.
 }
 
-:turing_rule4 lingua:headback _:turing_rule4_head;
-    lingua:body _:turing_rule4_body.
+_:ng7 lingua:if _:ng8.
 
-_:turing_rule4_head {
+_:ng7 {
     (:halt var:Left var:Cell var:Right) :continue var:OutTape.
 }
 
-_:turing_rule4_body {
+_:ng8 {
     var:Left :reverse var:R.
     var:List list:firstRest (var:Cell var:Right).
     (var:R var:List) list:append var:OutTape.
 }
 
-:turing_rule5 lingua:headback _:turing_rule5_head;
-    lingua:body _:turing_rule5_body.
+_:ng9 lingua:if _:ng10.
 
-_:turing_rule5_head {
+_:ng9 {
     (var:State var:Left var:Cell var:Right) :continue var:OutTape.
 }
 
-_:turing_rule5_body {
+_:ng10 {
     (var:State var:Left var:Cell var:Right) :find var:OutTape.
 }
 
-:turing_rule6 lingua:headback _:turing_rule6_head;
-    lingua:body _:turing_rule6_body.
+_:ng11 lingua:if _:ng12.
 
-_:turing_rule6_head {
+_:ng11 {
     (:left () var:Cell var:Right () "#" var:L) :move true.
 }
 
-_:turing_rule6_body {
+_:ng12 {
     var:L list:firstRest (var:Cell var:Right).
 }
 
-:turing_rule7 lingua:headback _:turing_rule7_head;
-    lingua:body _:turing_rule7_body.
+_:ng13 lingua:if _:ng14.
 
-_:turing_rule7_head {
+_:ng13 {
     (:left var:List var:Cell var:Right var:Tail var:Head var:L) :move true.
 }
 
-_:turing_rule7_body {
+_:ng14 {
     var:List list:firstRest (var:Head var:Tail).
     var:L list:firstRest (var:Cell var:Right).
 }
 
-:turing_rule8 lingua:headback _:turing_rule8_head;
-    lingua:body true.
+_:ng15 lingua:if true.
 
-_:turing_rule8_head {
+_:ng15 {
     (:stop var:Left var:Cell var:Right var:Left var:Cell var:Right) :move true.
 }
 
-:turing_rule9 lingua:headback _:turing_rule9_head;
-    lingua:body _:turing_rule9_body.
+_:ng16 lingua:if _:ng17.
 
-_:turing_rule9_head {
+_:ng16 {
     (:right var:Left var:Cell () var:L "#" ()) :move true.
 }
 
-_:turing_rule9_body {
+_:ng17 {
     var:L list:firstRest (var:Cell var:Left).
 }
 
-:turing_rule10 lingua:headback _:turing_rule10_head;
-    lingua:body _:turing_rule10_body.
+_:ng18 lingua:if _:ng19.
 
-_:turing_rule10_head {
+_:ng18 {
     (:right var:Left var:Cell var:List var:L var:Head var:Tail) :move true.
 }
 
-_:turing_rule10_body {
+_:ng19 {
     var:List list:firstRest (var:Head var:Tail).
     var:L list:firstRest (var:Cell var:Left).
 }
 
-:turing_rule11 lingua:headback _:turing_rule11_head;
-    lingua:body true.
+_:ng20 lingua:if true.
 
-_:turing_rule11_head {
+_:ng20 {
     () :reverse ().
 }
 
-:turing_rule12 lingua:headback _:turing_rule12_head;
-    lingua:body _:turing_rule12_body.
+_:ng21 lingua:if _:ng22.
 
-_:turing_rule12_head {
+_:ng21 {
     var:List :reverse var:Reverse.
 }
 
-_:turing_rule12_body {
+_:ng22 {
     var:List list:firstRest (var:Head var:Tail).
     var:Tail :reverse var:R.
     (var:R (var:Head)) list:append var:Reverse.
@@ -157,9 +145,9 @@ _:turing_rule12_body {
 (1 "#" 1 :stop) :tape :halt.
 
 # query
-:turing_query lingua:question _:turing_question.
+_:ng23 lingua:query _:ng23.
 
-_:turing_question {
+_:ng23 {
     (1 0 1 0 0 1) :compute var:A1.
     (1 0 1 1 1 1) :compute var:A2.
     (1 1 1 1 1 1) :compute var:A3.

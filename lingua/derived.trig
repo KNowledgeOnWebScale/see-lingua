@@ -13,29 +13,27 @@
 :Minka a :Cat.
 :Charly a :Dog.
 
-:main_rule lingua:premise _:main_rule_premise;
-    lingua:conclusion _:main_rule_conclusion.
+_:ng1 lingua:implication _:ng2.
 
-_:main_rule_premise {
+_:ng1 {
     var:cat a :Cat.
 }
 
-_:main_rule_conclusion {
-    :derived_rule lingua:premise _:derived_rule_premise;
-        lingua:conclusion _:derived_rule_conclusion.
+_:ng2 {
+    _:ng3 lingua:implication _:ng4.
 }
 
-_:derived_rule_premise {
+_:ng3 {
     var:dog a :Dog.
 }
 
-_:derived_rule_conclusion {
+_:ng4 {
     :test :is true.
 }
 
 # query
-:main_query lingua:question _:main_question.
+_:ng5 lingua:query _:ng5.
 
-_:main_question {
+_:ng5 {
     :test :is var:result.
 }

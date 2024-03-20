@@ -5,73 +5,73 @@
 :beetle a :Car.
 
 # all cars are green or blue
-(_:A) lingua:onNegativeSurface _:ns1.
+(_:A) lingua:nand _:ng1.
 
-_:ns1 {
+_:ng1 {
     _:A a :Car.
-    () lingua:onNegativeSurface _:ns2.
-    () lingua:onNegativeSurface _:ns3.
+    () lingua:nand _:ng2.
+    () lingua:nand _:ng3.
 }
 
-_:ns2 {
+_:ng2 {
     _:A :is :green.
 }
 
-_:ns3 {
+_:ng3 {
     _:A :is :blue.
 }
 
 # green things are nice or pretty
-(_:A) lingua:onNegativeSurface _:ns4.
+(_:A) lingua:nand _:ng4.
 
-_:ns4 {
+_:ng4 {
     _:A :is :green.
-    () lingua:onNegativeSurface _:ns5.
-    () lingua:onNegativeSurface _:ns6.
+    () lingua:nand _:ng5.
+    () lingua:nand _:ng6.
 }
 
-_:ns5 {
+_:ng5 {
     _:A :is :nice.
 }
 
-_:ns6 {
+_:ng6 {
     _:A :is :pretty.
 }
 
 # pretty things are beautiful
-(_:A) lingua:onNegativeSurface _:ns7.
+(_:A) lingua:nand _:ng7.
 
-_:ns7 {
+_:ng7 {
     _:A :is :pretty.
-    () lingua:onNegativeSurface _:ns8.
+    () lingua:nand _:ng8.
 }
 
-_:ns8 {
+_:ng8 {
     _:A :is :beautiful.
 }
 
 # cars are not beautiful
-(_:A) lingua:onNegativeSurface _:ns9.
+(_:A) lingua:nand _:ng9.
 
-_:ns9 {
+_:ng9 {
     _:A a :Car.
     _:A :is :beautiful.
 }
 
 # blue things are beautiful
-(_:A) lingua:onNegativeSurface _:ns10.
+(_:A) lingua:nand _:ng10.
 
-_:ns10 {
+_:ng10 {
     _:A :is :blue.
-    () lingua:onNegativeSurface _:ns11.
+    () lingua:nand _:ng11.
 }
 
-_:ns11 {
+_:ng11 {
     _:A :is :beautiful.
 }
 
 # query
-(_:S) lingua:onQuestionSurface _:qs.
+(_:S) lingua:question _:qs.
 
 _:qs {
     _:S :is :nice.

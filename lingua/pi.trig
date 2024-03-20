@@ -9,34 +9,31 @@
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
 @prefix : <#>.
 
-:pi_rule1 lingua:headback _:pi_rule1_head;
-    lingua:body _:pi_rule1_body.
+_:ng1 lingua:if _:ng2.
 
-_:pi_rule1_head {
+_:ng1 {
     (var:N var:Pi) :pi true.
 }
 
-_:pi_rule1_body {
+_:ng2 {
     (1 var:N 0 var:P 1) :pi true.
     (4 var:P) math:product var:A.
     (3 var:A) math:sum var:Pi.
 }
 
-:pi_rule2 lingua:headback _:pi_rule2_head;
-    lingua:body true.
+_:ng3 lingua:if true.
 
-_:pi_rule2_head {
+_:ng3 {
     (var:N var:N var:P var:P var:S) :pi true.
 }
 
-:pi_rule3 lingua:headback _:pi_rule3_head;
-    lingua:body _:pi_rule3_body.
+_:ng4 lingua:if _:ng5.
 
-_:pi_rule3_head {
+_:ng4 {
     (var:K var:N var:P0 var:P var:S) :pi true.
  }
 
-_:pi_rule3_body {
+_:ng5 {
     var:K math:notEqualTo var:N.
     (var:K 1) math:sum var:K1.
     (2 var:K) math:product var:K2.
@@ -50,8 +47,8 @@ _:pi_rule3_body {
 }
 
 # query
-:pi_query lingua:question _:pi_question.
+_:ng6 lingua:query _:ng6.
 
-_:pi_question {
+_:ng6 {
     (5000 var:Pi) :pi true.
 }

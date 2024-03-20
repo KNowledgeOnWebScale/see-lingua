@@ -9,46 +9,43 @@
 @prefix : <#>.
 
 # \Every x: type(x, Resource
-:universal_statements_rule1 lingua:headback _:universal_statements_rule1_head;
-    lingua:body true.
+_:ng1 lingua:if true.
 
-_:universal_statements_rule1_head {
+_:ng1 {
     var:X a rdfs:Resource.
 }
 
 # Everybody loves somebody who is lonely
-:universal_statements_rule2 lingua:headback _:universal_statements_rule2_head;
-    lingua:body _:universal_statements_rule2_body.
+_:ng2 lingua:if _:ng3.
 
-_:universal_statements_rule2_head {
+_:ng2 {
     var:A :loves var:B.
 }
 
-_:universal_statements_rule2_body {
+_:ng3 {
     (var:A) log:skolem var:B.
 }
 
-:universal_statements_rule3 lingua:headback _:universal_statements_rule3_head;
-    lingua:body _:universal_statements_rule3_body.
+_:ng4 lingua:if _:ng5.
 
-_:universal_statements_rule3_head {
+_:ng4 {
     var:B :is :lonely.
 }
 
-_:universal_statements_rule3_body {
+_:ng5 {
     (var:A) log:skolem var:B.
 }
 
 # queries
-:universal_statements_query1 lingua:question _:universal_statements_question1.
+_:ng6 lingua:query _:ng6.
 
-_:universal_statements_question1 {
+_:ng6 {
     :pat a rdfs:Resource.
 }
 
-:universal_statements_query2 lingua:question _:universal_statements_question2.
+_:ng7 lingua:query _:ng7.
 
-_:universal_statements_question2 {
+_:ng7 {
     :bob :loves var:X.
     var:X :is :lonely.
 }

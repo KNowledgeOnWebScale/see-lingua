@@ -24,49 +24,44 @@ RDF TriG as the web lingua.
 
 Lingua supports reasoning with forward rules described in RDF as
 ```
-:rulename lingua:premise _:premisename;
-    lingua:conclusion _:conclusionname.
+_:ng1 lingua:implication _:ng2.
 
-_:premisename {
+_:ng1 {
     RDF triples
 }
 
-_:conclusionname {
+_:ng2 {
     RDF triples
 }
 ```
 
-A forward rule with `lingua:conclusion` false is an inference fuse.
+A forward rule with `lingua:implication false` is an inference fuse.
 
 Lingua also supports reasoning with backward rules described in RDF as
 ```
-:rulename lingua:headback _:headname;
-    lingua:body _:bodyname.
+_:ng1 lingua:if _:ng2.
 
-_:headname {
+_:ng1 {
     RDF triples
 }
 
-_:bodyname {
+_:ng2 {
     RDF triples
 }
 ```
 
 Lingua also supports querying with queries described in RDF as
 ```
-:queryname lingua:question _:questionname;
-    lingua:answer _:answername.
+_:ng1 lingua:query _:ng2.
 
-_:questionname {
+_:ng1 {
     RDF triples
 }
 
-_:answername {
+_:ng2 {
     RDF triples
 }
 ```
-
-When `lingua:answer` is omitted it is the repetition of `lingua:question`.
 
 The `lingua:` prefix is `<http://www.w3.org/2000/10/swap/lingua#>` and is rooted
 in the "Semantic Web Area for Play" `http://www.w3.org/2000/10/swap/` URI.
@@ -81,15 +76,15 @@ See https://www.slideshare.net/PatHayes/blogic-iswc-2009-invited-talk
 
 The top level surface is an implicit positive surface with implicit graffiti.
 
-`lingua:onPositiveSurface` is a positive surface.
+`lingua:and` is a positive surface.
 
-`lingua:onNegativeSurface` is a negative surface used to express NAND based logic:
-- nand (not and) is a `lingua:onNegativeSurface`
-- negation is a `lingua:onNegativeSurface`
-- disjunction is a `lingua:onNegativeSurface` containing only `lingua:onNegativeSurface`'s
-- => is a `lingua:onNegativeSurface` containing a `lingua:onNegativeSurface`
-- <= is a `lingua:onNegativeSurface` containing a `lingua:negativeTriple`
+`lingua:nand` is a negative surface used to express NAND based logic:
+- nand (not and) is a `lingua:nand`
+- negation is a `lingua:nand`
+- disjunction is a `lingua:nand` containing only `lingua:nand`'s
+- implication is a `lingua:nand` containing a `lingua:nand`
+- if is a `lingua:nand` containing a `lingua:not`
 
-`lingua:onQuestionSurface` is a question surface containing an optional `lingua:onAnswerSurface`.
+`lingua:question` is a question surface containing an optional `lingua:answer`.
 
-`lingua:onNeutralSurface` is a neutral surface.
+`lingua:neutral` is a neutral surface.

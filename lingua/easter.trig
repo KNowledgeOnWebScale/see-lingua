@@ -11,14 +11,13 @@
 @prefix : <#>.
 
 # calculate easter day
-:easter_rule lingua:headback _:easter_rule_head;
-    lingua:body _:easter_rule_body.
+_:ng1 lingua:if _:ng2.
 
-_:easter_rule_head {
+_:ng1 {
     (var:x0) :easter (var:x34 var:x32).
 }
 
-_:easter_rule_body {
+_:ng2 {
     (var:x0 19) math:remainder var:x1.
     (var:x0 100) math:integerQuotient var:x2.
     (var:x0 100) math:remainder var:x3.
@@ -56,15 +55,14 @@ _:easter_rule_body {
 }
 
 # query
-:easter_query lingua:question _:easter_question;
-    lingua:answer _:easter_answer.
+_:ng3 lingua:query _:ng4.
 
-_:easter_question {
+_:ng3 {
     (27) log:repeat var:x0.
     (2024 var:x0) math:sum var:x1.
     (var:x1) :easter (var:x2 var:x3).
 }
 
-_:easter_answer {
+_:ng4 {
     (var:x1) :easter (var:x2 var:x3).
 }

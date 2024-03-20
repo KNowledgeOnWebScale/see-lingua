@@ -12,21 +12,21 @@
 :Man rdfs:subClassOf :Human.
 :Human rdfs:subClassOf :Mortal.
 
-(_:A _:B _:S) lingua:onNegativeSurface _:ns1.
+(_:A _:B _:S) lingua:nand _:ng1.
 
-_:ns1 {
+_:ng1 {
     _:A rdfs:subClassOf _:B.
     _:S a _:A.
-    () lingua:onNegativeSurface _:ns2.
+    () lingua:nand _:ng2.
 }
 
-_:ns2 {
+_:ng2 {
     _:S a _:B.
 }
 
 # query
-(_:S) lingua:onQuestionSurface _:qs.
+(_:S) lingua:question _:ng3.
 
-_:qs {
+_:ng3 {
     _:S a :Mortal.
 }

@@ -7,25 +7,24 @@
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
 @prefix : <#>.
 
-_:graph1 {
+_:ng1 {
     :A :B :C.
     :A :X :C.
     :D :E :F.
 }
 
-_:graph2 {
+_:ng2 {
     :A :Y :C.
     :A :B :C.
 }
 
 #query
-:union_query lingua:question _:union_question;
-    lingua:answer _:union_answer.
+_:ng3 lingua:query _:ng4.
 
-_:union_question {
-    (_:graph1 _:graph2) graph:union var:U.
+_:ng3 {
+    (_:ng1 _:ng2) graph:union var:U.
 }
 
-_:union_answer {
+_:ng4 {
     :result :is var:U.
 }

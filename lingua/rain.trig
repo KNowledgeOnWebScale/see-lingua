@@ -10,28 +10,28 @@
 :currentWeather a :NormalWeather.
 :obs1 :ascribed :Rain.
 
-() lingua:onNegativeSurface _:ns1.
+() lingua:nand _:ng1.
 
-_:ns1 {
+_:ng1 {
     :currentWeather a :NormalWeather.
-    () lingua:onNegativeSurface _:ns2.
+    () lingua:nand _:ng2.
 }
 
-_:ns2 {
-    (_:S) lingua:onNegativeSurface _:ns3.
+_:ng2 {
+    (_:S) lingua:nand _:ng3.
 }
 
-_:ns3 {
+_:ng3 {
     _:S :ascribed :Rain.
-    () lingua:onNegativeSurface _:ns4.
+    () lingua:nand _:ng4.
 }
 
-_:ns4 {
+_:ng4 {
     _:S :ascribed :WetGrass.
 }
 
 # query
-(_:S _:O) lingua:onQuestionSurface _:qs.
+(_:S _:O) lingua:question _:qs.
 
 _:qs {
     _:S :ascribed _:O.

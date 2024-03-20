@@ -28,53 +28,49 @@
 @prefix : <#>.
 
 # find paths in the state space from initial state to goal state within limits
-:gps_rule1 lingua:headback _:gps_rule1_head;
-    lingua:body _:gps_rule1_body.
+_:ng1 lingua:if _:ng2.
 
-_:gps_rule1_head {
+_:ng1 {
     () gps:findpath (var:Goal var:Path var:Duration var:Cost var:Belief var:Comfort
         (var:MaxDuration var:MaxCost var:MinBelief var:MinComfort)).
 }
 
-_:gps_rule1_body {
+_:ng2 {
     () gps:findpaths (() var:Goal () 0.0 0.0 1.0 1.0 var:Path var:Duration var:Cost var:Belief var:Comfort
         (var:MaxDuration var:MaxCost var:MinBelief var:MinComfort 1)).
 }
 
-:gps_rule2 lingua:headback _:gps_rule2_head;
-    lingua:body _:gps_rule2_body.
+_:ng3 lingua:if _:ng4.
 
-_:gps_rule2_head {
+_:ng3 {
     () gps:findpath (var:Goal var:Path var:Duration var:Cost var:Belief var:Comfort
         (var:MaxDuration var:MaxCost var:MinBelief var:MinComfort var:MaxStagecount)).
 }
 
-_:gps_rule2_body {
+_:ng4 {
     () gps:findpaths (() var:Goal () 0.0 0.0 1.0 1.0 var:Path var:Duration var:Cost var:Belief var:Comfort
         (var:MaxDuration var:MaxCost var:MinBelief var:MinComfort var:MaxStagecount)).
 }
 
-:gps_rule3 lingua:headback _:gps_rule3_head;
-    lingua:body _:gps_rule3_body.
+_:ng5 lingua:if _:ng6.
 
-_:gps_rule3_head {
+_:ng5 {
     () gps:findpaths (var:Maps var:Goal var:Path var:Duration var:Cost var:Belief var:Comfort var:Path var:Duration var:Cost var:Belief var:Comfort
         (var:MaxDuration var:MaxCost var:MinBelief var:MinComfort var:MaxStagecount)).
 }
 
-_:gps_rule3_body {
+_:ng6 {
     var:Goal log:call true.
 }
 
-:gps_rule4 lingua:headback _:gps_rule4_head;
-    lingua:body _:gps_rule4_body.
+_:ng7 lingua:if _:ng8.
 
-_:gps_rule4_head {
+_:ng7 {
     () gps:findpaths (var:Maps_s var:Goal var:Path_s var:Duration_s var:Cost_s var:Belief_s var:Comfort_s var:Path var:Duration var:Cost var:Belief var:Comfort
         (var:MaxDuration var:MaxCost var:MinBelief var:MinComfort var:MaxStagecount)).
 }
 
-_:gps_rule4_body {
+_:ng8 {
     var:Map gps:description (var:From var:Transition var:To var:Action var:Duration_n var:Cost_n var:Belief_n var:Comfort_n).
     (var:Maps_s (var:Map)) list:append var:Maps_t.
     var:Maps_t gps:stagecount var:Stagecount.
@@ -89,34 +85,32 @@ _:gps_rule4_body {
     var:Comfort_t math:notLessThan var:MinComfort.
     (var:Path_s (var:Action)) list:append var:Path_t.
     var:From log:becomes var:To.
-    _:gps_rule4_call1 log:callWithCleanup _:gps_rule4_call2.
+    _:ng9 log:callWithCleanup _:ng10.
 }
 
-_:gps_rule4_call1 {
+_:ng9 {
     () gps:findpaths (var:Maps_t var:Goal var:Path_t var:Duration_t var:Cost_t var:Belief_t var:Comfort_t var:Path var:Duration var:Cost var:Belief var:Comfort
         (var:MaxDuration var:MaxCost var:MinBelief var:MinComfort var:MaxStagecount)).
 }
 
-_:gps_rule4_call2 {
+_:ng10 {
     var:To log:becomes var:From.
 }
 
 # counting the number of stages (a stage is a sequence of gps in the same map)
-:gps_rule5 lingua:headback _:gps_rule5_head;
-    lingua:body true.
+_:ng11 lingua:if true.
 
-_:gps_rule5_head {
+_:ng11 {
     () gps:stagecount 1.
 }
 
-:gps_rule6 lingua:headback _:gps_rule6_head;
-    lingua:body _:gps_rule6_body.
+_:ng12 lingua:if _:ng13.
 
-_:gps_rule6_head {
+_:ng12 {
     var:A gps:stagecount var:B.
 }
 
-_:gps_rule6_body {
+_:ng13 {
     var:A list:firstRest (var:C var:D).
     var:D list:firstRest (var:E var:F).
     var:C log:notEqualTo var:E.
@@ -124,14 +118,13 @@ _:gps_rule6_body {
     (var:G 1) math:sum var:B.
 }
 
-:gps_rule7 lingua:headback _:gps_rule7_head;
-    lingua:body _:gps_rule7_body.
+_:ng14 lingua:if _:ng15.
 
-_:gps_rule7_head {
+_:ng14 {
     var:A gps:stagecount var:B.
 }
 
-_:gps_rule7_body {
+_:ng15 {
     var:A list:firstRest (var:C var:D).
     var:D gps:stagecount var:B.
 }
@@ -140,94 +133,89 @@ _:gps_rule7_body {
 :i1 :location :Gent.
 
 # map of Belgium
-:gps_rule8 lingua:headback _:gps_rule8_head;
-    lingua:body _:gps_rule8_body.
+_:ng16 lingua:if _:ng17.
 
-_:gps_rule8_head {
-    :map-BE gps:description (_:gps_rule8_from true _:gps_rule8_to :drive_gent_brugge 1500.0 0.006 0.96 0.99).
+_:ng16 {
+    :map-BE gps:description (_:ng18 true _:ng19 :drive_gent_brugge 1500.0 0.006 0.96 0.99).
 }
 
-_:gps_rule8_body {
+_:ng17 {
     var:S :location var:L.
 }
 
-_:gps_rule8_from {
+_:ng18 {
     var:S :location :Gent.
 }
 
-_:gps_rule8_to {
+_:ng19 {
     var:S :location :Brugge.
 }
 
-:gps_rule9 lingua:headback _:gps_rule9_head;
-    lingua:body _:gps_rule9_body.
+_:ng20 lingua:if _:ng21.
 
-_:gps_rule9_head {
-    :map-BE gps:description (_:gps_rule9_from true _:gps_rule9_to :drive_gent_kortrijk 1600.0 0.007 0.96 0.99).
+_:ng20 {
+    :map-BE gps:description (_:ng22 true _:ng23 :drive_gent_kortrijk 1600.0 0.007 0.96 0.99).
 }
 
-_:gps_rule9_body {
+_:ng21 {
     var:S :location var:L.
 }
 
-_:gps_rule9_from {
+_:ng22 {
     var:S :location :Gent.
 }
 
-_:gps_rule9_to {
+_:ng23 {
     var:S :location :Kortrijk.
 }
 
-:gps_rule10 lingua:headback _:gps_rule10_head;
-    lingua:body _:gps_rule10_body.
+_:ng24 lingua:if _:ng25.
 
-_:gps_rule10_head {
-    :map-BE gps:description (_:gps_rule10_from true _:gps_rule10_to :drive_kortrijk_brugge 1600.0 0.007 0.96 0.99).
+_:ng24 {
+    :map-BE gps:description (_:ng26 true _:ng27 :drive_kortrijk_brugge 1600.0 0.007 0.96 0.99).
 }
 
-_:gps_rule10_body {
+_:ng25 {
     var:S :location var:L.
 }
 
-_:gps_rule10_from {
+_:ng26 {
     var:S :location :Kortrijk.
 }
 
-_:gps_rule10_to {
+_:ng27 {
     var:S :location :Brugge.
 }
 
-:gps_rule11 lingua:headback _:gps_rule11_head;
-    lingua:body _:gps_rule11_body.
+_:ng28 lingua:if _:ng29.
 
-_:gps_rule11_head {
-    :map-BE gps:description (_:gps_rule11_from true _:gps_rule11_to :drive_brugge_oostende 900.0 0.004 0.98 1.0).
+_:ng28 {
+    :map-BE gps:description (_:ng30 true _:ng31 :drive_brugge_oostende 900.0 0.004 0.98 1.0).
 }
 
-_:gps_rule11_body {
+_:ng29 {
     var:S :location var:L.
 }
 
-_:gps_rule11_from {
+_:ng30 {
     var:S :location :Brugge.
 }
 
-_:gps_rule11_to {
+_:ng31 {
     var:S :location :Oostende.
 }
 
 # query
-:gps_query lingua:question _:gps_query_question;
-    lingua:answer _:gps_query_answer.
+_:ng32 lingua:query _:ng33.
 
-_:gps_query_question {
-    () gps:findpath (_:gps_query_goal var:PATH var:DURATION var:COST var:BELIEF var:COMFORT (5000.0 5.0 0.2 0.4 1)).
+_:ng32 {
+    () gps:findpath (_:ng34 var:PATH var:DURATION var:COST var:BELIEF var:COMFORT (5000.0 5.0 0.2 0.4 1)).
 }
 
-_:gps_query_answer {
+_:ng33 {
     var:S gps:path (var:PATH var:DURATION var:COST var:BELIEF var:COMFORT).
 }
 
-_:gps_query_goal {
+_:ng34 {
     var:S :location :Oostende.
 }

@@ -14,61 +14,61 @@
 #:xxx :bbb :yyy.
 
 # the following codex should entail :xxx a :aaa.
-(_:y) lingua:onNegativeSurface _:ns1.
+(_:y) lingua:nand _:ng1.
 
-_:ns1 {
+_:ng1 {
     :xxx :bbb _:y.
-    () lingua:onNegativeSurface _:ns2.
+    () lingua:nand _:ng2.
 }
 
-_:ns2 {
+_:ng2 {
     _:y a :ccc.
 }
 
 # owl:allValuseFrom description logic
-(_:a skolem:b _:c) lingua:onNegativeSurface _:ns3.
+(_:a skolem:b _:c) lingua:nand _:ng3.
 
-_:ns3 {
+_:ng3 {
     _:a owl:onProperty skolem:b.
     _:a owl:allValuesFrom _:c.
-    () lingua:onNegativeSurface _:ns4.
+    () lingua:nand _:ng4.
 }
 
-_:ns4 {
-    (_:x _:y) lingua:onNegativeSurface _:ns5.
-    (_:x) lingua:onNegativeSurface _:ns7.
+_:ng4 {
+    (_:x _:y) lingua:nand _:ng5.
+    (_:x) lingua:nand _:ng7.
 }
 
-_:ns5 {
+_:ng5 {
     _:x a _:a.
     _:x skolem:b _:y.
-    () lingua:onNegativeSurface _:ns6.
+    () lingua:nand _:ng6.
 }
 
-_:ns6 {
+_:ng6 {
     _:y a _:c.
 }
 
-_:ns7 {
-    (_:y) lingua:onNegativeSurface _:ns8.
-    () lingua:onNegativeSurface _:ns10.
+_:ng7 {
+    (_:y) lingua:nand _:ng8.
+    () lingua:nand _:ng10.
 }
 
-_:ns8 {
+_:ng8 {
     _:x skolem:b _:y.
-    () lingua:onNegativeSurface _:ns9.
+    () lingua:nand _:ng9.
 }
 
-_:ns9 {
+_:ng9 {
     _:y a _:c.
 }
 
-_:ns10 {
+_:ng10 {
     _:x a _:a.
 }
 
 # query
-(_:S _:C) lingua:onQuestionSurface _:qs.
+(_:S _:C) lingua:question _:qs.
 
 _:qs {
     _:S a _:C.

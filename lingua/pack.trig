@@ -13,10 +13,10 @@
 @prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
 
-[] pack:package _:pack1 .
+[] pack:package _:ng1 .
 
-_:pack1 {
-    [] pack:content _:content1 ;
+_:ng1 {
+    [] pack:content _:ng2 ;
         pack:origin :Endpoint ;
         pack:createdAt "2024-01-08T17:08:52.165Z"^^xsd:dateTime ;
         pack:hasContentSignature [
@@ -27,13 +27,13 @@ _:pack1 {
         ] .
 }
 
-_:content1 {
+_:ng2 {
     :Bob vcard:bday "2000-01-01T09:00:00.000Z"^^xsd:dateTime .
 }
 
 # query
-:pack_query lingua:question _:pack_question.
+_:ng3 lingua:query _:ng3.
 
-_:pack_question {
+_:ng3 {
     var:S pack:package var:O.
 }

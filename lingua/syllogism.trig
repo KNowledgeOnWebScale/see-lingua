@@ -8,26 +8,26 @@
 ## Syllogism 1 : Camestres
 
 # All cats are mammals
-(_:Cat) lingua:onNegativeSurface _:ns1.
+(_:Cat) lingua:nand _:ng1.
 
-_:ns1 {
+_:ng1 {
     _:Cat a :Cat.
-    () lingua:onNegativeSurface _:ns2.
+    () lingua:nand _:ng2.
 }
 
-_:ns2 {
+_:ng2 {
     _:Cat a :Mammal.
 }
 
 # No bird is a mammal
-(_:Bird) lingua:onNegativeSurface _:ns3.
+(_:Bird) lingua:nand _:ng3.
 
-_:ns3 {
+_:ng3 {
     _:Bird a :Bird.
-    () lingua:onPositiveSurface _:ns4.
+    () lingua:and _:ng4.
 }
 
-_:ns4 {
+_:ng4 {
     _:Bird a :Mammal.
 }
 
@@ -36,14 +36,14 @@ _:ns4 {
 ## Syllogism 2 : Datasi
 
 # All cats are feline
-(_:Cat) lingua:onNegativeSurface _:ns5.
+(_:Cat) lingua:nand _:ng5.
 
-_:ns5 {
+_:ng5 {
     _:Cat a :Cat.
-    () lingua:onNegativeSurface _:ns6.
+    () lingua:nand _:ng6.
 }
 
-_:ns6 {
+_:ng6 {
     _:Cat a :Feline.
 }
 
@@ -55,14 +55,14 @@ _:X a :Cat , :White.
 # Syllogism 3 : Ferio
 
 # No muslim is a christian
-(_:M) lingua:onNegativeSurface _:ns7.
+(_:M) lingua:nand _:ng7.
 
-_:ns7 {
+_:ng7 {
     _:M a :Muslim.
-    () lingua:onPositiveSurface _:ns8.
+    () lingua:and _:ng8.
 }
 
-_:ns8 {
+_:ng8 {
     _:M a :Christian.
 }
 
@@ -71,35 +71,35 @@ _:P a :Worshipper , :Muslim.
 
 # IMPLIES : Some worshipper is not a christian 
 
-() lingua:onNegativeSurface _:ns9.
+() lingua:nand _:ng9.
 
-_:ns9 {
+_:ng9 {
     # 1
-    () lingua:onNegativeSurface _:ns10.
+    () lingua:nand _:ng10.
 
     # 2 
     _:X a :White, :Feline.
 
     # 3
-    () lingua:onNegativeSurface _:ns11.
+    () lingua:nand _:ng11.
 
-    () lingua:onNegativeSurface _:ns12.
+    () lingua:nand _:ng12.
 }
 
-_:ns10 {
+_:ng10 {
     :Tweety a :Cat.
 }
 
-_:ns11 {
+_:ng11 {
     _:P a :Christian.
 }
 
-_:ns12 {
+_:ng12 {
     :test :is true.
 }
 
 # Test
-() lingua:onQuestionSurface _:qs.
+() lingua:question _:qs.
 
 _:qs {
     :test :is true.

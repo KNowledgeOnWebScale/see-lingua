@@ -15,29 +15,29 @@
 @prefix edt: <http://eulersharp.sourceforge.net/2009/12dtb/test#>.
 
 # importing
-() lingua:onNegativeSurface _:ns1.
+() lingua:nand _:ng1.
 
-_:ns1 {
+_:ng1 {
     <> log:imports <../../eye/reasoning/edt/test-facts.ttl>.
     <> log:imports <../../eye/reasoning/edt/test-dl.ttl>.
-    () lingua:onNegativeSurface true.
+    () lingua:nand true.
 }
 
-(_:X _:D _:C) lingua:onNegativeSurface _:ns2.
+(_:X _:D _:C) lingua:nand _:ng2.
 
-_:ns2 {
-    () lingua:negativeTriple _:nt.
+_:ng2 {
+    () lingua:not _:ng3.
     _:C rdfs:subClassOf _:D.
     _:X a _:C.
 }
 
-_:nt {
+_:ng3 {
     _:X a _:D.
 }
 
 # query
-() lingua:onQuestionSurface _:qs.
+() lingua:question _:ng4.
 
-_:qs {
+_:ng4 {
     edt:i100000 a edt:N10000.
 }

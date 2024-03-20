@@ -19,41 +19,38 @@
 #    _:s2 :p2 _:o2.
 #    _:s3 :p3 _:o3.
 # }
-:implication1 lingua:premise _:implication1_premise;
-    lingua:conclusion _:implication1_conclusion.
+_:ng1 lingua:implication _:ng2.
 
-_:implication1_premise {
+_:ng1 {
     _:s1 :p1 _:o1.
     _:s2 :p2 _:o2.
 }
 
-_:implication1_conclusion {
+_:ng2 {
     :c3 log:complement :p3.
     _:s3 :c3 _:o3.
 }
 
-:implication2 lingua:premise _:implication2_premise;
-    lingua:conclusion _:implication2_conclusion.
+_:ng3 lingua:implication _:ng4.
 
-_:implication2_premise {
+_:ng3 {
     _:s2 :p2 _:o2.
     _:s3 :p3 _:o3.
 }
 
-_:implication2_conclusion {
+_:ng4 {
     :c1 log:complement :p1.
     _:s1 :c1 _:o1.
 }
 
-:implication3 lingua:premise _:implication3_premise;
-    lingua:conclusion _:implication3_conclusion.
+_:ng5 lingua:implication _:ng6.
 
-_:implication3_premise {
+_:ng5 {
     _:s3 :p3 _:o3.
     _:s1 :p1 _:o1.
 }
 
-_:implication3_conclusion {
+_:ng6 {
     :c2 log:complement :p2.
     _:s2 :c2 _:o2.
 }
@@ -64,19 +61,17 @@ _:implication3_conclusion {
 # _:s3 :p3 _:o3.
 
 # fuse
-:complement_inference_fuse lingua:premise _:complement_inference_fuse_premise;
-    lingua:conclusion false.
+_:ng7 lingua:implication false.
 
-_:complement_inference_fuse_premise {
+_:ng7 {
     var:P log:complement var:C.
     var:S var:P var:O.
     var:S var:C var:O.
 }
 
 # query
-:complement_query lingua:question _:question.
+_:ng8 lingua:query _:ng8.
 
-_:question {
-    :complement_inference_fuse lingua:premise _:complement_inference_fuse_premise;
-        lingua:conclusion false.
+_:ng8 {
+    _:ng7 lingua:implication false.
 }
