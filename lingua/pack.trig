@@ -10,6 +10,7 @@
 @prefix pol: <https://example.org/ns/policy#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
 
@@ -32,8 +33,13 @@ _:ng2 {
 }
 
 # query
-_:ng3 lingua:query _:ng3.
+_:ng3 lingua:query _:ng4.
 
 _:ng3 {
     var:S pack:package var:O.
+    var:O log:includes _:ng4.
+}
+
+_:ng4 {
+    var:N pack:content var:C.
 }
