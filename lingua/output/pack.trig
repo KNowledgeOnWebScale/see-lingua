@@ -1,8 +1,4 @@
-@prefix pack: <https://example.org/ns/package#>.
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-_:node_3_1 pack:content _:node_4_1.
-_:node_4_1 {
-    <https://example.org/ns/example#Bob> vcard:bday "2000-01-01T09:00:00.000Z"^^xsd:dateTime.
-}
+<https://example.org/ns/example#Bob> vcard:bday "2000-01-01T09:00:00.000Z"^^xsd:dateTime.

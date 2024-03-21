@@ -33,7 +33,7 @@ _:ng2 {
 }
 
 # query
-_:ng3 lingua:query _:ng4.
+_:ng3 lingua:query var:C.
 
 _:ng3 {
     var:S pack:package var:O.
