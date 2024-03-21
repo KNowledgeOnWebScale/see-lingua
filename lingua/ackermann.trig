@@ -27,7 +27,7 @@
 @prefix : <#>.
 
 # ackermann(x, y)
-_:ng1 lingua:if _:ng2.
+_:ng1 lingua:condition _:ng2.
 
 _:ng1 {
     (var:X var:Y) :ackermann var:A.
@@ -41,7 +41,7 @@ _:ng2 {
 
 # ackermann(x, y, z)
 # succ (x=0)
-_:ng3 lingua:if _:ng4.
+_:ng3 lingua:condition _:ng4.
 
 _:ng3 {
     (0 var:Y var:Z) :ackermann var:A.
@@ -53,7 +53,7 @@ _:ng4 {
 }
 
 # sum (x=1)
-_:ng5 lingua:if _:ng6.
+_:ng5 lingua:condition _:ng6.
 
 _:ng5 {
     (1 var:Y var:Z) :ackermann var:A.
@@ -65,7 +65,7 @@ _:ng6 {
 }
 
 # product (x=2)
-_:ng7 lingua:if _:ng8.
+_:ng7 lingua:condition _:ng8.
 
 _:ng7 {
     (2 var:Y var:Z) :ackermann var:A.
@@ -77,7 +77,7 @@ _:ng8 {
 }
 
 # exponentiation (x=3), tetration (x=4), pentation (x=5), hexation (x=6), etc
-_:ng9 lingua:if _:ng10.
+_:ng9 lingua:condition _:ng10.
 
 _:ng9 {
     (var:X 0 var:Z) :ackermann 1.
@@ -87,7 +87,7 @@ _:ng10 {
     _:ng13 log:callWithCut true.
 }
 
-_:ng11 lingua:if _:ng12.
+_:ng11 lingua:condition _:ng12.
 
 _:ng11 {
     (var:X var:Y var:Z) :ackermann var:A.

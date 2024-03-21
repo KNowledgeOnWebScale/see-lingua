@@ -39,7 +39,7 @@ A forward rule with `lingua:implication false` is an inference fuse.
 
 Lingua also supports reasoning with backward rules described in RDF as
 ```
-_:ng1 lingua:if _:ng2.
+_:ng1 lingua:condition _:ng2.
 
 _:ng1 {
     RDF triples

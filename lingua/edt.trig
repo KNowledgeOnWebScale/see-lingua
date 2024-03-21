@@ -23,7 +23,7 @@ _:ng1 {
     <> log:imports <../../eye/reasoning/edt/test-dl.ttl>.
 }
 
-_:ng2 lingua:if _:ng3.
+_:ng2 lingua:condition _:ng3.
 
 _:ng2 {
     var:X a var:D.
