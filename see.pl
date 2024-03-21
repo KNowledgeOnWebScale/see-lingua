@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v1.0.2 (2024-03-21)').
+version_info('SEE v1.0.3 (2024-03-21)').
 
 help_info('Usage: see <options>* <data>*
 
@@ -721,8 +721,8 @@ astep(B, Cn) :-
         ->  true
         ;   functor(Cn, P, N),
             (   \+pred(P),
-                P \= '<http://www.w3.org/2000/10/swap/log#callWithCleanup>',
                 P \= '<http://www.w3.org/2000/10/swap/log#implies>',
+                P \= '<http://www.w3.org/2000/10/swap/log#callWithCleanup>',
                 N = 2
             ->  assertz(pred(P))
             ;   true
@@ -3342,15 +3342,6 @@ product([A|B], C) :-
     product(B, D),
     C is X*D.
 
-tmp_file(A) :-
-    (   current_prolog_flag(dialect, swi),
-        current_prolog_flag(windows, true),
-        current_prolog_flag(pid, B)
-    ->  atomic_list_concat(['pl_see_', B, '_'], C)
-    ;   C = 'see'
-    ),
-    tmp_file(C, A).
-
 if_then_else(A, B, C) :-
     (   catch(call(A), _, fail)
     ->  catch(call(B), _, fail)
@@ -3451,7 +3442,7 @@ quant(answer(':-', _, _), allv) :-
     !.
 quant(_-A, avar) :-
     conj_list(A, B),
-    member('<http://www.w3.org/2000/10/swap/lingua#premise>'(_, _), B),
+    member('<http://www.w3.org/2000/10/swap/lingua#implication>'(_, _), B),
     !.
 quant(_, some).
 
