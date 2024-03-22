@@ -72,7 +72,7 @@ forward rule conclusion-only variables which are interpreted existentially.
 
 ## RDF Lingua Surfaces
 
-See https://www.slideshare.net/PatHayes/blogic-iswc-2009-invited-talk
+See [https://www.slideshare.net/PatHayes/blogic-iswc-2009-invited-talk](https://www.slideshare.net/PatHayes/blogic-iswc-2009-invited-talk)
 
 The top level surface is an implicit positive surface with implicit graffiti.
 
