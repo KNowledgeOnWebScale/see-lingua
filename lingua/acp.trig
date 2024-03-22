@@ -16,7 +16,7 @@
     :anyOf :C;
     :noneOf :D.
 
-_:ng1 lingua:condition _:ng2.
+_:ng1 lingua:if _:ng2.
 
 _:ng1 {
     var:Pol :pass :allOfTest.
@@ -36,7 +36,7 @@ _:ng4 {
     var:Test :has var:Field.
 }
 
-_:ng5 lingua:condition _:ng6.
+_:ng5 lingua:if _:ng6.
 
 _:ng5 {
     var:Pol :pass :anyOfTest.
@@ -55,7 +55,7 @@ _:ng7 {
     var:Test :has var:Field.
 }
 
-_:ng8 lingua:condition _:ng9.
+_:ng8 lingua:if _:ng9.
 
 _:ng8 {
     var:Pol :pass :noneOfTest.
