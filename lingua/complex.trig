@@ -11,7 +11,7 @@
 @prefix : <#>.
 
 # exponentiation
-_:ng1 lingua:backimplication _:ng2.
+_:ng1 lingua:if _:ng2.
 
 _:ng1 {
     ((var:A var:B) (var:C var:D)) complex:exponentiation (var:E var:F).
@@ -34,7 +34,7 @@ _:ng2 {
 }
 
 # asin
-_:ng3 lingua:backimplication _:ng4.
+_:ng3 lingua:if _:ng4.
 
 _:ng3 {
     (var:A var:B) complex:asin (var:C var:D).
@@ -63,7 +63,7 @@ _:ng4 {
 }
 
 # acos
-_:ng5 lingua:backimplication _:ng6.
+_:ng5 lingua:if _:ng6.
 
 _:ng5 {
     (var:A var:B) complex:acos (var:C var:D).
@@ -93,7 +93,7 @@ _:ng6 {
 }
 
 # polar
-_:ng7 lingua:backimplication _:ng8.
+_:ng7 lingua:if _:ng8.
 
 _:ng7 {
     (var:X var:Y) complex:polar(var:R var:Tp).
@@ -111,7 +111,7 @@ _:ng8 {
 }
 
 # dial
-_:ng9 lingua:backimplication _:ng10.
+_:ng9 lingua:if _:ng10.
 
 _:ng9 {
     (var:X var:Y var:T) complex:dial var:Tp.
@@ -123,7 +123,7 @@ _:ng10 {
     (0 var:T) math:sum var:Tp.
 }
 
-_:ng11 lingua:backimplication _:ng12.
+_:ng11 lingua:if _:ng12.
 
 _:ng11 {
     (var:X var:Y var:T) complex:dial var:Tp.
@@ -135,7 +135,7 @@ _:ng12 {
     (3.141592653589793 var:T) math:difference var:Tp.
 }
 
-_:ng13 lingua:backimplication _:ng14.
+_:ng13 lingua:if _:ng14.
 
 _:ng13 {
     (var:X var:Y var:T) complex:dial var:Tp.
@@ -147,7 +147,7 @@ _:ng14 {
     (3.141592653589793 var:T) math:sum var:Tp.
 }
 
-_:ng15 lingua:backimplication _:ng16.
+_:ng15 lingua:if _:ng16.
 
 _:ng15 {
     (var:X var:Y var:T) complex:dial var:Tp.

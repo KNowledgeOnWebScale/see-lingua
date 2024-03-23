@@ -10,7 +10,7 @@
 @prefix : <#>.
 
 # backward rules
-_:ng1 lingua:backimplication _:ng2.
+_:ng1 lingua:if _:ng2.
 
 _:ng1 {
     (var:X) :fibonacci var:Y.
@@ -20,19 +20,19 @@ _:ng2 {
     (var:X 0 1) :fib var:Y.
 }
 
-_:ng3 lingua:backimplication true.
+_:ng3 lingua:if true.
 
 _:ng3 {
     (0 var:A var:B) :fib var:A.
 }
 
-_:ng4 lingua:backimplication true.
+_:ng4 lingua:if true.
 
 _:ng4 {
     (1 var:A var:B) :fib var:B.
 }
 
-_:ng5 lingua:backimplication _:ng6.
+_:ng5 lingua:if _:ng6.
 
 _:ng5 {
     (var:X var:A var:B) :fib var:Y.
