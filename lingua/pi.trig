@@ -9,7 +9,7 @@
 @prefix var: <http://www.w3.org/2000/10/swap/var#>.
 @prefix : <#>.
 
-_:ng1 lingua:if _:ng2.
+_:ng1 lingua:backimplication _:ng2.
 
 _:ng1 {
     (var:N var:Pi) :pi true.
@@ -21,13 +21,13 @@ _:ng2 {
     (3 var:A) math:sum var:Pi.
 }
 
-_:ng3 lingua:if true.
+_:ng3 lingua:backimplication true.
 
 _:ng3 {
     (var:N var:N var:P var:P var:S) :pi true.
 }
 
-_:ng4 lingua:if _:ng5.
+_:ng4 lingua:backimplication _:ng5.
 
 _:ng4 {
     (var:K var:N var:P0 var:P var:S) :pi true.
