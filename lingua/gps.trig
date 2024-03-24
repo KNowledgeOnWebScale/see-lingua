@@ -28,7 +28,7 @@
 @prefix : <#>.
 
 # find paths in the state space from initial state to goal state within limits
-_:ng1 lingua:if _:ng2.
+_:ng1 lingua:hornb _:ng2.
 
 _:ng1 {
     () gps:findpath (var:Goal var:Path var:Duration var:Cost var:Belief var:Comfort
@@ -40,7 +40,7 @@ _:ng2 {
         (var:MaxDuration var:MaxCost var:MinBelief var:MinComfort 1)).
 }
 
-_:ng3 lingua:if _:ng4.
+_:ng3 lingua:hornb _:ng4.
 
 _:ng3 {
     () gps:findpath (var:Goal var:Path var:Duration var:Cost var:Belief var:Comfort
@@ -52,7 +52,7 @@ _:ng4 {
         (var:MaxDuration var:MaxCost var:MinBelief var:MinComfort var:MaxStagecount)).
 }
 
-_:ng5 lingua:if _:ng6.
+_:ng5 lingua:hornb _:ng6.
 
 _:ng5 {
     () gps:findpaths (var:Maps var:Goal var:Path var:Duration var:Cost var:Belief var:Comfort var:Path var:Duration var:Cost var:Belief var:Comfort
@@ -63,7 +63,7 @@ _:ng6 {
     var:Goal log:call true.
 }
 
-_:ng7 lingua:if _:ng8.
+_:ng7 lingua:hornb _:ng8.
 
 _:ng7 {
     () gps:findpaths (var:Maps_s var:Goal var:Path_s var:Duration_s var:Cost_s var:Belief_s var:Comfort_s var:Path var:Duration var:Cost var:Belief var:Comfort
@@ -98,13 +98,13 @@ _:ng10 {
 }
 
 # counting the number of stages (a stage is a sequence of gps in the same map)
-_:ng11 lingua:if true.
+_:ng11 lingua:hornb true.
 
 _:ng11 {
     () gps:stagecount 1.
 }
 
-_:ng12 lingua:if _:ng13.
+_:ng12 lingua:hornb _:ng13.
 
 _:ng12 {
     var:A gps:stagecount var:B.
@@ -118,7 +118,7 @@ _:ng13 {
     (var:G 1) math:sum var:B.
 }
 
-_:ng14 lingua:if _:ng15.
+_:ng14 lingua:hornb _:ng15.
 
 _:ng14 {
     var:A gps:stagecount var:B.
@@ -133,7 +133,7 @@ _:ng15 {
 :i1 :location :Gent.
 
 # map of Belgium
-_:ng16 lingua:if _:ng17.
+_:ng16 lingua:hornb _:ng17.
 
 _:ng16 {
     :map-BE gps:description (_:ng18 true _:ng19 :drive_gent_brugge 1500.0 0.006 0.96 0.99).
@@ -151,7 +151,7 @@ _:ng19 {
     var:S :location :Brugge.
 }
 
-_:ng20 lingua:if _:ng21.
+_:ng20 lingua:hornb _:ng21.
 
 _:ng20 {
     :map-BE gps:description (_:ng22 true _:ng23 :drive_gent_kortrijk 1600.0 0.007 0.96 0.99).
@@ -169,7 +169,7 @@ _:ng23 {
     var:S :location :Kortrijk.
 }
 
-_:ng24 lingua:if _:ng25.
+_:ng24 lingua:hornb _:ng25.
 
 _:ng24 {
     :map-BE gps:description (_:ng26 true _:ng27 :drive_kortrijk_brugge 1600.0 0.007 0.96 0.99).
@@ -187,7 +187,7 @@ _:ng27 {
     var:S :location :Brugge.
 }
 
-_:ng28 lingua:if _:ng29.
+_:ng28 lingua:hornb _:ng29.
 
 _:ng28 {
     :map-BE gps:description (_:ng30 true _:ng31 :drive_brugge_oostende 900.0 0.004 0.98 1.0).

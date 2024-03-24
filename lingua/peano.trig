@@ -10,13 +10,13 @@
 @prefix : <#>.
 
 # add
-_:ng1 lingua:if true.
+_:ng1 lingua:hornb true.
 
 _:ng1 {
     (var:A 0) :add var:A.
 }
 
-_:ng2 lingua:if _:ng3.
+_:ng2 lingua:hornb _:ng3.
 
 _:ng2 {
     (var:A (:s var:B)) :add (:s var:C).
@@ -27,13 +27,13 @@ _:ng3 {
 }
 
 # multiply
-_:ng4 lingua:if true.
+_:ng4 lingua:hornb true.
 
 _:ng4 {
     (var:A 0) :multiply 0.
 }
 
-_:ng5 lingua:if _:ng6.
+_:ng5 lingua:hornb _:ng6.
 
 _:ng5 {
     (var:A (:s var:B)) :multiply var:C.
@@ -45,7 +45,7 @@ _:ng6 {
 }
 
 # factorial
-_:ng7 lingua:if _:ng8.
+_:ng7 lingua:hornb _:ng8.
 
 _:ng7 {
     var:A :factorial var:B.
@@ -55,13 +55,13 @@ _:ng8 {
     (var:A (:s 0)) :fac var:B.
 }
 
-_:ng9 lingua:if true.
+_:ng9 lingua:hornb true.
 
 _:ng9 {
     (0 var:A) :fac var:A.
 }
 
-_:ng10 lingua:if _:ng11.
+_:ng10 lingua:hornb _:ng11.
 
 _:ng10 {
     ((:s var:A) var:B) :fac var:C.

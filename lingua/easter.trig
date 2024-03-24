@@ -11,7 +11,7 @@
 @prefix : <#>.
 
 # calculate easter day
-_:ng1 lingua:if _:ng2.
+_:ng1 lingua:hornb _:ng2.
 
 _:ng1 {
     (var:x0) :easter (var:x34 var:x32).

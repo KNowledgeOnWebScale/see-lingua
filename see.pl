@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v1.0.6 (2024-03-23)').
+version_info('SEE v1.0.7 (2024-03-24)').
 
 help_info('Usage: see <options>* <data>*
 
@@ -72,7 +72,7 @@ help_info('Usage: see <options>* <data>*
 :- dynamic('<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest>'/2).
 :- dynamic('<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>'/2).
 :- dynamic('<http://www.w3.org/2000/01/rdf-schema#subClassOf>'/2).
-:- dynamic('<http://www.w3.org/2000/10/swap/lingua#if>'/2).
+:- dynamic('<http://www.w3.org/2000/10/swap/lingua#hornb>'/2).
 :- dynamic('<http://www.w3.org/2000/10/swap/lingua#implication>'/2).
 :- dynamic('<http://www.w3.org/2000/10/swap/lingua#nand>'/2).
 :- dynamic('<http://www.w3.org/2000/10/swap/lingua#query>'/2).
@@ -228,7 +228,7 @@ gre(Argus) :-
             ), '<http://www.w3.org/2000/10/swap/log#implies>'(Q, I))),
     % create backward rules
     assertz(implies((
-            '<http://www.w3.org/2000/10/swap/lingua#if>'(B, A),
+            '<http://www.w3.org/2000/10/swap/lingua#hornb>'(B, A),
             findvars([A, B], V, alpha),
             list_to_set(V, U),
             makevars([A, B, U], [Q, I, X], beta(U)),
@@ -413,7 +413,7 @@ gre(Argus) :-
             conj_list(S, Y),
             append(Vl, X, U),
             makevars([M, S], [Q, I], alpha(U))
-            ), '<http://www.w3.org/2000/10/swap/lingua#if>'(Q, I))),
+            ), '<http://www.w3.org/2000/10/swap/lingua#hornb>'(Q, I))),
     % blow inference fuse
     assertz(implies((
             '<http://www.w3.org/2000/10/swap/lingua#nand>'(V, G),
