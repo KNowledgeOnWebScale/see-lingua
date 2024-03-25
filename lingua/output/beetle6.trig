@@ -1,3 +1,150 @@
 @prefix : <https://eyereasoner.github.io/see-lingua/lingua/beetle6.trig#>.
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 
 :beetle :is :nice.
+
+# ------------------
+# lingua explanation
+# ------------------
+
+_:gn_1 lingua:explanation _:gn_2.
+_:gn_1 lingua:explanation _:gn_3.
+_:gn_3 lingua:explanation _:gn_4.
+_:gn_3 lingua:explanation _:gn_5.
+_:gn_3 lingua:explanation _:gn_6.
+_:gn_1 lingua:explanation _:gn_7.
+_:gn_1 lingua:explanation _:gn_4.
+_:gn_8 lingua:explanation _:gn_9.
+_:gn_10 lingua:explanation _:node_18_1.
+_:gn_11 lingua:explanation _:gn_9.
+_:gn_12 lingua:explanation _:node_18_1.
+_:gn_9 lingua:explanation _:gn_13.
+_:gn_3 lingua:explanation _:gn_7.
+_:gn_4 lingua:explanation _:gn_9.
+_:gn_1 lingua:explanation _:gn_9.
+_:gn_9 lingua:explanation _:node_18_1.
+_:gn_3 lingua:explanation _:gn_9.
+_:gn_4 lingua:explanation _:node_18_1.
+true lingua:explanation _:gn_9.
+true lingua:explanation _:node_18_1.
+_:gn_4 lingua:explanation _:gn_14.
+_:gn_1 lingua:explanation _:gn_14.
+_:gn_9 lingua:explanation _:gn_15.
+_:gn_3 lingua:explanation _:gn_14.
+_:gn_4 lingua:explanation _:gn_15.
+_:gn_7 lingua:explanation _:node_18_1.
+_:gn_3 lingua:explanation _:node_18_1.
+_:gn_7 lingua:explanation _:gn_15.
+_:gn_3 lingua:explanation _:gn_15.
+
+_:gn_9 {
+    :beetle :is :green.
+}
+
+_:node_18_1 {
+    :beetle :is :nice.
+}
+
+_:gn_21 {
+    :beetle :is :pretty.
+}
+
+_:gn_1 {
+    :beetle a :Car.
+}
+
+_:gn_2 {
+    () lingua:nand _:gn_16.
+}
+
+_:gn_3 {
+    () lingua:nand _:gn_17.
+}
+
+_:gn_4 {
+    () lingua:nand _:gn_18.
+}
+
+_:gn_5 {
+    () lingua:nand _:gn_19.
+}
+
+_:gn_6 {
+    () lingua:nand _:gn_20.
+}
+
+_:gn_7 {
+    () lingua:nand _:gn_21.
+}
+
+_:gn_8 {
+    :beetle a :Car.
+    () lingua:nand _:gn_18.
+}
+
+_:gn_10 {
+    :beetle :is :green.
+    () lingua:nand _:gn_21.
+}
+
+_:gn_11 {
+    () lingua:nand _:gn_17.
+    :beetle a :Car.
+}
+
+_:gn_12 {
+    () lingua:nand _:gn_17.
+    :beetle :is :green.
+}
+
+_:gn_13 {
+    () lingua:nand _:gn_22.
+}
+
+_:gn_14 {
+    () lingua:nand _:gn_23.
+}
+
+_:gn_15 {
+    () lingua:nand _:gn_24.
+}
+
+_:gn_16 {
+    () lingua:nand _:gn_9.
+    () lingua:nand _:gn_18.
+}
+
+_:gn_17 {
+    :beetle :is :beautiful.
+}
+
+_:gn_18 {
+    :beetle :is :blue.
+}
+
+_:gn_19 {
+    :beetle a :Car.
+    () lingua:nand _:gn_9.
+}
+
+_:gn_20 {
+    :beetle :is :green.
+    () lingua:nand _:node_18_1.
+}
+
+_:gn_21 {
+    :beetle :is :pretty.
+}
+
+_:gn_22 {
+    () lingua:nand _:node_18_1.
+    () lingua:nand _:gn_21.
+}
+
+_:gn_23 {
+    () lingua:nand _:gn_9.
+}
+
+_:gn_24 {
+    () lingua:nand _:node_18_1.
+}

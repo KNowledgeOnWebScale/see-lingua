@@ -1,3 +1,16 @@
 @prefix edt: <http://eulersharp.sourceforge.net/2009/12dtb/test#>.
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
 
 edt:i100000 a edt:N10000.
+
+# ------------------
+# lingua explanation
+# ------------------
+
+_:node_1_1 lingua:explanation true.
+
+_:node_1_1 {
+    <https://eyereasoner.github.io/see-lingua/lingua/edt.trig> log:imports <https://eyereasoner.github.io/eye/reasoning/edt/test-facts.ttl>.
+    <https://eyereasoner.github.io/see-lingua/lingua/edt.trig> log:imports <https://eyereasoner.github.io/eye/reasoning/edt/test-dl.ttl>.
+}

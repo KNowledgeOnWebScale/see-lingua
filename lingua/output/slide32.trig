@@ -1,3 +1,28 @@
 @prefix : <https://eyereasoner.github.io/see-lingua/lingua/slide32.trig#>.
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 
 :Ghent a :HumanCommunity.
+
+# ------------------
+# lingua explanation
+# ------------------
+
+_:gn_1 lingua:explanation _:node_5_1.
+_:gn_1 lingua:explanation _:gn_2.
+true lingua:explanation _:node_5_1.
+
+_:node_5_1 {
+    :Ghent a :HumanCommunity.
+}
+
+_:gn_1 {
+    :Ghent a :City.
+}
+
+_:gn_2 {
+    () lingua:nand _:gn_3.
+}
+
+_:gn_3 {
+    () lingua:nand _:node_5_1.
+}

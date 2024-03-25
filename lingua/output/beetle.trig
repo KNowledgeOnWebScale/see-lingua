@@ -1,3 +1,46 @@
 @prefix : <https://eyereasoner.github.io/see-lingua/lingua/beetle.trig#>.
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 
 :beetle :is :beautiful.
+
+# ------------------
+# lingua explanation
+# ------------------
+
+_:gn_1 lingua:explanation _:gn_2.
+_:gn_1 lingua:explanation _:node_12_1.
+_:gn_1 lingua:explanation _:gn_3.
+true lingua:explanation _:node_12_1.
+
+_:gn_6 {
+    :beetle :is :green.
+}
+
+_:gn_7 {
+    :beetle :is :blue.
+}
+
+_:node_12_1 {
+    :beetle :is :beautiful.
+}
+
+_:gn_1 {
+    :beetle a :Car.
+}
+
+_:gn_2 {
+    () lingua:nand _:gn_4.
+}
+
+_:gn_3 {
+    () lingua:nand _:gn_5.
+}
+
+_:gn_4 {
+    () lingua:nand _:gn_6.
+    () lingua:nand _:gn_7.
+}
+
+_:gn_5 {
+    () lingua:nand _:node_12_1.
+}

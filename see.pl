@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v1.0.7 (2024-03-24)').
+version_info('SEE v1.1.0 (2024-03-25)').
 
 help_info('Usage: see <options>* <data>*
 
@@ -224,15 +224,15 @@ gre(Argus) :-
             '<http://www.w3.org/2000/10/swap/lingua#implication>'(A, B),
             findvars([A, B], V, alpha),
             list_to_set(V, U),
-            makevars([A, B, U], [Q, I, X], beta(U))
-            ), '<http://www.w3.org/2000/10/swap/log#implies>'(Q, I))),
+            makevars([A, B, U], [Q, I, X], beta(U)),
+            conj_append(I, answer('<http://www.w3.org/2000/10/swap/lingua#explanation>', Q, I), F)
+            ), '<http://www.w3.org/2000/10/swap/log#implies>'(Q, F))),
     % create backward rules
     assertz(implies((
             '<http://www.w3.org/2000/10/swap/lingua#hornb>'(B, A),
             findvars([A, B], V, alpha),
             list_to_set(V, U),
             makevars([A, B, U], [Q, I, X], beta(U)),
-            zip_list(U, X, W),
             C = ':-'(I, Q),
             copy_term_nat(C, CC),
             labelvars(CC, 0, _, avar),
@@ -249,7 +249,6 @@ gre(Argus) :-
             findvars([A, B], V, alpha),
             list_to_set(V, U),
             makevars([A, J, U], [Q, I, X], beta(U)),
-            zip_list(U, X, W),
             C = implies(Q, I),
             copy_term_nat(C, CC),
             labelvars(CC, 0, _, avar),
@@ -658,13 +657,15 @@ eam(Recursion) :-
             w3,
             forall(
                 retract(keep_ng(NG)),
-                (   wt(NG),
+                (   nl,
+                    wt(NG),
                     nl
                 )
             ),
             forall(
                 retract(keep_ng(NG)),
-                (   wt(NG),
+                (   nl,
+                    wt(NG),
                     nl
                 )
             ),
@@ -683,13 +684,15 @@ eam(Recursion) :-
             w3,
             forall(
                 retract(keep_ng(NG)),
-                (   wt(NG),
+                (   nl,
+                    wt(NG),
                     nl
                 )
             ),
             forall(
                 retract(keep_ng(NG)),
-                (   wt(NG),
+                (   nl,
+                    wt(NG),
                     nl
                 )
             )
@@ -856,6 +859,7 @@ w3 :-
     nb_setval(pdepth, 0),
     nb_setval(cdepth, 0),
     (   answer(B1, B2, B3),
+        B1 \= '<http://www.w3.org/2000/10/swap/lingua#explanation>',
         relabel([B1, B2, B3], [C1, C2, C3]),
         djiti_answer(answer(C), answer(C1, C2, C3)),
         indent,
@@ -869,6 +873,23 @@ w3 :-
         ),
         nl,
         fail
+    ;   true
+    ),
+    (   answer('<http://www.w3.org/2000/10/swap/lingua#explanation>', _, _)
+    ->  nl,
+        writeln('# ------------------'),
+        writeln('# lingua explanation'),
+        writeln('# ------------------'),
+        nl,
+        (   answer('<http://www.w3.org/2000/10/swap/lingua#explanation>', S, O),
+            indent,
+            wt('<http://www.w3.org/2000/10/swap/lingua#explanation>'(S, O)),
+            ws('<http://www.w3.org/2000/10/swap/lingua#explanation>'(S, O)),
+            write('.'),
+            nl,
+            fail
+        ;   true
+        )
     ;   true
     ).
 
@@ -3319,14 +3340,6 @@ srlist([], _, []).
 srlist([A|B], C, [[E, C]|D]) :-
     string_codes(A, E),
     srlist(B, C, D).
-
-zip_list([], [], []).
-zip_list([A|B], [C|D], [[E,C]|F]) :-
-    (   atom_concat('avar', G, A)
-    ->  atomic_list_concat(['<http://www.w3.org/2000/10/swap/var#x_', G, '>'], E)
-    ;   E = A
-    ),
-    zip_list(B, D, F).
 
 sum([], 0) :-
     !.

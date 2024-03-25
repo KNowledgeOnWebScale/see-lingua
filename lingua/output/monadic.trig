@@ -1,4 +1,6 @@
 @prefix bmt: <http://eulersharp.sourceforge.net/2007/07test/graph#>.
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
 
 bmt:i12 bmt:cycle (bmt:i45 bmt:i45 bmt:i45 bmt:i45 bmt:i45 bmt:i45 bmt:i45 bmt:i45 bmt:i45 bmt:i45).
 bmt:i12 bmt:cycle (bmt:i66 bmt:i66 bmt:i66 bmt:i66 bmt:i66 bmt:i66 bmt:i66 bmt:i66 bmt:i66 bmt:i66).
@@ -1518,3 +1520,22 @@ bmt:i27 bmt:cycle (bmt:i21 bmt:i72 bmt:i21 bmt:i72 bmt:i21 bmt:i72 bmt:i21 bmt:i
 bmt:i27 bmt:cycle (bmt:i84 bmt:i39 bmt:i84 bmt:i39 bmt:i84 bmt:i39 bmt:i84 bmt:i39 bmt:i84 bmt:i39).
 bmt:i27 bmt:cycle (bmt:i72 bmt:i21 bmt:i72 bmt:i21 bmt:i72 bmt:i21 bmt:i72 bmt:i21 bmt:i72 bmt:i21).
 bmt:i27 bmt:cycle (bmt:i39 bmt:i84 bmt:i39 bmt:i84 bmt:i39 bmt:i84 bmt:i39 bmt:i84 bmt:i39 bmt:i84).
+
+# ------------------
+# lingua explanation
+# ------------------
+
+_:node_1_1 lingua:explanation true.
+
+_:node_1_1 {
+    <https://eyereasoner.github.io/see-lingua/lingua/monadic.trig> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt1.ttl>.
+    <https://eyereasoner.github.io/see-lingua/lingua/monadic.trig> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt2.ttl>.
+    <https://eyereasoner.github.io/see-lingua/lingua/monadic.trig> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt3.ttl>.
+    <https://eyereasoner.github.io/see-lingua/lingua/monadic.trig> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt4.ttl>.
+    <https://eyereasoner.github.io/see-lingua/lingua/monadic.trig> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt5.ttl>.
+    <https://eyereasoner.github.io/see-lingua/lingua/monadic.trig> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt6.ttl>.
+    <https://eyereasoner.github.io/see-lingua/lingua/monadic.trig> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt7.ttl>.
+    <https://eyereasoner.github.io/see-lingua/lingua/monadic.trig> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt8.ttl>.
+    <https://eyereasoner.github.io/see-lingua/lingua/monadic.trig> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt9.ttl>.
+    <https://eyereasoner.github.io/see-lingua/lingua/monadic.trig> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt10.ttl>.
+}
