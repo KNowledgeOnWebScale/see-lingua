@@ -10,7 +10,6 @@
 _:gn_1 lingua:explanation _:gn_2.
 _:gn_1 lingua:explanation _:node_12_1.
 _:gn_1 lingua:explanation _:gn_3.
-true lingua:explanation _:node_12_1.
 
 _:gn_6 {
     :beetle :is :green.

@@ -9,7 +9,6 @@
 
 _:gn_1 lingua:explanation _:node_5_1.
 _:gn_1 lingua:explanation _:gn_2.
-true lingua:explanation _:node_5_1.
 
 _:node_5_1 {
     :Ghent a :HumanCommunity.

@@ -16,8 +16,6 @@ _:gn_8 lingua:explanation _:gn_2.
 _:gn_2 lingua:explanation _:node_9_1.
 _:gn_8 lingua:explanation _:gn_9.
 _:gn_2 lingua:explanation _:gn_10.
-true lingua:explanation _:gn_2.
-true lingua:explanation _:node_9_1.
 
 _:gn_15 {
     _:sk_11 a :Human.

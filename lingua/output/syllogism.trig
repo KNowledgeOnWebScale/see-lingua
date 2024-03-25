@@ -19,24 +19,20 @@ _:gn_5 lingua:explanation _:gn_11.
 _:gn_12 lingua:explanation _:node_19_1.
 _:gn_6 lingua:explanation _:gn_11.
 _:gn_11 lingua:explanation _:gn_13.
-true lingua:explanation _:gn_14.
-true lingua:explanation _:gn_15.
-_:gn_14 lingua:explanation _:gn_16.
-_:gn_17 lingua:explanation _:node_19_1.
-_:gn_18 lingua:explanation _:node_19_1.
-_:gn_19 lingua:explanation _:gn_20.
-_:gn_1 lingua:explanation _:gn_21.
-_:gn_22 lingua:explanation _:node_19_1.
-_:gn_23 lingua:explanation _:node_19_1.
-_:gn_24 lingua:explanation _:node_19_1.
-_:gn_3 lingua:explanation _:gn_25.
-_:gn_19 lingua:explanation _:gn_26.
-_:gn_1 lingua:explanation _:gn_27.
+_:gn_14 lingua:explanation _:node_19_1.
+_:gn_15 lingua:explanation _:node_19_1.
+_:gn_16 lingua:explanation _:gn_17.
+_:gn_1 lingua:explanation _:gn_18.
+_:gn_19 lingua:explanation _:node_19_1.
+_:gn_20 lingua:explanation _:node_19_1.
+_:gn_21 lingua:explanation _:node_19_1.
+_:gn_3 lingua:explanation _:gn_22.
+_:gn_16 lingua:explanation _:gn_23.
+_:gn_1 lingua:explanation _:gn_24.
 _:gn_10 lingua:explanation _:node_19_1.
 _:gn_9 lingua:explanation _:node_19_1.
-true lingua:explanation _:node_19_1.
-_:gn_10 lingua:explanation _:gn_28.
-_:gn_9 lingua:explanation _:gn_28.
+_:gn_10 lingua:explanation _:gn_25.
+_:gn_9 lingua:explanation _:gn_25.
 
 _:gn_2 {
     _:node_11_1 a :Mammal.
@@ -46,7 +42,7 @@ _:gn_3 {
     _:node_11_1 a :Feline.
 }
 
-_:gn_41 {
+_:gn_37 {
     _:sk_64 a :Christian.
 }
 
@@ -54,24 +50,24 @@ _:node_19_1 {
     :test :is true.
 }
 
+_:gn_38 {
+    _:sk_92 a :Christian.
+}
+
+_:gn_39 {
+    _:sk_93 a :Christian.
+}
+
+_:gn_40 {
+    _:sk_121 a :Christian.
+}
+
+_:gn_41 {
+    _:sk_122 a :Christian.
+}
+
 _:gn_42 {
-    _:sk_94 a :Christian.
-}
-
-_:gn_43 {
-    _:sk_95 a :Christian.
-}
-
-_:gn_44 {
     _:sk_123 a :Christian.
-}
-
-_:gn_45 {
-    _:sk_124 a :Christian.
-}
-
-_:gn_46 {
-    _:sk_125 a :Christian.
 }
 
 _:gn_1 {
@@ -79,7 +75,7 @@ _:gn_1 {
 }
 
 _:gn_4 {
-    () lingua:nand _:gn_29.
+    () lingua:nand _:gn_26.
 }
 
 _:gn_5 {
@@ -87,15 +83,15 @@ _:gn_5 {
 }
 
 _:gn_6 {
-    () lingua:nand _:gn_30.
+    () lingua:nand _:gn_27.
 }
 
 _:gn_7 {
-    () lingua:nand _:gn_31.
+    () lingua:nand _:gn_28.
 }
 
 _:gn_8 {
-    () lingua:nand _:gn_32.
+    () lingua:nand _:gn_29.
 }
 
 _:gn_9 {
@@ -118,89 +114,77 @@ _:gn_12 {
 }
 
 _:gn_13 {
-    () lingua:nand _:gn_33.
+    () lingua:nand _:gn_30.
 }
 
 _:gn_14 {
-    _:sk_92 a :Mammal.
+    _:node_11_1 a :White.
+    _:node_11_1 a :Feline.
+    () lingua:nand _:node_18_1.
 }
 
 _:gn_15 {
-    _:sk_93 a :Feline.
+    _:node_11_1 a :Cat.
+    _:node_11_1 a :White.
+    () lingua:nand _:node_18_1.
 }
 
 _:gn_16 {
-    () lingua:nand _:gn_34.
+    _:node_11_1 a :White.
 }
 
 _:gn_17 {
-    _:node_11_1 a :White.
-    _:node_11_1 a :Feline.
-    () lingua:nand _:node_18_1.
+    () lingua:nand _:gn_31.
 }
 
 _:gn_18 {
-    _:node_11_1 a :Cat.
-    _:node_11_1 a :White.
-    () lingua:nand _:node_18_1.
+    () lingua:nand _:gn_32.
 }
 
 _:gn_19 {
-    _:node_11_1 a :White.
-}
-
-_:gn_20 {
-    () lingua:nand _:gn_35.
-}
-
-_:gn_21 {
-    () lingua:nand _:gn_36.
-}
-
-_:gn_22 {
     _:node_11_1 a :Feline.
     () lingua:nand _:node_18_1.
 }
 
-_:gn_23 {
+_:gn_20 {
     _:node_11_1 a :White.
     () lingua:nand _:node_18_1.
 }
 
-_:gn_24 {
+_:gn_21 {
     _:node_11_1 a :Cat.
     () lingua:nand _:node_18_1.
 }
 
+_:gn_22 {
+    () lingua:nand _:gn_33.
+}
+
+_:gn_23 {
+    () lingua:nand _:gn_34.
+}
+
+_:gn_24 {
+    () lingua:nand _:gn_35.
+}
+
 _:gn_25 {
-    () lingua:nand _:gn_37.
+    () lingua:nand _:gn_36.
 }
 
 _:gn_26 {
-    () lingua:nand _:gn_38.
-}
-
-_:gn_27 {
-    () lingua:nand _:gn_39.
-}
-
-_:gn_28 {
-    () lingua:nand _:gn_40.
-}
-
-_:gn_29 {
     () lingua:nand _:gn_2.
 }
 
-_:gn_30 {
+_:gn_27 {
     :Tweety a :Mammal.
 }
 
-_:gn_31 {
+_:gn_28 {
     _:node_11_1 a :Bird.
 }
 
-_:gn_32 {
+_:gn_29 {
     () lingua:nand _:gn_3.
 }
 
@@ -212,44 +196,40 @@ _:node_17_1 {
     :Tweety a :Cat.
 }
 
-_:gn_33 {
+_:gn_30 {
     _:sk_63 a :White.
     _:sk_63 a :Feline.
-    () lingua:nand _:gn_41.
+    () lingua:nand _:gn_37.
+    () lingua:nand _:node_19_1.
+}
+
+_:gn_31 {
+    _:node_11_1 a :Feline.
+    () lingua:nand _:gn_38.
+    () lingua:nand _:node_19_1.
+}
+
+_:gn_32 {
+    _:node_11_1 a :White.
+    () lingua:nand _:gn_39.
+    () lingua:nand _:node_19_1.
+}
+
+_:gn_33 {
+    () lingua:nand _:gn_40.
     () lingua:nand _:node_19_1.
 }
 
 _:gn_34 {
-    _:sk_92 a :Bird.
+    () lingua:nand _:gn_41.
+    () lingua:nand _:node_19_1.
 }
 
 _:gn_35 {
-    _:node_11_1 a :Feline.
     () lingua:nand _:gn_42.
     () lingua:nand _:node_19_1.
 }
 
 _:gn_36 {
-    _:node_11_1 a :White.
-    () lingua:nand _:gn_43.
-    () lingua:nand _:node_19_1.
-}
-
-_:gn_37 {
-    () lingua:nand _:gn_44.
-    () lingua:nand _:node_19_1.
-}
-
-_:gn_38 {
-    () lingua:nand _:gn_45.
-    () lingua:nand _:node_19_1.
-}
-
-_:gn_39 {
-    () lingua:nand _:gn_46.
-    () lingua:nand _:node_19_1.
-}
-
-_:gn_40 {
     () lingua:nand _:node_19_1.
 }

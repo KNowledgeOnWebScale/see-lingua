@@ -31,28 +31,26 @@ _:gn_22 lingua:explanation _:gn_23.
 _:gn_24 lingua:explanation _:gn_25.
 _:gn_15 lingua:explanation _:gn_26.
 _:gn_15 lingua:explanation _:gn_27.
-true lingua:explanation _:node_23_1.
-true lingua:explanation _:gn_28.
 
-_:gn_55 {
+_:gn_52 {
     _:sk_202 a :ccc.
 }
 
-_:gn_56 {
+_:gn_53 {
     _:sk_201 :bbb _:sk_202.
-    () lingua:nand _:gn_55.
+    () lingua:nand _:gn_52.
 }
 
-_:gn_57 {
+_:gn_54 {
     _:sk_201 a :aaa.
 }
 
-_:gn_58 {
+_:gn_55 {
     _:sk_203 :bbb _:sk_204.
-    () lingua:nand _:gn_85.
+    () lingua:nand _:gn_79.
 }
 
-_:gn_59 {
+_:gn_56 {
     _:sk_203 a :aaa.
 }
 
@@ -60,59 +58,59 @@ _:node_4_1 {
     _:node_2_1 a :ccc.
 }
 
-_:gn_60 {
+_:gn_57 {
     _:sk_206 a :ccc.
 }
 
-_:gn_61 {
-    (_:sk_208 _:sk_209) lingua:nand _:gn_86.
-    (_:sk_208) lingua:nand _:gn_87.
+_:gn_58 {
+    (_:sk_208 _:sk_209) lingua:nand _:gn_80.
+    (_:sk_208) lingua:nand _:gn_81.
 }
 
-_:gn_62 {
+_:gn_59 {
     _:sk_212 a _:sk_210.
 }
 
-_:gn_63 {
+_:gn_60 {
     _:sk_214 :bbb _:sk_215.
-    () lingua:nand _:gn_88.
+    () lingua:nand _:gn_82.
 }
 
-_:gn_64 {
+_:gn_61 {
     _:sk_214 a :aaa.
 }
 
-_:gn_65 {
+_:gn_62 {
     _:sk_294 :bbb _:sk_295.
-    () lingua:nand _:gn_89.
+    () lingua:nand _:gn_83.
 }
 
-_:gn_66 {
+_:gn_63 {
     _:sk_294 a :aaa.
 }
 
-_:gn_67 {
+_:gn_64 {
     _:sk_297 a :aaa.
 }
 
-_:gn_68 {
+_:gn_65 {
     _:sk_301 a _:sk_299.
 }
 
-_:gn_69 {
+_:gn_66 {
     _:sk_393 a :aaa.
 }
 
-_:gn_70 {
+_:gn_67 {
     _:sk_407 a :ccc.
 }
 
-_:gn_71 {
+_:gn_68 {
     _:sk_406 :bbb _:sk_407.
-    () lingua:nand _:gn_70.
+    () lingua:nand _:gn_67.
 }
 
-_:gn_72 {
+_:gn_69 {
     _:sk_406 a :aaa.
 }
 
@@ -120,56 +118,43 @@ _:node_23_1 {
     :xxx a :aaa.
 }
 
-_:gn_73 {
-    (_:sk_408 _:sk_409) lingua:nand _:gn_90.
-    (_:sk_408) lingua:nand _:gn_91.
+_:gn_70 {
+    (_:sk_408 _:sk_409) lingua:nand _:gn_84.
+    (_:sk_408) lingua:nand _:gn_85.
 }
 
-_:gn_74 {
+_:gn_71 {
     _:sk_410 :bbb _:sk_411.
-    () lingua:nand _:gn_92.
+    () lingua:nand _:gn_86.
 }
 
-_:gn_75 {
+_:gn_72 {
     _:sk_410 a :aaa.
 }
 
-_:gn_76 {
+_:gn_73 {
     _:sk_412 a :aaa.
 }
 
-_:gn_77 {
+_:gn_74 {
     () a _:sk_470.
 }
 
-_:gn_78 {
+_:gn_75 {
     () a _:sk_472.
 }
 
-_:gn_79 {
+_:gn_76 {
     _:sk_474 :bbb _:sk_475.
-    () lingua:nand _:gn_93.
+    () lingua:nand _:gn_87.
 }
 
-_:gn_80 {
+_:gn_77 {
     _:sk_474 a :aaa.
 }
 
-_:gn_81 {
+_:gn_78 {
     _:sk_476 a :aaa.
-}
-
-_:gn_82 {
-    _:sk_537 a :ccc.
-}
-
-_:gn_83 {
-    _:sk_536 :bbb _:sk_537.
-    () lingua:nand _:gn_82.
-}
-
-_:gn_84 {
-    _:sk_536 a :aaa.
 }
 
 _:gn_1 {
@@ -178,22 +163,22 @@ _:gn_1 {
 }
 
 _:gn_2 {
-    (_:sk_201 _:sk_202) lingua:nand _:gn_29.
-    (_:sk_201) lingua:nand _:gn_30.
+    (_:sk_201 _:sk_202) lingua:nand _:gn_28.
+    (_:sk_201) lingua:nand _:gn_29.
 }
 
 _:gn_3 {
-    (_:sk_203) lingua:nand _:gn_31.
+    (_:sk_203) lingua:nand _:gn_30.
 }
 
 _:gn_4 {
     :aaa owl:onProperty :bbb.
     :aaa owl:allValuesFrom :ccc.
-    (_:node_2_1) lingua:nand _:gn_32.
+    (_:node_2_1) lingua:nand _:gn_31.
 }
 
 _:gn_5 {
-    (_:sk_205 _:sk_206) lingua:nand _:gn_33.
+    (_:sk_205 _:sk_206) lingua:nand _:gn_32.
 }
 
 _:gn_6 {
@@ -201,35 +186,35 @@ _:gn_6 {
 }
 
 _:gn_7 {
-    (_:sk_207) lingua:nand _:gn_34.
+    (_:sk_207) lingua:nand _:gn_33.
 }
 
 _:gn_8 {
-    (_:sk_210 _:sk_211 _:sk_212) lingua:nand _:gn_35.
+    (_:sk_210 _:sk_211 _:sk_212) lingua:nand _:gn_34.
 }
 
 _:gn_9 {
-    (_:sk_213 _:sk_214) lingua:nand _:gn_36.
+    (_:sk_213 _:sk_214) lingua:nand _:gn_35.
 }
 
 _:gn_10 {
-    (_:sk_293 _:sk_294 _:sk_295 _:sk_294) lingua:nand _:gn_37.
+    (_:sk_293 _:sk_294 _:sk_295 _:sk_294) lingua:nand _:gn_36.
 }
 
 _:gn_11 {
-    (_:sk_296 _:sk_297 _:sk_298) lingua:nand _:gn_38.
+    (_:sk_296 _:sk_297 _:sk_298) lingua:nand _:gn_37.
 }
 
 _:gn_12 {
-    (_:sk_299 _:sk_300 _:sk_300 _:sk_301) lingua:nand _:gn_39.
+    (_:sk_299 _:sk_300 _:sk_300 _:sk_301) lingua:nand _:gn_38.
 }
 
 _:gn_13 {
-    (_:sk_392 _:sk_393 _:sk_394 _:sk_393 _:sk_394) lingua:nand _:gn_40.
+    (_:sk_392 _:sk_393 _:sk_394 _:sk_393 _:sk_394) lingua:nand _:gn_39.
 }
 
 _:gn_14 {
-    (_:node_2_1) lingua:nand _:gn_32.
+    (_:node_2_1) lingua:nand _:gn_31.
 }
 
 _:gn_15 {
@@ -237,250 +222,230 @@ _:gn_15 {
 }
 
 _:gn_16 {
-    (_:sk_406 _:sk_407) lingua:nand _:gn_41.
-    (_:sk_406) lingua:nand _:gn_42.
+    (_:sk_406 _:sk_407) lingua:nand _:gn_40.
+    (_:sk_406) lingua:nand _:gn_41.
 }
 
 _:gn_17 {
     :aaa owl:allValuesFrom :ccc.
-    (_:node_2_1) lingua:nand _:gn_32.
+    (_:node_2_1) lingua:nand _:gn_31.
 }
 
 _:gn_18 {
-    () lingua:nand _:gn_43.
+    () lingua:nand _:gn_42.
 }
 
 _:gn_19 {
-    () lingua:nand _:gn_44.
+    () lingua:nand _:gn_43.
 }
 
 _:gn_20 {
-    (_:sk_410) lingua:nand _:gn_45.
+    (_:sk_410) lingua:nand _:gn_44.
 }
 
 _:gn_21 {
-    (_:sk_412 _:sk_413) lingua:nand _:gn_46.
+    (_:sk_412 _:sk_413) lingua:nand _:gn_45.
 }
 
 _:gn_22 {
-    () lingua:nand _:gn_47.
+    () lingua:nand _:gn_46.
 }
 
 _:gn_23 {
-    (_:sk_470 _:sk_471) lingua:nand _:gn_48.
+    (_:sk_470 _:sk_471) lingua:nand _:gn_47.
 }
 
 _:gn_24 {
-    () lingua:nand _:gn_49.
+    () lingua:nand _:gn_48.
 }
 
 _:gn_25 {
-    (_:sk_472 _:sk_473) lingua:nand _:gn_50.
+    (_:sk_472 _:sk_473) lingua:nand _:gn_49.
 }
 
 _:gn_26 {
-    (_:sk_474 _:sk_475 _:sk_474) lingua:nand _:gn_51.
+    (_:sk_474 _:sk_475 _:sk_474) lingua:nand _:gn_50.
 }
 
 _:gn_27 {
-    (_:sk_476 _:sk_477 _:sk_476 _:sk_477) lingua:nand _:gn_52.
+    (_:sk_476 _:sk_477 _:sk_476 _:sk_477) lingua:nand _:gn_51.
 }
 
-_:gn_28 {
-    (_:sk_536 _:sk_537) lingua:nand _:gn_53.
-    (_:sk_536) lingua:nand _:gn_54.
-}
-
-_:gn_55 {
+_:gn_52 {
     _:sk_202 a :ccc.
 }
 
-_:gn_85 {
+_:gn_79 {
     _:sk_204 a :ccc.
 }
 
-_:gn_86 {
+_:gn_80 {
     _:sk_208 a :aaa.
     _:sk_208 :bbb _:sk_209.
-    () lingua:nand _:gn_94.
+    () lingua:nand _:gn_88.
 }
 
-_:gn_87 {
-    (_:sk_209) lingua:nand _:gn_95.
-    () lingua:nand _:gn_96.
-}
-
-_:gn_88 {
-    _:sk_215 a _:sk_213.
-}
-
-_:gn_89 {
-    _:sk_295 a _:sk_293.
-}
-
-_:gn_70 {
-    _:sk_407 a :ccc.
-}
-
-_:gn_90 {
-    _:sk_408 a :aaa.
-    _:sk_408 :bbb _:sk_409.
-    () lingua:nand _:gn_97.
-}
-
-_:gn_91 {
-    (_:sk_409) lingua:nand _:gn_98.
-    () lingua:nand _:gn_99.
-}
-
-_:gn_92 {
-    _:sk_411 a :ccc.
-}
-
-_:gn_93 {
-    _:sk_475 a :ccc.
+_:gn_81 {
+    (_:sk_209) lingua:nand _:gn_89.
+    () lingua:nand _:gn_90.
 }
 
 _:gn_82 {
-    _:sk_537 a :ccc.
+    _:sk_215 a _:sk_213.
+}
+
+_:gn_83 {
+    _:sk_295 a _:sk_293.
+}
+
+_:gn_67 {
+    _:sk_407 a :ccc.
+}
+
+_:gn_84 {
+    _:sk_408 a :aaa.
+    _:sk_408 :bbb _:sk_409.
+    () lingua:nand _:gn_91.
+}
+
+_:gn_85 {
+    (_:sk_409) lingua:nand _:gn_92.
+    () lingua:nand _:gn_93.
+}
+
+_:gn_86 {
+    _:sk_411 a :ccc.
+}
+
+_:gn_87 {
+    _:sk_475 a :ccc.
+}
+
+_:gn_28 {
+    _:sk_201 a :aaa.
+    _:sk_201 :bbb _:sk_202.
+    () lingua:nand _:gn_52.
 }
 
 _:gn_29 {
-    _:sk_201 a :aaa.
-    _:sk_201 :bbb _:sk_202.
-    () lingua:nand _:gn_55.
+    (_:sk_202) lingua:nand _:gn_53.
+    () lingua:nand _:gn_54.
 }
 
 _:gn_30 {
-    (_:sk_202) lingua:nand _:gn_56.
-    () lingua:nand _:gn_57.
+    (_:sk_204) lingua:nand _:gn_55.
+    () lingua:nand _:gn_56.
 }
 
 _:gn_31 {
-    (_:sk_204) lingua:nand _:gn_58.
-    () lingua:nand _:gn_59.
-}
-
-_:gn_32 {
     :xxx :bbb _:node_2_1.
     () lingua:nand _:node_4_1.
 }
 
-_:gn_33 {
+_:gn_32 {
     _:sk_205 a :aaa.
     _:sk_205 :bbb _:sk_206.
-    () lingua:nand _:gn_60.
+    () lingua:nand _:gn_57.
+}
+
+_:gn_33 {
+    :aaa owl:allValuesFrom _:sk_207.
+    () lingua:nand _:gn_58.
 }
 
 _:gn_34 {
-    :aaa owl:allValuesFrom _:sk_207.
-    () lingua:nand _:gn_61.
-}
-
-_:gn_35 {
     :aaa owl:allValuesFrom _:sk_210.
     _:sk_211 a :aaa.
     _:sk_211 :bbb _:sk_212.
-    () lingua:nand _:gn_62.
+    () lingua:nand _:gn_59.
+}
+
+_:gn_35 {
+    :aaa owl:allValuesFrom _:sk_213.
+    (_:sk_215) lingua:nand _:gn_60.
+    () lingua:nand _:gn_61.
 }
 
 _:gn_36 {
-    :aaa owl:allValuesFrom _:sk_213.
-    (_:sk_215) lingua:nand _:gn_63.
-    () lingua:nand _:gn_64.
+    :aaa owl:allValuesFrom _:sk_293.
+    (_:sk_295) lingua:nand _:gn_62.
+    () lingua:nand _:gn_63.
 }
 
 _:gn_37 {
-    :aaa owl:allValuesFrom _:sk_293.
-    (_:sk_295) lingua:nand _:gn_65.
-    () lingua:nand _:gn_66.
-}
-
-_:gn_38 {
     :aaa owl:allValuesFrom _:sk_296.
-    () lingua:nand _:gn_67.
+    () lingua:nand _:gn_64.
     _:sk_298 a _:sk_296.
 }
 
-_:gn_39 {
+_:gn_38 {
     :aaa owl:allValuesFrom _:sk_299.
     _:sk_300 a :aaa.
     _:sk_300 :bbb _:sk_301.
-    () lingua:nand _:gn_68.
+    () lingua:nand _:gn_65.
 }
 
-_:gn_40 {
+_:gn_39 {
     :aaa owl:allValuesFrom _:sk_392.
-    () lingua:nand _:gn_69.
+    () lingua:nand _:gn_66.
     _:sk_394 a _:sk_392.
 }
 
-_:gn_41 {
+_:gn_40 {
     _:sk_406 a :aaa.
     _:sk_406 :bbb _:sk_407.
-    () lingua:nand _:gn_70.
+    () lingua:nand _:gn_67.
+}
+
+_:gn_41 {
+    (_:sk_407) lingua:nand _:gn_68.
+    () lingua:nand _:gn_69.
 }
 
 _:gn_42 {
-    (_:sk_407) lingua:nand _:gn_71.
-    () lingua:nand _:gn_72.
+    () lingua:nand _:node_23_1.
 }
 
 _:gn_43 {
-    () lingua:nand _:node_23_1.
+    () lingua:nand _:gn_70.
 }
 
 _:gn_44 {
-    () lingua:nand _:gn_73.
+    (_:sk_411) lingua:nand _:gn_71.
+    () lingua:nand _:gn_72.
 }
 
 _:gn_45 {
-    (_:sk_411) lingua:nand _:gn_74.
-    () lingua:nand _:gn_75.
-}
-
-_:gn_46 {
-    () lingua:nand _:gn_76.
+    () lingua:nand _:gn_73.
     _:sk_413 a :ccc.
 }
 
-_:gn_47 {
+_:gn_46 {
     () lingua:nand _:node_23_1.
 }
 
-_:gn_48 {
+_:gn_47 {
     _:sk_470 owl:onProperty lingua:nand.
     _:sk_470 owl:allValuesFrom _:sk_471.
-    () lingua:nand _:gn_77.
+    () lingua:nand _:gn_74.
+}
+
+_:gn_48 {
+    () lingua:nand _:gn_70.
 }
 
 _:gn_49 {
-    () lingua:nand _:gn_73.
+    _:sk_472 owl:onProperty lingua:nand.
+    _:sk_472 owl:allValuesFrom _:sk_473.
+    () lingua:nand _:gn_75.
 }
 
 _:gn_50 {
-    _:sk_472 owl:onProperty lingua:nand.
-    _:sk_472 owl:allValuesFrom _:sk_473.
-    () lingua:nand _:gn_78.
+    (_:sk_475) lingua:nand _:gn_76.
+    () lingua:nand _:gn_77.
 }
 
 _:gn_51 {
-    (_:sk_475) lingua:nand _:gn_79.
-    () lingua:nand _:gn_80.
-}
-
-_:gn_52 {
-    () lingua:nand _:gn_81.
+    () lingua:nand _:gn_78.
     _:sk_477 a :ccc.
-}
-
-_:gn_53 {
-    _:sk_536 a :aaa.
-    _:sk_536 :bbb _:sk_537.
-    () lingua:nand _:gn_82.
-}
-
-_:gn_54 {
-    (_:sk_537) lingua:nand _:gn_83.
-    () lingua:nand _:gn_84.
 }

@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v1.1.0 (2024-03-25)').
+version_info('SEE v1.1.1 (2024-03-25)').
 
 help_info('Usage: see <options>* <data>*
 
@@ -225,8 +225,11 @@ gre(Argus) :-
             findvars([A, B], V, alpha),
             list_to_set(V, U),
             makevars([A, B, U], [Q, I, X], beta(U)),
-            conj_append(I, answer('<http://www.w3.org/2000/10/swap/lingua#explanation>', Q, I), F)
-            ), '<http://www.w3.org/2000/10/swap/log#implies>'(Q, F))),
+            (   Q \= true,
+                I \= false
+            ->  conj_append(I, answer('<http://www.w3.org/2000/10/swap/lingua#explanation>', Q, I), F)
+            ;   F = I
+            )), '<http://www.w3.org/2000/10/swap/log#implies>'(Q, F))),
     % create backward rules
     assertz(implies((
             '<http://www.w3.org/2000/10/swap/lingua#hornb>'(B, A),
