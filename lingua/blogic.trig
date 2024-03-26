@@ -8,8 +8,7 @@
 @prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix : <#>.
 
-:Socrates a :Man.
-:Man rdfs:subClassOf :Human.
+:Socrates a :Human.
 :Human rdfs:subClassOf :Mortal.
 
 (_:A _:B _:S) lingua:nand _:ng1.

@@ -8,25 +8,13 @@
 # lingua explanation
 # ------------------
 
-_:gn_1 lingua:explanation _:gn_2.
-_:gn_3 lingua:explanation _:node_9_1.
+_:gn_1 lingua:explanation _:node_9_1.
+_:gn_2 lingua:explanation _:gn_3.
+_:gn_4 lingua:explanation _:node_9_1.
 _:gn_4 lingua:explanation _:gn_5.
-_:gn_6 lingua:explanation _:gn_7.
-_:gn_8 lingua:explanation _:gn_2.
-_:gn_2 lingua:explanation _:node_9_1.
-_:gn_8 lingua:explanation _:gn_9.
-_:gn_2 lingua:explanation _:gn_10.
 
-_:gn_15 {
-    _:sk_11 a :Human.
-}
-
-_:gn_16 {
-    _:sk_12 a :Mortal.
-}
-
-_:gn_2 {
-    :Socrates a :Human.
+_:gn_8 {
+    _:sk_11 a :Mortal.
 }
 
 _:node_9_1 {
@@ -34,57 +22,31 @@ _:node_9_1 {
 }
 
 _:gn_1 {
-    :Man rdfs:subClassOf :Human.
-    :Socrates a :Man.
-}
-
-_:gn_3 {
     :Human rdfs:subClassOf :Mortal.
     :Socrates a :Human.
 }
 
-_:gn_4 {
-    :Man rdfs:subClassOf :Human.
-}
-
-_:gn_5 {
-    (_:sk_11) lingua:nand _:gn_11.
-}
-
-_:gn_6 {
+_:gn_2 {
     :Human rdfs:subClassOf :Mortal.
 }
 
+_:gn_3 {
+    (_:sk_11) lingua:nand _:gn_6.
+}
+
+_:gn_4 {
+    :Socrates a :Human.
+}
+
+_:gn_5 {
+    () lingua:nand _:gn_7.
+}
+
+_:gn_6 {
+    _:sk_11 a :Human.
+    () lingua:nand _:gn_8.
+}
+
 _:gn_7 {
-    (_:sk_12) lingua:nand _:gn_12.
-}
-
-_:gn_8 {
-    :Socrates a :Man.
-}
-
-_:gn_9 {
-    () lingua:nand _:gn_13.
-}
-
-_:gn_10 {
-    () lingua:nand _:gn_14.
-}
-
-_:gn_11 {
-    _:sk_11 a :Man.
-    () lingua:nand _:gn_15.
-}
-
-_:gn_12 {
-    _:sk_12 a :Human.
-    () lingua:nand _:gn_16.
-}
-
-_:gn_13 {
-    () lingua:nand _:gn_2.
-}
-
-_:gn_14 {
     () lingua:nand _:node_9_1.
 }
