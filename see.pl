@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v1.1.1 (2024-03-25)').
+version_info('SEE v1.1.2 (2024-03-26)').
 
 help_info('Usage: see <options>* <data>*
 
@@ -236,7 +236,11 @@ gre(Argus) :-
             findvars([A, B], V, alpha),
             list_to_set(V, U),
             makevars([A, B, U], [Q, I, X], beta(U)),
-            C = ':-'(I, Q),
+            (   Q \= true
+            ->  conj_append(Q, remember(answer('<http://www.w3.org/2000/10/swap/lingua#explanation>', Q, I)), F)
+            ;   F = Q
+            ),
+            C = ':-'(I, F),
             copy_term_nat(C, CC),
             labelvars(CC, 0, _, avar),
             (   \+cc(CC)
@@ -248,6 +252,10 @@ gre(Argus) :-
     % create queries
     assertz(implies((
             '<http://www.w3.org/2000/10/swap/lingua#query>'(A, B),
+            (   A \= B
+            ->  F = ('<http://www.w3.org/2000/10/swap/lingua#explanation>'(A, B), B)
+            ;   F = B
+            ),
             djiti_answer(answer(B), J),
             findvars([A, B], V, alpha),
             list_to_set(V, U),
@@ -900,7 +908,11 @@ wt(X) :-
     var(X),
     !,
     write('var:'),
-    write(X).
+    write(X),
+    (   apfx('var:', _)
+    ->  true
+    ;   assertz(apfx('var:', '<http://www.w3.org/2000/10/swap/var#>'))
+    ).
 wt(X) :-
     functor(X, _, A),
     (   A = 0,
@@ -983,7 +995,11 @@ wt0(X) :-
             ->  write('_:')
             ;   sub_atom(Y, 0, 2, _, Z),
                 memberchk(Z, ['x_', 't_']),
-                write('var:')
+                write('var:'),
+                (   apfx('var:', _)
+                ->  true
+                ;   assertz(apfx('var:', '<http://www.w3.org/2000/10/swap/var#>'))
+                )
             )
         ;   write('_:')
         ),
@@ -1281,7 +1297,11 @@ wg(X) :-
     var(X),
     !,
     write('var:'),
-    write(X).
+    write(X),
+    (   apfx('var:', _)
+    ->  true
+    ;   assertz(apfx('var:', '<http://www.w3.org/2000/10/swap/var#>'))
+    ).
 wg(X) :-
     functor(X, F, A),
     (   (   F = exopred,
@@ -3879,6 +3899,12 @@ getcodes(literal(A, _), B) :-
 getcodes(A, B) :-
     nonvar(A),
     with_output_to_chars(wg(A), B).
+
+remember(A) :-
+    \+call(A),
+    !,
+    assertz(A).
+remember(_).
 
 preformat([], []) :-
     !.

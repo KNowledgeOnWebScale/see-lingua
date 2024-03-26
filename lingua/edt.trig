@@ -38,5 +38,5 @@ _:ng3 {
 _:ng4  lingua:query _:ng4.
 
 _:ng4 {
-    edt:i100000 a edt:N10000.
+    edt:i100000 a edt:N1000.
 }

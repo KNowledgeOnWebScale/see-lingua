@@ -1,3 +1,19 @@
 @prefix : <https://eyereasoner.github.io/see-lingua/lingua/backward.trig#>.
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
 
 ("this" 5) :moreInterestingThan ("that" 3).
+
+# ------------------
+# lingua explanation
+# ------------------
+
+_:gn_1 lingua:explanation _:gn_2.
+
+_:gn_1 {
+    5 math:greaterThan 3.
+}
+
+_:gn_2 {
+    ("this" 5) :moreInterestingThan ("that" 3).
+}

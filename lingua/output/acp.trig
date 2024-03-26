@@ -1,4 +1,68 @@
 @prefix : <https://eyereasoner.github.io/see-lingua/lingua/acp.trig#>.
+@prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix var: <http://www.w3.org/2000/10/swap/var#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
 
 :test :for :PolicyX.
 :test :is true.
+
+# ------------------
+# lingua explanation
+# ------------------
+
+_:gn_1 lingua:explanation _:gn_2.
+_:gn_3 lingua:explanation _:gn_4.
+_:gn_5 lingua:explanation _:gn_6.
+
+_:gn_1 {
+    :test1 :policy :PolicyX.
+    :PolicyX a :Policy.
+    (_:gn_7 _:gn_8) log:forAllIn ((<https://eyereasoner.github.io/see-lingua/lingua/acp.trig>) 1).
+}
+
+_:gn_2 {
+    :PolicyX :pass :allOfTest.
+}
+
+_:gn_3 {
+    :test1 :policy :PolicyX.
+    :PolicyX a :Policy.
+    (var:_7042 _:gn_9 (:C)) log:collectAllIn ((<https://eyereasoner.github.io/see-lingua/lingua/acp.trig>) 1).
+    (:C) list:length 1 .
+    1 log:notEqualTo 0.
+}
+
+_:gn_4 {
+    :PolicyX :pass :anyOfTest.
+}
+
+_:gn_5 {
+    :test1 :policy :PolicyX.
+    :PolicyX a :Policy.
+    (var:_7042 _:gn_10 ()) log:collectAllIn ((<https://eyereasoner.github.io/see-lingua/lingua/acp.trig>) 1).
+    () list:length 0 .
+    0 log:equalTo 0.
+}
+
+_:gn_6 {
+    :PolicyX :pass :noneOfTest.
+}
+
+_:gn_7 {
+    :PolicyX :allOf var:_7044.
+}
+
+_:gn_8 {
+    :test1 :has var:_7044.
+}
+
+_:gn_9 {
+    :PolicyX :anyOf var:_7050 .
+    :test1 :has var:_7050.
+}
+
+_:gn_10 {
+    :PolicyX :noneOf var:_7050 .
+    :test1 :has var:_7050.
+}

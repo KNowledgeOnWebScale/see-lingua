@@ -50,5 +50,5 @@ _:ng5 {
 _:ng6 lingua:query _:ng6.
 
 _:ng6 {
-    (5000 var:Pi) :pi true.
+    (1000 var:Pi) :pi true.
 }
