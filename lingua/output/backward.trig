@@ -11,7 +11,7 @@
 _:gn_1 lingua:explanation _:gn_2.
 
 _:gn_1 {
-    5 math:greaterThan 3.
+    (5) math:greaterThan 3.
 }
 
 _:gn_2 {

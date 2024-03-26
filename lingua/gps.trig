@@ -74,15 +74,15 @@ _:ng8 {
     var:Map gps:description (var:From var:Transition var:To var:Action var:Duration_n var:Cost_n var:Belief_n var:Comfort_n).
     (var:Maps_s (var:Map)) list:append var:Maps_t.
     var:Maps_t gps:stagecount var:Stagecount.
-    var:Stagecount math:notGreaterThan var:MaxStagecount.
+    (var:Stagecount) math:notGreaterThan var:MaxStagecount.
     (var:Duration_s var:Duration_n) math:sum var:Duration_t.
-    var:Duration_t math:notGreaterThan var:MaxDuration.
+    (var:Duration_t) math:notGreaterThan var:MaxDuration.
     (var:Cost_s var:Cost_n) math:sum var:Cost_t.
-    var:Cost_t math:notGreaterThan var:MaxCost.
+    (var:Cost_t) math:notGreaterThan var:MaxCost.
     (var:Belief_s var:Belief_n) math:product var:Belief_t.
-    var:Belief_t math:notLessThan var:MinBelief.
+    (var:Belief_t) math:notLessThan var:MinBelief.
     (var:Comfort_s var:Comfort_n) math:product var:Comfort_t.
-    var:Comfort_t math:notLessThan var:MinComfort.
+    (var:Comfort_t) math:notLessThan var:MinComfort.
     (var:Path_s (var:Action)) list:append var:Path_t.
     var:From log:becomes var:To.
     _:ng9 log:callWithCleanup _:ng10.

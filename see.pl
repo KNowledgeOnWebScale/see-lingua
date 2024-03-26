@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v1.1.2 (2024-03-26)').
+version_info('SEE v1.1.3 (2024-03-26)').
 
 help_info('Usage: see <options>* <data>*
 
@@ -3770,10 +3770,13 @@ getnumber(literal(A, type('<http://www.w3.org/2001/XMLSchema#dayTimeDuration>'))
     atom_codes(A, C),
     daytimeduration(B, C, []).
 getnumber(literal(A, _), B) :-
+    !,
     ground(A),
     atom_codes(A, C),
     numeral(C, D),
     catch(number_codes(B, D), _, fail).
+getnumber([A], B) :-
+    getnumber(A, B).
 
 getint(A, B) :-
     getnumber(A, C),

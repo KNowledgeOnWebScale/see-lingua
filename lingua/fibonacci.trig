@@ -39,7 +39,7 @@ _:ng5 {
 }
 
 _:ng6 {
-    var:X math:greaterThan 1.
+    (var:X) math:greaterThan 1.
     (var:X 1) math:difference var:C.
     (var:A var:B) math:sum var:D.
     (var:C var:B var:D) :fib var:Y.

@@ -17,7 +17,7 @@ _:ng1 {
 }
 
 _:ng2 {
-    var:X math:greaterThan var:Y.
+    (var:X) math:greaterThan var:Y.
 }
 
 # query
