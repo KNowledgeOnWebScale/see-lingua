@@ -14,9 +14,9 @@
 (4 0) :ackermann 13 .
 (4 1) :ackermann 65533 .
 
-###                    ###
-### lingua explanation ###
-###                    ###
+#                    #
+# lingua explanation #
+#                    #
 
 _:gn_1 lingua:explanation _:gn_2.
 _:gn_3 lingua:explanation _:gn_4.

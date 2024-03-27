@@ -3,9 +3,9 @@
 
 (:s (:s (:s (:s (:s 0))))) :factorial (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s 0)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))).
 
-###                    ###
-### lingua explanation ###
-###                    ###
+#                    #
+# lingua explanation #
+#                    #
 
 _:gn_1 lingua:explanation _:gn_2.
 _:gn_3 lingua:explanation _:gn_4.
