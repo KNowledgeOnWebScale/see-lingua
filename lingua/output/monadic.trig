@@ -1521,9 +1521,9 @@ bmt:i27 bmt:cycle (bmt:i84 bmt:i39 bmt:i84 bmt:i39 bmt:i84 bmt:i39 bmt:i84 bmt:i
 bmt:i27 bmt:cycle (bmt:i72 bmt:i21 bmt:i72 bmt:i21 bmt:i72 bmt:i21 bmt:i72 bmt:i21 bmt:i72 bmt:i21).
 bmt:i27 bmt:cycle (bmt:i39 bmt:i84 bmt:i39 bmt:i84 bmt:i39 bmt:i84 bmt:i39 bmt:i84 bmt:i39 bmt:i84).
 
-# ------------------
-# lingua explanation
-# ------------------
+###                    ###
+### lingua explanation ###
+###                    ###
 
 _:node_1_1 lingua:explanation true.
 

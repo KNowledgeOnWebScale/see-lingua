@@ -3,9 +3,9 @@
 
 :Ghent a :HumanCommunity.
 
-# ------------------
-# lingua explanation
-# ------------------
+###                    ###
+### lingua explanation ###
+###                    ###
 
 _:gn_1 lingua:explanation _:node_5_1.
 _:gn_1 lingua:explanation _:gn_2.

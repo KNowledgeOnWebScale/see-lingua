@@ -5,9 +5,9 @@
 
 edt:i100000 a edt:N1000.
 
-# ------------------
-# lingua explanation
-# ------------------
+###                    ###
+### lingua explanation ###
+###                    ###
 
 _:node_1_1 lingua:explanation true.
 _:gn_1 lingua:explanation _:gn_2.

@@ -889,9 +889,9 @@ w3 :-
     ),
     (   answer('<http://www.w3.org/2000/10/swap/lingua#explanation>', _, _)
     ->  nl,
-        writeln('# ------------------'),
-        writeln('# lingua explanation'),
-        writeln('# ------------------'),
+        writeln('###                    ###'),
+        writeln('### lingua explanation ###'),
+        writeln('###                    ###'),
         nl,
         (   answer('<http://www.w3.org/2000/10/swap/lingua#explanation>', S, O),
             labelvars('<http://www.w3.org/2000/10/swap/lingua#explanation>'(S, O), 0, _, avar),

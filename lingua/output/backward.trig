@@ -4,9 +4,9 @@
 
 ("this" 5) :moreInterestingThan ("that" 3).
 
-# ------------------
-# lingua explanation
-# ------------------
+###                    ###
+### lingua explanation ###
+###                    ###
 
 _:gn_1 lingua:explanation _:gn_2.
 

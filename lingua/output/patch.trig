@@ -7,9 +7,9 @@
 :pers002 :familyName "Cardinale".
 :pers002 :givenName "Claudia".
 
-# ------------------
-# lingua explanation
-# ------------------
+###                    ###
+### lingua explanation ###
+###                    ###
 
 _:gn_1 lingua:explanation true.
 

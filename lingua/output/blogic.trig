@@ -4,9 +4,9 @@
 
 :Socrates a :Mortal.
 
-# ------------------
-# lingua explanation
-# ------------------
+###                    ###
+### lingua explanation ###
+###                    ###
 
 _:gn_1 lingua:explanation _:node_9_1.
 _:gn_2 lingua:explanation _:gn_3.

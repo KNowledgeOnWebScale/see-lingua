@@ -9,9 +9,9 @@
 (2 0) complex:asin (1.5707963267948966 1.3169578969248166).
 (2 0) complex:acos (0.0 -1.3169578969248166).
 
-# ------------------
-# lingua explanation
-# ------------------
+###                    ###
+### lingua explanation ###
+###                    ###
 
 _:gn_1 lingua:explanation _:gn_2.
 _:gn_3 lingua:explanation _:gn_4.
