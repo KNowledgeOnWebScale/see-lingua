@@ -54,5 +54,5 @@ _:ng7 {
     (6) :fibonacci var:F3.
     (91) :fibonacci var:F4.
     (283) :fibonacci var:F5.
-    (3674) :fibonacci var:F6.
+#   (3674) :fibonacci var:F6.   # explanation is 15 MB
 }

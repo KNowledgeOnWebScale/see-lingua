@@ -13,7 +13,6 @@
 (3 14) :ackermann 131069 .
 (4 0) :ackermann 13 .
 (4 1) :ackermann 65533 .
-(5 0) :ackermann 65533 .
 
 # ------------------
 # lingua explanation
@@ -75,11 +74,6 @@ _:gn_104 lingua:explanation _:gn_105.
 _:gn_106 lingua:explanation _:gn_107.
 _:gn_108 lingua:explanation _:gn_109.
 _:gn_110 lingua:explanation _:gn_111.
-_:gn_25 lingua:explanation _:gn_112.
-_:gn_113 lingua:explanation _:gn_114.
-_:gn_115 lingua:explanation _:gn_116.
-_:gn_117 lingua:explanation _:gn_118.
-_:gn_119 lingua:explanation _:gn_120.
 
 _:gn_1 {
     () log:equalTo ().
@@ -653,51 +647,4 @@ _:gn_110 {
 
 _:gn_111 {
     (4 1) :ackermann 65533.
-}
-
-_:gn_112 {
-    (5 0 2) :ackermann 1.
-}
-
-_:gn_113 {
-    (1 1) math:difference 0 .
-    (5 0 2) :ackermann 1 .
-    (5 1) math:difference 4 .
-    (4 1 2) :ackermann 2.
-}
-
-_:gn_114 {
-    (5 1 2) :ackermann 2.
-}
-
-_:gn_115 {
-    (2 1) math:difference 1 .
-    (5 1 2) :ackermann 2 .
-    (5 1) math:difference 4 .
-    (4 2 2) :ackermann 4.
-}
-
-_:gn_116 {
-    (5 2 2) :ackermann 4.
-}
-
-_:gn_117 {
-    (3 1) math:difference 2 .
-    (5 2 2) :ackermann 4 .
-    (5 1) math:difference 4 .
-    (4 4 2) :ackermann 65536.
-}
-
-_:gn_118 {
-    (5 3 2) :ackermann 65536.
-}
-
-_:gn_119 {
-    (0 3) math:sum 3 .
-    (5 3 2) :ackermann 65536 .
-    (65536 3) math:difference 65533.
-}
-
-_:gn_120 {
-    (5 0) :ackermann 65533.
 }
