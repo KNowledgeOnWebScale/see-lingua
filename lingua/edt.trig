@@ -35,7 +35,7 @@ _:ng3 {
 }
 
 # query
-_:ng4  lingua:query _:ng4.
+_:ng4 lingua:query _:ng4.
 
 _:ng4 {
     edt:i100000 a edt:N1000.

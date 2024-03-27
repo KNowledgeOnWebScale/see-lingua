@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v1.1.3 (2024-03-26)').
+version_info('SEE v1.1.4 (2024-03-27)').
 
 help_info('Usage: see <options>* <data>*
 
@@ -874,6 +874,7 @@ w3 :-
         relabel([B1, B2, B3], [C1, C2, C3]),
         djiti_answer(answer(C), answer(C1, C2, C3)),
         indent,
+        labelvars(C, 0, _, avar),
         wt(C),
         ws(C),
         (   (   C = graph(_, _)
@@ -893,6 +894,7 @@ w3 :-
         writeln('# ------------------'),
         nl,
         (   answer('<http://www.w3.org/2000/10/swap/lingua#explanation>', S, O),
+            labelvars('<http://www.w3.org/2000/10/swap/lingua#explanation>'(S, O), 0, _, avar),
             indent,
             wt('<http://www.w3.org/2000/10/swap/lingua#explanation>'(S, O)),
             ws('<http://www.w3.org/2000/10/swap/lingua#explanation>'(S, O)),
@@ -904,15 +906,6 @@ w3 :-
     ;   true
     ).
 
-wt(X) :-
-    var(X),
-    !,
-    write('var:'),
-    write(X),
-    (   apfx('var:', _)
-    ->  true
-    ;   assertz(apfx('var:', '<http://www.w3.org/2000/10/swap/var#>'))
-    ).
 wt(X) :-
     functor(X, _, A),
     (   A = 0,
@@ -995,11 +988,7 @@ wt0(X) :-
             ->  write('_:')
             ;   sub_atom(Y, 0, 2, _, Z),
                 memberchk(Z, ['x_', 't_']),
-                write('var:'),
-                (   apfx('var:', _)
-                ->  true
-                ;   assertz(apfx('var:', '<http://www.w3.org/2000/10/swap/var#>'))
-                )
+                write('var:')
             )
         ;   write('_:')
         ),
@@ -1293,15 +1282,6 @@ wtn(X) :-
         write(' true')
     ).
 
-wg(X) :-
-    var(X),
-    !,
-    write('var:'),
-    write(X),
-    (   apfx('var:', _)
-    ->  true
-    ;   assertz(apfx('var:', '<http://www.w3.org/2000/10/swap/var#>'))
-    ).
 wg(X) :-
     functor(X, F, A),
     (   (   F = exopred,
