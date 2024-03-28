@@ -79,20 +79,21 @@ _:gn_116 lingua:explanation _:gn_117.
 _:gn_118 lingua:explanation _:gn_119.
 _:gn_120 lingua:explanation _:gn_121.
 _:gn_122 lingua:explanation _:gn_123.
+_:gn_123 lingua:explanation _:gn_124.
 
 _:gn_124 {
-    () :mi (_:gn_128).
-}
-
-_:gn_128 {
     () :natnum (:s (:s (:s (:s (:s (0)))))).
 }
 
-_:gn_129 {
-    () :headBody (_:gn_128 var:x_0 ()).
+_:gn_125 {
+    () :mi (_:gn_124).
 }
 
-_:gn_126 {
+_:gn_129 {
+    () :headBody (_:gn_124 var:x_0 ()).
+}
+
+_:gn_127 {
     () :mi var:x_0.
 }
 
@@ -101,7 +102,7 @@ _:gn_133 {
 }
 
 _:gn_9 {
-    () :headBody (_:gn_128 (_:gn_133) ()).
+    () :headBody (_:gn_124 (_:gn_133) ()).
 }
 
 _:gn_134 {
@@ -185,23 +186,23 @@ _:gn_168 {
 }
 
 _:gn_1 {
-    (_:gn_124) list:firstRest (_:gn_124 ()).
-    (_:gn_125 _:gn_126) list:firstRest (_:gn_125 (_:gn_126)).
-    (_:gn_126) list:firstRest (_:gn_126 ()).
+    (_:gn_125) list:firstRest (_:gn_125 ()).
+    (_:gn_126 _:gn_127) list:firstRest (_:gn_126 (_:gn_127)).
+    (_:gn_127) list:firstRest (_:gn_127 ()).
 }
 
 _:gn_2 {
-    () :headBody (_:gn_127 (_:gn_125 _:gn_126) ()).
+    () :headBody (_:gn_128 (_:gn_126 _:gn_127) ()).
 }
 
 _:gn_3 {
-    (_:gn_128) list:firstRest (_:gn_128 ()).
-    (_:gn_129 _:gn_126) list:firstRest (_:gn_129 (_:gn_126)).
-    (_:gn_126) list:firstRest (_:gn_126 ()).
+    (_:gn_124) list:firstRest (_:gn_124 ()).
+    (_:gn_129 _:gn_127) list:firstRest (_:gn_129 (_:gn_127)).
+    (_:gn_127) list:firstRest (_:gn_127 ()).
 }
 
 _:gn_4 {
-    () :headBody (_:gn_124 (_:gn_129 _:gn_126) ()).
+    () :headBody (_:gn_125 (_:gn_129 _:gn_127) ()).
 }
 
 _:gn_5 {
@@ -209,7 +210,7 @@ _:gn_5 {
 }
 
 _:gn_6 {
-    (_:gn_129 _:gn_126) list:firstRest (_:gn_129 (_:gn_126)).
+    (_:gn_129 _:gn_127) list:firstRest (_:gn_129 (_:gn_127)).
     (_:gn_131 _:gn_132) list:firstRest (_:gn_131 (_:gn_132)).
     (_:gn_132) list:firstRest (_:gn_132 ()).
 }
@@ -232,22 +233,22 @@ _:gn_11 {
 
 _:gn_12 {
     (_:gn_134) list:firstRest (_:gn_134 ()).
-    (_:gn_136 _:gn_126) list:firstRest (_:gn_136 (_:gn_126)).
-    (_:gn_126) list:firstRest (_:gn_126 ()).
+    (_:gn_136 _:gn_127) list:firstRest (_:gn_136 (_:gn_127)).
+    (_:gn_127) list:firstRest (_:gn_127 ()).
 }
 
 _:gn_13 {
-    () :headBody (_:gn_135 (_:gn_136 _:gn_126) ()).
+    () :headBody (_:gn_135 (_:gn_136 _:gn_127) ()).
 }
 
 _:gn_14 {
     (_:gn_133) list:firstRest (_:gn_133 ()).
-    (_:gn_137 _:gn_126) list:firstRest (_:gn_137 (_:gn_126)).
-    (_:gn_126) list:firstRest (_:gn_126 ()).
+    (_:gn_137 _:gn_127) list:firstRest (_:gn_137 (_:gn_127)).
+    (_:gn_127) list:firstRest (_:gn_127 ()).
 }
 
 _:gn_15 {
-    () :headBody (_:gn_134 (_:gn_137 _:gn_126) ()).
+    () :headBody (_:gn_134 (_:gn_137 _:gn_127) ()).
 }
 
 _:gn_16 {
@@ -255,7 +256,7 @@ _:gn_16 {
 }
 
 _:gn_17 {
-    (_:gn_137 _:gn_126) list:firstRest (_:gn_137 (_:gn_126)).
+    (_:gn_137 _:gn_127) list:firstRest (_:gn_137 (_:gn_127)).
     (_:gn_139 _:gn_132) list:firstRest (_:gn_139 (_:gn_132)).
     (_:gn_132) list:firstRest (_:gn_132 ()).
 }
@@ -278,22 +279,22 @@ _:gn_22 {
 
 _:gn_23 {
     (_:gn_141) list:firstRest (_:gn_141 ()).
-    (_:gn_143 _:gn_126) list:firstRest (_:gn_143 (_:gn_126)).
-    (_:gn_126) list:firstRest (_:gn_126 ()).
+    (_:gn_143 _:gn_127) list:firstRest (_:gn_143 (_:gn_127)).
+    (_:gn_127) list:firstRest (_:gn_127 ()).
 }
 
 _:gn_24 {
-    () :headBody (_:gn_142 (_:gn_143 _:gn_126) ()).
+    () :headBody (_:gn_142 (_:gn_143 _:gn_127) ()).
 }
 
 _:gn_25 {
     (_:gn_140) list:firstRest (_:gn_140 ()).
-    (_:gn_144 _:gn_126) list:firstRest (_:gn_144 (_:gn_126)).
-    (_:gn_126) list:firstRest (_:gn_126 ()).
+    (_:gn_144 _:gn_127) list:firstRest (_:gn_144 (_:gn_127)).
+    (_:gn_127) list:firstRest (_:gn_127 ()).
 }
 
 _:gn_26 {
-    () :headBody (_:gn_141 (_:gn_144 _:gn_126) ()).
+    () :headBody (_:gn_141 (_:gn_144 _:gn_127) ()).
 }
 
 _:gn_27 {
@@ -301,7 +302,7 @@ _:gn_27 {
 }
 
 _:gn_28 {
-    (_:gn_144 _:gn_126) list:firstRest (_:gn_144 (_:gn_126)).
+    (_:gn_144 _:gn_127) list:firstRest (_:gn_144 (_:gn_127)).
     (_:gn_146 _:gn_132) list:firstRest (_:gn_146 (_:gn_132)).
     (_:gn_132) list:firstRest (_:gn_132 ()).
 }
@@ -324,22 +325,22 @@ _:gn_33 {
 
 _:gn_34 {
     (_:gn_148) list:firstRest (_:gn_148 ()).
-    (_:gn_150 _:gn_126) list:firstRest (_:gn_150 (_:gn_126)).
-    (_:gn_126) list:firstRest (_:gn_126 ()).
+    (_:gn_150 _:gn_127) list:firstRest (_:gn_150 (_:gn_127)).
+    (_:gn_127) list:firstRest (_:gn_127 ()).
 }
 
 _:gn_35 {
-    () :headBody (_:gn_149 (_:gn_150 _:gn_126) ()).
+    () :headBody (_:gn_149 (_:gn_150 _:gn_127) ()).
 }
 
 _:gn_36 {
     (_:gn_147) list:firstRest (_:gn_147 ()).
-    (_:gn_151 _:gn_126) list:firstRest (_:gn_151 (_:gn_126)).
-    (_:gn_126) list:firstRest (_:gn_126 ()).
+    (_:gn_151 _:gn_127) list:firstRest (_:gn_151 (_:gn_127)).
+    (_:gn_127) list:firstRest (_:gn_127 ()).
 }
 
 _:gn_37 {
-    () :headBody (_:gn_148 (_:gn_151 _:gn_126) ()).
+    () :headBody (_:gn_148 (_:gn_151 _:gn_127) ()).
 }
 
 _:gn_38 {
@@ -347,7 +348,7 @@ _:gn_38 {
 }
 
 _:gn_39 {
-    (_:gn_151 _:gn_126) list:firstRest (_:gn_151 (_:gn_126)).
+    (_:gn_151 _:gn_127) list:firstRest (_:gn_151 (_:gn_127)).
     (_:gn_153 _:gn_132) list:firstRest (_:gn_153 (_:gn_132)).
     (_:gn_132) list:firstRest (_:gn_132 ()).
 }
@@ -370,22 +371,22 @@ _:gn_44 {
 
 _:gn_45 {
     (_:gn_155) list:firstRest (_:gn_155 ()).
-    (_:gn_157 _:gn_126) list:firstRest (_:gn_157 (_:gn_126)).
-    (_:gn_126) list:firstRest (_:gn_126 ()).
+    (_:gn_157 _:gn_127) list:firstRest (_:gn_157 (_:gn_127)).
+    (_:gn_127) list:firstRest (_:gn_127 ()).
 }
 
 _:gn_46 {
-    () :headBody (_:gn_156 (_:gn_157 _:gn_126) ()).
+    () :headBody (_:gn_156 (_:gn_157 _:gn_127) ()).
 }
 
 _:gn_47 {
     (_:gn_154) list:firstRest (_:gn_154 ()).
-    (_:gn_158 _:gn_126) list:firstRest (_:gn_158 (_:gn_126)).
-    (_:gn_126) list:firstRest (_:gn_126 ()).
+    (_:gn_158 _:gn_127) list:firstRest (_:gn_158 (_:gn_127)).
+    (_:gn_127) list:firstRest (_:gn_127 ()).
 }
 
 _:gn_48 {
-    () :headBody (_:gn_155 (_:gn_158 _:gn_126) ()).
+    () :headBody (_:gn_155 (_:gn_158 _:gn_127) ()).
 }
 
 _:gn_49 {
@@ -393,7 +394,7 @@ _:gn_49 {
 }
 
 _:gn_50 {
-    (_:gn_158 _:gn_126) list:firstRest (_:gn_158 (_:gn_126)).
+    (_:gn_158 _:gn_127) list:firstRest (_:gn_158 (_:gn_127)).
     (_:gn_160 _:gn_132) list:firstRest (_:gn_160 (_:gn_132)).
     (_:gn_132) list:firstRest (_:gn_132 ()).
 }
@@ -416,22 +417,22 @@ _:gn_55 {
 
 _:gn_56 {
     (_:gn_162) list:firstRest (_:gn_162 ()).
-    (_:gn_164 _:gn_126) list:firstRest (_:gn_164 (_:gn_126)).
-    (_:gn_126) list:firstRest (_:gn_126 ()).
+    (_:gn_164 _:gn_127) list:firstRest (_:gn_164 (_:gn_127)).
+    (_:gn_127) list:firstRest (_:gn_127 ()).
 }
 
 _:gn_57 {
-    () :headBody (_:gn_163 (_:gn_164 _:gn_126) ()).
+    () :headBody (_:gn_163 (_:gn_164 _:gn_127) ()).
 }
 
 _:gn_58 {
     (_:gn_161) list:firstRest (_:gn_161 ()).
-    (_:gn_165 _:gn_126) list:firstRest (_:gn_165 (_:gn_126)).
-    (_:gn_126) list:firstRest (_:gn_126 ()).
+    (_:gn_165 _:gn_127) list:firstRest (_:gn_165 (_:gn_127)).
+    (_:gn_127) list:firstRest (_:gn_127 ()).
 }
 
 _:gn_59 {
-    () :headBody (_:gn_162 (_:gn_165 _:gn_126) ()).
+    () :headBody (_:gn_162 (_:gn_165 _:gn_127) ()).
 }
 
 _:gn_60 {
@@ -439,7 +440,7 @@ _:gn_60 {
 }
 
 _:gn_61 {
-    (_:gn_165 _:gn_126) list:firstRest (_:gn_165 (_:gn_126)).
+    (_:gn_165 _:gn_127) list:firstRest (_:gn_165 (_:gn_127)).
     (_:gn_167 _:gn_132) list:firstRest (_:gn_167 (_:gn_132)).
     (_:gn_132) list:firstRest (_:gn_132 ()).
 }
@@ -458,12 +459,12 @@ _:gn_65 {
 
 _:gn_66 {
     (_:gn_168) list:firstRest (_:gn_168 ()).
-    (_:gn_169 _:gn_126) list:firstRest (_:gn_169 (_:gn_126)).
-    (_:gn_126) list:firstRest (_:gn_126 ()).
+    (_:gn_169 _:gn_127) list:firstRest (_:gn_169 (_:gn_127)).
+    (_:gn_127) list:firstRest (_:gn_127 ()).
 }
 
 _:gn_67 {
-    () :headBody (_:gn_71 (_:gn_169 _:gn_126) ()).
+    () :headBody (_:gn_71 (_:gn_169 _:gn_127) ()).
 }
 
 _:gn_68 {
@@ -735,16 +736,16 @@ _:gn_121 {
 }
 
 _:gn_122 {
-    (_:gn_127) list:firstRest (_:gn_127 ()).
-    () :headBody (_:gn_127 (_:gn_181 _:gn_180) ()).
+    (_:gn_128) list:firstRest (_:gn_128 ()).
+    () :headBody (_:gn_128 (_:gn_181 _:gn_180) ()).
     () :mi (_:gn_181 _:gn_180).
 }
 
 _:gn_123 {
-    () :mi (_:gn_127).
+    () :mi (_:gn_128).
 }
 
-_:gn_128 {
+_:gn_124 {
     () :natnum (:s (:s (:s (:s (:s (0)))))).
 }
 
@@ -768,36 +769,36 @@ _:gn_161 {
     () :natnum (0).
 }
 
-_:gn_124 {
-    () :mi (_:gn_128).
-}
-
 _:gn_125 {
-    () :headBody (_:gn_124 var:x_0 ()).
-}
-
-_:gn_126 {
-    () :mi var:x_0.
-}
-
-_:gn_127 {
     () :mi (_:gn_124).
 }
 
+_:gn_126 {
+    () :headBody (_:gn_125 var:x_0 ()).
+}
+
+_:gn_127 {
+    () :mi var:x_0.
+}
+
+_:gn_128 {
+    () :mi (_:gn_125).
+}
+
 _:gn_129 {
-    () :headBody (_:gn_128 var:x_0 ()).
+    () :headBody (_:gn_124 var:x_0 ()).
 }
 
 _:gn_4 {
-    () :headBody (_:gn_124 (_:gn_129 _:gn_126) ()).
+    () :headBody (_:gn_125 (_:gn_129 _:gn_127) ()).
 }
 
 _:gn_130 {
-    () :mi (_:gn_129 _:gn_126).
+    () :mi (_:gn_129 _:gn_127).
 }
 
 _:gn_131 {
-    () :headBody (_:gn_129 var:x_1 (_:gn_126)).
+    () :headBody (_:gn_129 var:x_1 (_:gn_127)).
 }
 
 _:gn_132 {
@@ -805,7 +806,7 @@ _:gn_132 {
 }
 
 _:gn_9 {
-    () :headBody (_:gn_128 (_:gn_133) ()).
+    () :headBody (_:gn_124 (_:gn_133) ()).
 }
 
 _:gn_134 {
@@ -829,15 +830,15 @@ _:gn_137 {
 }
 
 _:gn_15 {
-    () :headBody (_:gn_134 (_:gn_137 _:gn_126) ()).
+    () :headBody (_:gn_134 (_:gn_137 _:gn_127) ()).
 }
 
 _:gn_138 {
-    () :mi (_:gn_137 _:gn_126).
+    () :mi (_:gn_137 _:gn_127).
 }
 
 _:gn_139 {
-    () :headBody (_:gn_137 var:x_1 (_:gn_126)).
+    () :headBody (_:gn_137 var:x_1 (_:gn_127)).
 }
 
 _:gn_20 {
@@ -865,15 +866,15 @@ _:gn_144 {
 }
 
 _:gn_26 {
-    () :headBody (_:gn_141 (_:gn_144 _:gn_126) ()).
+    () :headBody (_:gn_141 (_:gn_144 _:gn_127) ()).
 }
 
 _:gn_145 {
-    () :mi (_:gn_144 _:gn_126).
+    () :mi (_:gn_144 _:gn_127).
 }
 
 _:gn_146 {
-    () :headBody (_:gn_144 var:x_1 (_:gn_126)).
+    () :headBody (_:gn_144 var:x_1 (_:gn_127)).
 }
 
 _:gn_31 {
@@ -901,15 +902,15 @@ _:gn_151 {
 }
 
 _:gn_37 {
-    () :headBody (_:gn_148 (_:gn_151 _:gn_126) ()).
+    () :headBody (_:gn_148 (_:gn_151 _:gn_127) ()).
 }
 
 _:gn_152 {
-    () :mi (_:gn_151 _:gn_126).
+    () :mi (_:gn_151 _:gn_127).
 }
 
 _:gn_153 {
-    () :headBody (_:gn_151 var:x_1 (_:gn_126)).
+    () :headBody (_:gn_151 var:x_1 (_:gn_127)).
 }
 
 _:gn_42 {
@@ -937,15 +938,15 @@ _:gn_158 {
 }
 
 _:gn_48 {
-    () :headBody (_:gn_155 (_:gn_158 _:gn_126) ()).
+    () :headBody (_:gn_155 (_:gn_158 _:gn_127) ()).
 }
 
 _:gn_159 {
-    () :mi (_:gn_158 _:gn_126).
+    () :mi (_:gn_158 _:gn_127).
 }
 
 _:gn_160 {
-    () :headBody (_:gn_158 var:x_1 (_:gn_126)).
+    () :headBody (_:gn_158 var:x_1 (_:gn_127)).
 }
 
 _:gn_53 {
@@ -973,15 +974,15 @@ _:gn_165 {
 }
 
 _:gn_59 {
-    () :headBody (_:gn_162 (_:gn_165 _:gn_126) ()).
+    () :headBody (_:gn_162 (_:gn_165 _:gn_127) ()).
 }
 
 _:gn_166 {
-    () :mi (_:gn_165 _:gn_126).
+    () :mi (_:gn_165 _:gn_127).
 }
 
 _:gn_167 {
-    () :headBody (_:gn_165 var:x_1 (_:gn_126)).
+    () :headBody (_:gn_165 var:x_1 (_:gn_127)).
 }
 
 _:gn_63 {
@@ -1053,5 +1054,5 @@ _:gn_180 {
 }
 
 _:gn_181 {
-    () :headBody (_:gn_124 (_:gn_9 _:gn_134) ()).
+    () :headBody (_:gn_125 (_:gn_9 _:gn_134) ()).
 }

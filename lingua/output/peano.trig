@@ -150,6 +150,7 @@ _:gn_162 lingua:explanation _:gn_163.
 _:gn_164 lingua:explanation _:gn_165.
 _:gn_166 lingua:explanation _:gn_167.
 _:gn_167 lingua:explanation _:gn_168.
+_:gn_169 lingua:explanation _:gn_168.
 
 _:gn_1 {
     ((:s 0) 0) :multiply 0 .
@@ -840,5 +841,11 @@ _:gn_167 {
 }
 
 _:gn_168 {
+    (:s (:s (:s (:s (:s 0))))) :factorial (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s 0)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))).
+}
+
+_:gn_169 {
+    ((:s 0) (:s (:s 0))) :multiply (:s (:s 0)).
+    ((:s (:s 0)) (:s (:s (:s 0)))) :add (:s (:s (:s (:s (:s 0))))).
     (:s (:s (:s (:s (:s 0))))) :factorial (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s (:s 0)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))).
 }

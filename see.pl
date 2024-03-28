@@ -19,7 +19,7 @@
 :- use_module(library(semweb/turtle)).
 :- catch(use_module(library(http/http_open)), _, true).
 
-version_info('SEE v1.1.4 (2024-03-27)').
+version_info('SEE v1.1.5 (2024-03-28)').
 
 help_info('Usage: see <options>* <data>*
 
@@ -256,8 +256,8 @@ gre(Argus) :-
             ->  F = ('<http://www.w3.org/2000/10/swap/lingua#explanation>'(A, B), B)
             ;   F = B
             ),
-            djiti_answer(answer(B), J),
-            findvars([A, B], V, alpha),
+            djiti_answer(answer(F), J),
+            findvars([A, F], V, alpha),
             list_to_set(V, U),
             makevars([A, J, U], [Q, I, X], beta(U)),
             C = implies(Q, I),
