@@ -2,7 +2,7 @@
 % Second Eye of Euler -- Jos De Roo
 % ---------------------------------
 %
-% See https://github.com/eyereasoner/see
+% See https://github.com/KNowledgeOnWebScale/see-lingua
 %
 
 :- use_module(library(lists)).

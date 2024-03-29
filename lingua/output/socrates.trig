@@ -1,4 +1,4 @@
-@prefix : <https://eyereasoner.github.io/see-lingua/lingua/socrates.trig#>.
+@prefix : <https://KNowledgeOnWebScale.github.io/see-lingua/lingua/socrates.trig#>.
 @prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 

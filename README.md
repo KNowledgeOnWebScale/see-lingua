@@ -2,7 +2,7 @@
 
 Reasoning engine that is using RDF TriG as the web lingua.
 
-Examples are in [lingua](https://github.com/eyereasoner/see-lingua/tree/main/lingua) and their output in [lingua/output](https://github.com/eyereasoner/see-lingua/tree/main/lingua/output)
+Examples are in [lingua](https://github.com/KNowledgeOnWebScale/see-lingua/tree/main/lingua) and their output in [lingua/output](https://github.com/KNowledgeOnWebScale/see-lingua/tree/main/lingua/output)
 
 ```
 Usage: see <options>* <data>*

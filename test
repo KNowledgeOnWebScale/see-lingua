@@ -1,4 +1,4 @@
 #!/bin/bash
-pushd ~/github.com/eyereasoner/see-lingua/lingua > /dev/null
+pushd ~/github.com/KNowledgeOnWebScale/see-lingua/lingua > /dev/null
 ./test
 popd > /dev/null

@@ -1,4 +1,4 @@
-@prefix : <https://eyereasoner.github.io/see-lingua/lingua/fibonacci.trig#>.
+@prefix : <https://KNowledgeOnWebScale.github.io/see-lingua/lingua/fibonacci.trig#>.
 @prefix lingua: <http://www.w3.org/2000/10/swap/lingua#>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 

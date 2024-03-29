@@ -3,9 +3,9 @@
 Install SWI-Prolog from http://www.swi-prolog.org/Download.html
 
 mkdir -p ~/github.com
-mkdir -p ~/github.com/eyereasoner
-cd ~/github.com/eyereasoner
-git clone https://github.com/eyereasoner/see-lingua
+mkdir -p ~/github.com/KNowledgeOnWebScale
+cd ~/github.com/KNowledgeOnWebScale
+git clone https://github.com/KNowledgeOnWebScale/see-lingua
 cd see-lingua
 sudo ln -sf $(realpath ./see) /usr/local/bin
 see --version

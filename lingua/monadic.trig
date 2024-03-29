@@ -15,16 +15,16 @@
 _:ng1 lingua:implication true.
 
 _:ng1 {
-    <> log:imports <../../eye/reasoning/bmt/1tt1.ttl>.
-    <> log:imports <../../eye/reasoning/bmt/1tt2.ttl>.
-    <> log:imports <../../eye/reasoning/bmt/1tt3.ttl>.
-    <> log:imports <../../eye/reasoning/bmt/1tt4.ttl>.
-    <> log:imports <../../eye/reasoning/bmt/1tt5.ttl>.
-    <> log:imports <../../eye/reasoning/bmt/1tt6.ttl>.
-    <> log:imports <../../eye/reasoning/bmt/1tt7.ttl>.
-    <> log:imports <../../eye/reasoning/bmt/1tt8.ttl>.
-    <> log:imports <../../eye/reasoning/bmt/1tt9.ttl>.
-    <> log:imports <../../eye/reasoning/bmt/1tt10.ttl>.
+    <> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt1.ttl>.
+    <> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt2.ttl>.
+    <> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt3.ttl>.
+    <> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt4.ttl>.
+    <> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt5.ttl>.
+    <> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt6.ttl>.
+    <> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt7.ttl>.
+    <> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt8.ttl>.
+    <> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt9.ttl>.
+    <> log:imports <https://eyereasoner.github.io/eye/reasoning/bmt/1tt10.ttl>.
 }
 
 #query

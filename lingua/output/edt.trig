@@ -1012,8 +1012,8 @@ _:gn_1997 lingua:explanation _:gn_1998.
 _:gn_1999 lingua:explanation _:node_4_1.
 
 _:node_1_1 {
-    <https://eyereasoner.github.io/see-lingua/lingua/edt.trig> log:imports <https://eyereasoner.github.io/eye/reasoning/edt/test-facts.ttl>.
-    <https://eyereasoner.github.io/see-lingua/lingua/edt.trig> log:imports <https://eyereasoner.github.io/eye/reasoning/edt/test-dl.ttl>.
+    <https://KNowledgeOnWebScale.github.io/see-lingua/lingua/edt.trig> log:imports <https://eyereasoner.github.io/eye/reasoning/edt/test-facts.ttl>.
+    <https://KNowledgeOnWebScale.github.io/see-lingua/lingua/edt.trig> log:imports <https://eyereasoner.github.io/eye/reasoning/edt/test-dl.ttl>.
 }
 
 _:gn_1 {
